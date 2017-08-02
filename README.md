@@ -14,3 +14,4 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 2. 파이썬도 사실 초반은 복습이겠지만 가물가물 해서 처음 배운다 생각해도 될거 같다.
 3. 확실하게 이해하고 넘어가기 위해 코드보다 주석이 더 많을 수도 있다.
 4. 항상 하던대로 넘버링 방식으로 하겠지만 조금 더 체계적으로 디렉토리화를 할 예정이다.
+5. 후반부는 파이썬 고급 반 + Flask 반 공부할 거다.
