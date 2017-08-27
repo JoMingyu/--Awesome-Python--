@@ -10,3 +10,10 @@ tuple2 = ()
 
 set1 = set()
 # set은 리터럴로 선언 불가능하다
+
+# 아직 아무것도 할당되지 않은 변수는?
+none = None
+# 자바에 null, JS에 undefined가 있는 것처럼 파이썬엔 None이 있다
+
+print(type(none))
+# <class 'NoneType'>
