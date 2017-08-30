@@ -23,6 +23,8 @@ class Account:
         Account.num_of_account -= 1
 
     def login(self, id, pw):
+        # 클래스의 메소드는 snake case와 camel case중 사용하면 된다
+        # 대체적으로 camel case를 사용하는 듯 하다
         if self.id == id and self.pw == pw:
             return True
         else:
