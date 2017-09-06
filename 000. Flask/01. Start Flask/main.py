@@ -15,5 +15,11 @@ def index():
     # 문자열 'hello'를 응답으로 전달. status code는 자동 200으로 처리
 
 
+@app.route('/custom/<param>')
+# 사용자 정의 URL
+def custom(param):
+    return param
+
+
 app.run()
 # 기본 포트는 5000
