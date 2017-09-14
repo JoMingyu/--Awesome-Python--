@@ -7,3 +7,7 @@ print(format1 % ('Name', 'PlanB'))
 format2 = "This is {0} formatting!"
 print(format2.format('awesome'))
 # 타입 안정성이 높고, 정렬이나 공백 채우기 등의 고급 포매팅이 가능해서 이걸 많이 쓴다
+
+# 파이썬 3.6의 포매팅은?
+data = 'formatting'
+print(f"Python 3.6's {data}")
