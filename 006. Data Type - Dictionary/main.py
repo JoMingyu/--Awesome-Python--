@@ -25,3 +25,8 @@ print(dic.keys())
 print(list(dic.keys()))
 # value들을 가져올 수도 있다
 print(dic.values())
+
+# 딕셔너리에 딕셔너리를 추가하려면
+dic2 = {'new': 141}
+dic.update(dic2)
+print(dic)
