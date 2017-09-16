@@ -36,7 +36,7 @@ def insert_sample():
     }
     # document가 될 데이터(딕셔너리)
 
-    print(collection.insert(data))
+    print(f'Insert : {collection.insert(data)}')
     # 컬렉션에 대해 도큐먼트를 insert
     # 데이터가 _id 키를 가지고 있지 않으면 MongoDB가 알아서 도큐먼트에 유니크한 _id 키를 부여해서 insert
 
@@ -53,7 +53,7 @@ def insert_sample():
             'author': 'JGC'
         }
     ]
-    print(collection.insert(data))
+    print(f'Insert list : {collection.insert(data)}')
     # id는 통째로 넣는 list의 갯수만큼 list로 반환된다
 
 insert_sample()
@@ -62,27 +62,42 @@ insert_sample()
 def find_sample():
     # 이제 도큐먼트를 찾아 보도록 하자
     found_datas = collection.find()
-    print('Result of find :', found_datas)
+    print(f'Result of find : {found_datas}')
     # Cursor가 반환된다. iterable하기 때문에 걍 for문 돌리면 된다
 
-    for data in found_datas:
-        print(data)
+    # for data in found_datas:
+    #     print(data)
 
     # 이 Cursor 객체는 같은 iterable 객체인 list로 캐스팅 가능하다
-    print(list(data))
+    print(f'Cast to list : {list(found_datas)}')
 
     # 데이터의 length가 궁금할 때도 있다.
-    print(found_datas.count())
+    print(f'Data length : {found_datas.count()}')
 
     print('----------------------------------------------')
     # 결과에 제한을 걸 수도 있다. SQL의 WHERE 문과 비슷하다
-    print(list(collection.find({'author': 'JGC'})))
+    print(f'Sample of author is JGC : {list(collection.find({"author": "JGC"}))}')
 
     # 이 데이터에 들어 있는 _id의 값(ObjectId)은 직렬화 불가능하다. 필요없으면 빼도록 하자
-    print(list(collection.find({}, {'_id': False})))
+    print(f'Remove _id : {list(collection.find({}, {"_id": False}))}')
 
     # sort해 보자
-    print(list(collection.find().sort('title', pymongo.ASCENDING)))
-    # sort(key_name, sort_type
+    print(f"Sort by title : {list(collection.find().sort('title', pymongo.ASCENDING))}")
+    # sort(key_name, sort_type)
 
 find_sample()
+
+
+def update_sample():
+    print(collection.update({'title': 'Yes!!'}, {'title': 'New!', 'author': 'JGC'}))
+
+update_sample()
+
+
+def remove_sample():
+    print(f'Before remove : {list(collection.find())}')
+    collection.remove({'author': 'JGC'})
+    print(f'After remove : {list(collection.find())}')
+    collection.remove()
+
+remove_sample()
