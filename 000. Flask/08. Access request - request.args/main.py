@@ -1,4 +1,4 @@
-from flask import Flask, request
+﻿from flask import Flask, request
 
 app = Flask(__name__)
 # 요청 데이터에 접근할 필요가 있다
@@ -9,6 +9,6 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return request.args['test_key']
-    # args라는 딕셔너리에 접근해서 빼오면 된다
+    # args라는 딕셔너리(정확히는 MultiDict)에 접근해서 빼오면 된다
 
 app.run(debug=True)
