@@ -1,4 +1,4 @@
-# key-value 형식의 데이터는 어딜 가든 중요하게 여긴다
+﻿# key-value 형식의 데이터는 어딜 가든 중요하게 여긴다
 # 자바의 hashmap이나 js의 객체나 json 같은거
 # 파이썬은 딕셔너리(dictionary)라고 한다
 # 키를 가지고 값을 얻어내는 게 사전같아서 그런가보다
@@ -10,6 +10,10 @@ dic = {'hello': 3, 'asdf': 4, 123: 123}
 # 값 얻어내는 건 인덱싱처럼 하면 된다
 print(dic['hello'])
 print(dic[123])
+
+# 얻어내려 했는데 키가 없으면 KeyError가 발생한다
+# 해당 key가 딕셔너리에 있는지 알고 싶으면
+print('hello' in dic)
 
 # key-value 쌍 삭제하는 건 리스트 때 했던 거
 del dic[123]
@@ -24,9 +28,11 @@ print(dic.keys())
 # 리스트로 바꾸려면 그냥 리스트로 캐스팅하면 된다
 print(list(dic.keys()))
 # value들을 가져올 수도 있다
-print(dic.values())
+print(list(dic.values()))
 
 # 딕셔너리에 딕셔너리를 추가하려면
 dic2 = {'new': 141}
 dic.update(dic2)
+# 정확히는 '없으면 추가, 있으면 대체'이다
+
 print(dic)
