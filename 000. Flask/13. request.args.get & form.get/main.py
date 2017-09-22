@@ -17,6 +17,7 @@ def index():
     # 코드가 너무 길어진다. request.args와 form 둘 다 MultiDict의 인스턴스인데, get 메소드에 좋은 기능이 있다
 
     value = request.form.get('test_key2', 0, int)
+    value = request.form.get('test_key', type=int)
     # 기본값 처리와 캐스팅을 도와준다. 기본값과 자료형은 생략 가능해서, get('test_key2')만 쓸수도 있다
     # 위처럼 기본값 처리와 캐스팅에 도움을 받기 위해 get()을 사용하곤 한다
 
