@@ -15,9 +15,12 @@ def json():
     # return response
     # TypeError: 'list' object is not callable
 
-    # request의 Json 데이터를 받았던 것처럼 json 모듈을 쓰면 된다
-    import json
+    # json 모듈을 사용할 수 있는데, json 데이터가 한 line에 쭉 리턴되기 때문에 보기 조금 불편하다
+    # flask의 jsonify를 사용하면 indent 적용된 예쁜 json 데이터를 응답할 수 있다
+    from flask import jsonify
 
-    return json.dumps(response)
+    return jsonify(response)
 
-app.run(debug=True)
+
+if __name__ == '__main__':
+    app.run(debug=True)
