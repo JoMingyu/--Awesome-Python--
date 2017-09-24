@@ -29,6 +29,7 @@ initialize()
 
 
 def insert_sample():
+    print('------ insert sample')
     data = {
         'title': 'titletitlte',
         'content': 'foo',
@@ -56,25 +57,28 @@ def insert_sample():
     print(f'Insert list : {collection.insert(data)}')
     # id는 통째로 넣는 list의 갯수만큼 list로 반환된다
 
-insert_sample()
-
 
 def find_sample():
+    print('------ find sample')
     # 이제 도큐먼트를 찾아 보도록 하자
     found_datas = collection.find()
+
     print(f'Result of find : {found_datas}')
     # Cursor가 반환된다. iterable하기 때문에 걍 for문 돌리면 된다
 
     # for data in found_datas:
     #     print(data)
 
-    # 이 Cursor 객체는 같은 iterable 객체인 list로 캐스팅 가능하다
+    # find 시 반환되는 Cursor 객체는 같은 iterable 객체인 list로 캐스팅 가능하다
     print(f'Cast to list : {list(found_datas)}')
+
+    # 하나만 가져와 보자
+    # find_one의 반환값은 기본적으로 딕셔너리다
+    print(f"Find one : {collection.find_one()}")
 
     # 데이터의 length가 궁금할 때도 있다.
     print(f'Data length : {found_datas.count()}')
 
-    print('----------------------------------------------')
     # 결과에 제한을 걸 수도 있다. SQL의 WHERE 문과 비슷하다
     print(f'Sample of author is JGC : {list(collection.find({"author": "JGC"}))}')
 
@@ -85,19 +89,24 @@ def find_sample():
     print(f"Sort by title : {list(collection.find().sort('title', pymongo.ASCENDING))}")
     # sort(key_name, sort_type)
 
-find_sample()
-
 
 def update_sample():
+    print('------ update sample')
     print(collection.update({'title': 'Yes!!'}, {'title': 'New!', 'author': 'JGC'}))
-
-update_sample()
+    # 기존에 있던 데이터가 제거되고 뒤쪽의 딕셔너리가 들어간다. 기존엔 title, content, author로 이루어져 있었지만 이 명령이 수행되고 나면 content는 사라진다
+    # ObjectId는 손실되지 않는다
+    # 조건에 대한 데이터가 없다면(이 경우 title이 'Yes!!'인 데이터) 명령 자체는 성공하지만 결과적으로 바뀌는 데이터는 없다
 
 
 def remove_sample():
+    print('------ remove sample')
     print(f'Before remove : {list(collection.find())}')
     collection.remove({'author': 'JGC'})
     print(f'After remove : {list(collection.find())}')
     collection.remove()
 
+insert_sample()
+find_sample()
+update_sample()
+find_sample()
 remove_sample()
