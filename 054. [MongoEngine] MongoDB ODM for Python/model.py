@@ -9,8 +9,8 @@ connect('test_db')
 class User(Document):
     # 클래스는 하나의 collection이 된다
 
-    uid = StringField(required=True, unique=True)
-    # unique를 통해 겹치는 일을 없앤다
+    uid = StringField(required=True, primary_key=True)
+    # primary key 설정. 이 경우 document에서 ObjectId가 사라지고 이게 식별자가 된다
     pw = StringField(required=True)
     name = StringField(required=True, max_length=10)
     # 테이블의 구조가 일반 ORM에서 정의되는 방식과 유사
