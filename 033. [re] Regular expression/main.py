@@ -1,4 +1,4 @@
-import re
+﻿import re
 # re는 정규 표현식(Regular Expression)을 위한 모듈
 
 # 1. re에 갖다대고 찾을 수 있다
@@ -11,7 +11,7 @@ groups = regex.findall('123!1231.asd')
 
 # match와 search가 있다
 
-# (1) match는 정규식과 매치되지 판단한다(문자열의 처음부터 봄)
+# (1) match는 정규식과 매치되는지 판단한다(문자열의 처음부터 봄)
 match = regex.match('!123')
 # 정규식에 맞지 않을 땐 None이 리턴된다
 
