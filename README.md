@@ -2,11 +2,19 @@
 Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 
 ## My own projects using Flask
+<https://github.com/JoMingyu/Slack-Translator-bot>  
+<https://github.com/JoMingyu/Virtual-Currency-API>  
+<https://github.com/JoMingyu/School-API>  
+<https://github.com/JoMingyu/DMS-Baseline-API>  
+<https://github.com/JoMingyu/Whale-SideDish>  
 <https://github.com/JoMingyu/DMS-Migrates-to-Python>
-<https://github.com/DSM-GRAM/Artist>
-<https://github.com/JoMingyu/Bubble>
-<https://github.com/JoMingyu/Voltalk>
-<https://github.com/JoMingyu/Ccomet-Howmuch-ExchangeRate>
+
+
+<https://github.com/DSM-GRAM/Artist>  
+<https://github.com/JoMingyu/Bubble>  
+<https://github.com/JoMingyu/Server-Quickstart-Flask>  
+<https://github.com/JoMingyu/Voltalk>  
+<https://github.com/JoMingyu/Ccomet-Howmuch-ExchangeRate>  
 <https://github.com/JoMingyu/Helpable>
 
 ## Python
@@ -22,6 +30,8 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 - 반복 가능(iterable)한 객체의 개념과 unpack, 문자열과 JSON 사이의 변환
 - 파이썬에서 언더스코어(_)의 여러가지 활용
 - 모듈과 패키지 개념
+- Comprehension 기법과 RegEx의 응용
 - Assertion과 테스팅
 - with-as, import-as
-- datetime, pickle, re, json, numpy, PIL 등의 메이저한 패키지
+- datetime, pickle, re, json, numpy, PIL, urllib 등의 메이저한 패키지
+- pip를 통한 패키지 관리(requirements.txt, pigar 패키지를 통한 requirements.txt 뽑아내기)
