@@ -36,4 +36,4 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 - Assertion과 테스팅
 - with-as, import-as
 - datetime, pickle, re, json, numpy, PIL, urllib 등의 메이저한 패키지
-- pip를 통한 패키지 관리(requirements.txt, pigar)
+- pip(requirements.txt, pigar, setup.py)
