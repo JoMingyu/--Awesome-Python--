@@ -16,3 +16,11 @@ except (IOError, IndexError):
     # 괄호로 묶고 콤마로 나열
     print('IOError or IndexError')
 # except 구문을 여러개 두는 방법도 있다
+
+# 파이썬에서는 try문에도 else문이 있다 (귀도 반 로썸아저씨가 else를 좋아하시나보다)
+try:
+    print(lst[2])
+except:
+    print('IOError or IndexError')
+else:
+    print('Success')

@@ -29,12 +29,12 @@ for (first, second) in lst:
 for i in range(10):
     print(i)
 else:
-    print('success')
+    print('Success')
 
 for i in range(10):
     print(i)
     if i == 5:
-        print('fail')
+        print('Fail')
         break
 else:
     print('success')
