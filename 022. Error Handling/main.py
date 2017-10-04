@@ -24,3 +24,4 @@ except:
     print('IOError or IndexError')
 else:
     print('Success')
+# try문 내에서 오류가 발생하지 않을 경우 else문 내의 작업을 수행한다
