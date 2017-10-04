@@ -24,3 +24,18 @@ for i in range(5):
 lst = [(1, 2), (3, 4), (5, 6)]
 for (first, second) in lst:
     print(first, second)
+
+# 파이썬에는 for문에도 else를 쓸 수 있다
+for i in range(10):
+    print(i)
+else:
+    print('success')
+
+for i in range(10):
+    print(i)
+    if i == 5:
+        print('fail')
+        break
+else:
+    print('success')
+# for문 내에서 break에 걸리지 않고 온전하게 for문을 마치면 else문 블럭 내에 작업을 수행한다
