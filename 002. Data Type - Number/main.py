@@ -16,6 +16,9 @@ a = 0.8e+15
 # e 표기법
 print(a)
 
+# e 표기법을 사용하면 float형으로 저장된다
+print(type(a))
+
 a = 0x1f
 # 16진수
 print(a)
