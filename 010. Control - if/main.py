@@ -28,3 +28,7 @@ elif 1 in lst:
     print('1 in list!')
 else:
     print("I don't know")
+
+# if에는 ternary operator라는 개념이 있는데, 삼항 연산과 비슷하게 이해하면 된다
+value = 4
+print('홀수' if value % 2 else '짝수')
