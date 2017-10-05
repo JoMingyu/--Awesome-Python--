@@ -16,6 +16,8 @@ print(s1 - s2)
 
 # 메소드는 그렇게 많지 않다
 s1.add(4)
-s1.update([7, 2])
-s1.remove(4)
-print(s1)
+s2.update([7, 2])
+s2.remove(4)
+
+# 리스트의 중복 되는 값을 없애기 위해 사용하기도 한다
+print(list(set([1, 2, 3, 4, 1, 2, 3])))
