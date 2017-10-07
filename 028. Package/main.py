@@ -6,7 +6,7 @@ import some_package.another_module
 # 도트 연산을 하면 된다
 some_package.another_module.say_hello()
 
-# 근데 너무 기니까 from ~ import를 사용해 보자
+# 접근이 너무 기니까 from ~ import를 사용해 보자
 from some_package import another_module
 another_module.say_hello()
 
@@ -26,6 +26,6 @@ from some_package.another_module import *
 say_hello()
 say_hi()
 
-# 결국 모듈과 패키지에서 중요한 건
+# 모듈과 패키지에서 중요한 건
 # 1. __init__.py의 __all__ 변수
 # 2. 상황에 따른 import(모듈 import, 또는 모듈 내 요소 import)

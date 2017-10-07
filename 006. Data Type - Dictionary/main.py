@@ -23,6 +23,10 @@ del dic[123]
 dic['new'] = 1234
 print(dic['new'])
 
+# 딕셔너리의 key name을 바꿔야 할 경우, 대입 따로 del 따로 하지 말고 이렇게 해보자
+dic['changed'] = dic.pop('new')
+# pop 메소드는 해당 key를 지우는 동시에 value를 리턴한다
+
 # 딕셔너리에 있는 모든 키들을 가져올 필요가 있다
 print(dic.keys())
 # dict_keys 타입이다
