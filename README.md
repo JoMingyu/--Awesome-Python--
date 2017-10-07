@@ -1,21 +1,27 @@
 # TIL-Python
 Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 
-## My own projects using Flask
-<https://github.com/JoMingyu/Slack-Translator-bot>  
-<https://github.com/JoMingyu/Virtual-Currency-API>  
-<https://github.com/JoMingyu/School-API>  
-<https://github.com/JoMingyu/DMS-Baseline-API>  
-<https://github.com/JoMingyu/Whale-SideDish>  
-<https://github.com/JoMingyu/DMS-Migrates-to-Python>
+## My own projects using Python
+### PyPI Library
+[PyPI] <https://github.com/JoMingyu/TourAPI>  
+[PyPI] <https://github.com/JoMingyu/CoinAPI>  
+[PyPI] <https://github.com/JoMingyu/Schapi>  
 
+### Flask
+[Flask] <https://github.com/Seoul-People/Seoul-People_Backend>  
+[Flask] <https://github.com/Daedongyo-Tourism/Daedongyo-Tourism_Backend>  
+[Flask] <https://github.com/JoMingyu/Daejeon-People>  
 
-<https://github.com/DSM-GRAM/Artist>  
-<https://github.com/JoMingyu/Bubble>  
-<https://github.com/JoMingyu/Server-Quickstart-Flask>  
-<https://github.com/JoMingyu/Voltalk>  
-<https://github.com/JoMingyu/Ccomet-Howmuch-ExchangeRate>  
-<https://github.com/JoMingyu/Helpable>
+[Flask] <https://github.com/JoMingyu/DMS-Baseline-API>  
+[Flask] <https://github.com/JoMingyu/DMS-Migrates-to-Python>  
+[Flask] <https://github.com/JoMingyu/Whale-SideDish>  
+
+[Flask] <https://github.com/DSM-GRAM/Artist>  
+[Flask] <https://github.com/JoMingyu/Bubble>  
+[Flask] <https://github.com/JoMingyu/Server-Quickstart-Flask>  
+[Flask] <https://github.com/JoMingyu/Voltalk>  
+[Flask] <https://github.com/JoMingyu/Ccomet-Howmuch-ExchangeRate>  
+[Flask] <https://github.com/JoMingyu/Helpable>
 
 ## Python
 동적 타이핑 인터프리터 언어. 함수와 변수명에 스네이크 케이스, 클래스명에 파스칼 케이스를 사용. 반복 가능한 객체에 부여해 주는 syntactic sugar들이 많다. 현재는 언어의 유연함이나 Django와 Tensorflow로 인해 엄청나게 많은 사람들이 사용하고 있다.(물론 이 아이들 빼고도 파이썬으로 할 수 있는 일들이 무궁무진하다) 언어 자체와 Flask를 병행할 예정이다.
@@ -26,14 +32,18 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 
 <https://github.com/vinta/awesome-python>
 
-## 알고 가자
-- 반복 가능(iterable)한 객체의 개념과 unpack, 문자열과 JSON 사이의 변환
-- 언더스코어(_)의 활용
+## 알아 두면 쓸데 많은 파이썬의 개념들
 - 모듈과 패키지 개념
+- 반복 가능(iterable)한 객체 다루기와 unpack
+- 언더스코어(_)의 활용
+- Python 3.6의 fstring
 - Comprehensions
 - lambda
+- For loop 내부에서 수행되는 Shallow copy, Deep copy
+- ternary operator
+- docstring in function
+- assertion
 - Decorators
-- Assertion과 테스팅
 - with-as, import-as
 - datetime, pickle, re, json, numpy, PIL, urllib 등의 메이저한 패키지
-- pip(requirements.txt, pigar, setup.py)
+- pip(requirements.txt, pigar, setup.py, twine)
