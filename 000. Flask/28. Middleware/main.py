@@ -1,5 +1,5 @@
-from flask import Flask
-# 미들웨어는 서버에 요청이 들어올 때마다 호출되는 코드
+﻿from flask import Flask
+# 미들웨어는 서버에 요청이 들어올 때마다 호출되는 코드. 파이썬에선 WSGI 미들웨어를 사용한다
 # 이전에 배웠던 app 객체의 after_request 데코레이터와 비슷하다고 생각할 수 있다
 
 from werkzeug.wrappers import Request
