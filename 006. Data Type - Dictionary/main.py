@@ -13,6 +13,10 @@ print(temp)
 print(dic[123])
 
 # 얻어내려 했는데 키가 없으면 KeyError가 발생한다
+# .get()을 이용해 KeyError를 피할 수 있다
+print(dic.get('not_key'))
+# 키가 없으면 None을 반환한다
+
 # 해당 key가 딕셔너리에 있는지 알고 싶으면
 print('hello' in dic)
 
@@ -23,7 +27,7 @@ del dic[123]
 dic['new'] = 1234
 print(dic['new'])
 
-# 딕셔너리의 key name을 바꿔야 할 경우, 대입 따로 del 따로 하지 말고 이렇게 해보자
+# 딕셔너리에서 key의 이름을 바꿔야 할 경우, 대입 따로 del 따로 하지 말고 pop()을 사용하자
 dic['changed'] = dic.pop('new')
 # pop 메소드는 해당 key를 지우는 동시에 value를 리턴한다
 
