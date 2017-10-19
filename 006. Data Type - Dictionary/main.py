@@ -30,6 +30,9 @@ print(dic['new'])
 # 딕셔너리에서 key의 이름을 바꿔야 할 경우, 대입 따로 del 따로 하지 말고 pop()을 사용하자
 dic['changed'] = dic.pop('new')
 # pop 메소드는 해당 key를 지우는 동시에 value를 리턴한다
+# pop 메소드도 KeyError가 발생할 수 있다. 파라미터로 default value를 넘겨주며 안전하게 pop하자
+print(dic.pop('not_in', 'test'))
+# 'test'
 
 # 딕셔너리에 있는 모든 키들을 가져올 필요가 있다
 print(dic.keys())
