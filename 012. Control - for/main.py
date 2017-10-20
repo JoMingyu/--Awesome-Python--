@@ -1,4 +1,4 @@
-# 파이썬은 Iterable 객체에 대한 서포트가 많다 보니 for문이 애초에 for-each 형태(참조 방식)로 만들어져 있다
+﻿# 파이썬은 Iterable 객체에 대한 서포트가 많다 보니 for문이 애초에 for-each 형태(참조 방식)로 만들어져 있다
 # 순차 참조 방식을 띤다
 lst = [1, 2, 3, 4]
 for i in lst:
@@ -28,6 +28,8 @@ for i in range(10):
     print(i)
 else:
     print('Success')
+# 루프 본문이 break문을 만나지 않은 경우에만 else 블록이 실행된다
+# Effective Python에서는 직관적이지 않고 혼동하기 쉬우니 사용하지 않는 것이 좋다고 한다
 
 for i in range(10):
     print(i)

@@ -1,4 +1,4 @@
-# 구조적으로 프로그래밍을 하기 위해 필요한 조건문
+﻿# 구조적으로 프로그래밍을 하기 위해 필요한 조건문
 # 1. if - elif - else 형태로 조건분기를 구성한다
 # 2. if 안에 소괄호를 씌우지 않는다
 # 3. 중괄호가 아니라 콜론과 indent로 블럭을 구분한다
@@ -29,6 +29,13 @@ elif 1 in lst:
 else:
     print("I don't know")
 
-# if에는 ternary operator라는 개념이 있는데, 삼항 연산과 비슷하게 이해하면 된다
+# 파이썬에는 ternary operator(삼항 연산자)가 if에 있다
 value = 4
 print('홀수' if value % 2 else '짝수')
+# condition_is_true if condition else condition_is_false
+
+# 광범위하게 사용되지 않는 ternary operator 문법이 하나 더 있는데, 튜플을 포함하고 있다
+print(False, True)[True]
+# tupled ternary라고 부름
+# (condition_is_false, condition_is_true)[condition]
+# true condition과 false condition을 넣을 자리를 혼동하기 쉬움
