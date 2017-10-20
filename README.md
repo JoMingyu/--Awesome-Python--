@@ -49,7 +49,7 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 - 언더스코어(_)의 활용
 - Python 3.6의 fstring
 - Comprehension과 unpack
-- Dictionary와 List의 여러가지 표현(instance.__dict__, _dict['new_name'] = _dict.pop('legacy_name'), sorted(_list, key=lambda) 등)
+- Dictionary와 List의 여러가지 표현(_dict['new_name'] = _dict.pop('legacy_name'), sorted(_list, key=lambda) 등)
 - lambda
 - ternary operator(삼항 연산자) : if ternary&tupled ternary
 - 단순 객체복제, Shallow copy, Deep copy의 차이
