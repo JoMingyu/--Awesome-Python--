@@ -1,38 +1,6 @@
 # TIL-Python
 Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 
-## Python Best Practices
-[The Best of the Best Practices Guide for Python] <https://gist.github.com/sloria/7001839>  
-[Flask Hacks and Best Practices] <http://slides.skien.cc/flask-hacks-and-best-practices/>
-
-## My own projects using Python
-### PyPI Library
-[PyPI] <https://github.com/JoMingyu/TourAPI>  
-[PyPI] <https://github.com/JoMingyu/CoinAPI>  
-[PyPI] <https://github.com/JoMingyu/Schapi>  
-
-### Flask
-[Flask] <https://github.com/Seoul-People/Seoul-People_Backend>  
-[Flask] <https://github.com/Daedongyo-Tourism/Daedongyo-Tourism_Backend>  
-[Flask] <https://github.com/DSM-GRAM/Artist-Soongsil>  
-[Flask] <https://github.com/JoMingyu/Daejeon-People>  
-
-[Flask] <https://github.com/JoMingyu/DMS-Baseline-API>  
-[Flask] <https://github.com/JoMingyu/DMS-Migrates-to-Python>  
-[Flask] <https://github.com/JoMingyu/Whale-SideDish>  
-
-[Flask] <https://github.com/DSM-GRAM/Artist>  
-[Flask] <https://github.com/JoMingyu/Bubble>  
-[Flask] <https://github.com/JoMingyu/Server-Quickstart-Flask>  
-[Flask] <https://github.com/JoMingyu/Voltalk>  
-[Flask] <https://github.com/JoMingyu/Ccomet-Howmuch-ExchangeRate>  
-[Flask] <https://github.com/JoMingyu/Helpable>
-
-## Helpable Utilities
-[Pigar] <https://github.com/damnever/pigar>  
-[Twine] <https://github.com/pypa/twine>  
-[Isort] <https://github.com/timothycrosley/isort>
-
 ## Python
 동적 타이핑 인터프리터 언어. 함수와 변수명에 스네이크 케이스, 클래스명에 파스칼 케이스를 사용. 반복 가능한 객체에 부여해 주는 syntactic sugar들이 많다. 현재는 언어의 유연함이나 Django와 Tensorflow로 인해 엄청나게 많은 사람들이 사용하고 있다.
 
@@ -44,6 +12,38 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 
 <https://github.com/vinta/awesome-python>
 
+## Python Best Practices
+[The Best of the Best Practices Guide for Python] <https://gist.github.com/sloria/7001839>  
+[Python Tips] <http://book.pythontips.com/en/latest/ternary_operators.html>
+
+## My own projects using Python
+### PyPI Library
+[TourAPI] (https://github.com/JoMingyu/TourAPI)  
+[CoinAPI] (https://github.com/JoMingyu/CoinAPI)  
+[SchAPI] (https://github.com/JoMingyu/Schapi)  
+
+### Flask
+[2017 스마트 관광앱 공모전] (https://github.com/Daedongyo-Tourism/Daedongyo-Tourism_Backend)  
+[전공 프로젝트 도와주기 : WakeHeart] (https://github.com/JoMingyu/WakeHeart)  
+[DMS] (https://github.com/DSM-DMS/DSM-Dormitory-Management-System)  
+[2017 서울시 앱 공모전] (https://github.com/Seoul-People/Seoul-People_Backend)  
+[동아리 경진대회 리메이크] (https://github.com/DSM-GRAM/Artist-Soongsil)  
+[전공 프로젝트] (https://github.com/JoMingyu/Daejeon-People)
+
+[Whale 확장앱] (https://github.com/JoMingyu/Whale-SideDish)
+
+[17회 청소년동아리 경진대회] (https://github.com/DSM-GRAM/Artist)  
+[4회 대한민국 SW융합 해카톤대회] (https://github.com/JoMingyu/Bubble)  
+[Flask Server Quickstart] (https://github.com/JoMingyu/Server-Quickstart-Flask)  
+[2회 에너지 해커톤] (https://github.com/JoMingyu/Voltalk)  
+[교내 팀 프로젝트] (https://github.com/JoMingyu/Ccomet-Howmuch-ExchangeRate)  
+[12회 AppJam] (https://github.com/JoMingyu/Helpable)
+
+## Helpable Utilities
+[Pigar] (https://github.com/damnever/pigar)  
+[Twine] (https://github.com/pypa/twine)  
+[Isort] (https://github.com/timothycrosley/isort)
+
 ## 알아 두면 쓸데 많은 파이썬의 개념들
 - 모듈과 패키지 개념
 - 언더스코어(_)의 활용
@@ -51,11 +51,20 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 - Comprehension과 unpack
 - Dictionary와 List의 여러가지 표현(instance.__dict__, _dict['new_name'] = _dict.pop('legacy_name'), sorted(_list, key=lambda) 등)
 - lambda
-- ternary operator
-- For loop 내부에서 수행되는 Shallow copy, Deep copy
-- docstring in function
+- ternary operator(삼항 연산자) : if ternary&tupled ternary
+- 단순 객체복제, Shallow copy, Deep copy의 차이
+- docstring
 - assertion
 - Decorators
 - with-as, import-as
 - datetime, pickle, re, json, numpy, PIL, urllib 등의 메이저한 패키지
 - pip(requirements.txt, pigar, setup.py, twine)
+
+## 팁
+- double leading underscore 방식의 네이밍(__example)은 파이썬 인터프리터에 의해 맹글링되기 때문에 private처럼 보이는 효과가 있는데, 이런 특징을 private를 표현하기 위해 사용하진 않아야 합니다.
+- 한 슬라이스에 start, end, stride를 함께 쓰지 않는 것이 좋습니다. stride 문법이 종종 예상치 못한 동작을 해서 버그를 만들어내기도 하고, 슬라이싱 문법의 stride 부분이 혼란스러울 수 있습니다.
+- map과 filter 대신 Comprehension을 사용합시다.
+- Comprehension에서 표현식을 두 개 이상 사용하지 않는 것이 좋습니다. 한 Comprehension에서 for가 두 개 중첩되어 있다고 치면, 읽기 정말 어렵습니다.
+- Comprehension의 크기가 큰데도 불구하고 Comprehension에 고집을 부리지 맙시다. Generator가 있습니다.
+- 인덱스 기반 loop를 위해 range(len())을 사용하기보다 enumerate()를 사용합시다.
+- import는 빌트인 - site-package - 사용자 정의 모듈 순으로 합시다.
