@@ -9,6 +9,11 @@ Python으로 작성된 마이크로 서버 프레임워크. 두개의 외부 라
 
 Flask는 내부적으로 Thread local 방식을 사용한다. Thread-safe한 상태를 유지하기 위해서 하나의 요청에서 함수들이 돌아가며 객체를 주고받을 필요가 없도록 했다. 이 때문에 문맥(Context)를 이해하는 일이 매우 중요하다.
 
+## Flask best practices
+[Flask Hacks and Best Practices] <http://slides.skien.cc/flask-hacks-and-best-practices/>  
+[Organizing your project - Flask 1.0 doc] <http://exploreflask.com/en/latest/organizing.html>  
+[How to Structure Large Flask Applications] <https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications>
+
 ## 중요한 개념들
 - Template rendering 시 Jinja2의 이스케이핑 방식 숙지, templates와 static 디렉토리 관리
 - request data의 컨트롤(기본값, 타입, args와 form의 차이 등)
