@@ -24,13 +24,14 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 
 ### Flask
 [2017 스마트 관광앱 공모전] <https://github.com/Daedongyo-Tourism/Daedongyo-Tourism_Backend>  
-[전공 프로젝트 도와주기 : WakeHeart] <https://github.com/JoMingyu/WakeHeart>  
 [DMS] <https://github.com/DSM-DMS/DSM-Dormitory-Management-System>  
+[안드로이드 실시간 사전 : Pick] <https://github.com/JoMingyu/Pick>  
+[전공 프로젝트 도와주기 : WakeHeart] <https://github.com/JoMingyu/WakeHeart>  
 [2017 서울시 앱 공모전] <https://github.com/Seoul-People/Seoul-People_Backend>  
 [동아리 경진대회 리메이크] <https://github.com/DSM-GRAM/Artist-Soongsil>  
 [전공 프로젝트] <https://github.com/JoMingyu/Daejeon-People>
 
-[Whale 확장앱] <https://github.com/JoMingyu/Whale-SideDish>
+[Whale 확장앱 : SideDish] <https://github.com/JoMingyu/Whale-SideDish>
 
 [17회 청소년동아리 경진대회] <https://github.com/DSM-GRAM/Artist>  
 [4회 대한민국 SW융합 해카톤대회] <https://github.com/JoMingyu/Bubble>  

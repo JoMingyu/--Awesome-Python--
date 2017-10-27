@@ -41,6 +41,20 @@ Flask 객체의 route() 데코레이터는 딕셔너리나 리스트를 그대�
 route() 데코레이터 : 리스트나 딕셔너리 리턴 시 jsonify 사용  
 flask-restful의 API : 리스트나 딕셔너리는 그대로 리턴
 
+### Flask-restful에서 empty response 과정의 문제
+
+기본 Flask 라우팅의 경우 ''를 리턴하면 자동으로 response body를 비워주는데 비해, Flask-restful에서는 아주 사실적으로 response가 처리되어 큰따옴표("")로 response된다. 이렇게 응답할 경우 Retrofit에서 Call<Void>로 설정된 콜백이 제대로 먹히지 않는다.
+
+Flask-restful에서 ''를 리턴하면 ""로, None을 리턴하면 null로 반환된다. 이를 해결하기 위해선 Flask의 wrapper 클래스인 Response를 사용하면 된다.
+
+    from flask import Response
+    from flask_restful import Resource
+
+    class Test(Resource):
+        def get(self):
+            return Response('', 200)
+
+
 ### g 객체의 'RuntimeError: Working outside of application context.'
 
 Flask의 글로벌 객체인 g는 각각의 request thread에서만 값이 유효한 '스레드 로컬 변수'다. request context가 유지되고 있는 상태에서 g에 접근해야 RuntimeError를 피할 수 있다.
@@ -91,16 +105,7 @@ key가 username과 password라는 점도 맘에 안들었고, url rule이 /auth�
         'JWT_REQUIRED_CLAIMS': ['exp', 'iat', 'nbf']
     }
 
-결론적으로 app.config를 통해 위의 JWT_AUTH_USERNAME_KEY와 JWT_AUTH_PASSWORD_KEY 등을 바꿔주면 되는 것이었다.
-
-### Flask-JWT에서 identity handler 함수의 리턴 값
-
-Flask-JWT에서 했던 마지막 삽질은 identity handler 함수였다.
-
-    def identity(payload):
-        return payload['id']
-
-이 값을 그대로 받아서 MongoDB에 담으려고 하니 bson InvalidDocument 에러로 고생을 좀 했다. Flask-JWT 측에서 identity 함수의 리턴 값을 werkzeug.local.LocalProxy로 wrapping하는 문제였다. str로 캐스팅하면 해결되는 문제였다.
+결론적으로 app.config를 통해 위의 JWT_AUTH_USERNAME_KEY와 JWT_AUTH_PASSWORD_KEY 등을 바꿔주면 되는 것이었다. 그냥 이렇게 시간낭비 하지 말고 Flask-JWT-Extended 쓰자.
 
 ### Swagger에서 API 문서를 불러오지 못하는 문제
 
