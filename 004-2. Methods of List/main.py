@@ -1,4 +1,4 @@
-# 리스트를 만들어 보자
+﻿# 리스트를 만들어 보자
 _list = [1, 2, 3]
 
 _list += [4]
@@ -30,6 +30,7 @@ _list.insert(0, 8)
 
 _list.remove(8)
 # 처음으로 나오는 8을 삭제
+# del _list[_list.index(8)]보다 더 좋은 구문이다
 
 print(_list.pop())
 # 리스트 맨 마지막 값을 삭제하며 리턴

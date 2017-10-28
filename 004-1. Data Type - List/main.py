@@ -39,6 +39,7 @@ print(list_a)
 # 삭제는 del 함수를 사용한다
 del list_a[-3:-1]
 print(list_a)
+# 정확히는 객체의 소멸자(__del__())를 부르는 구문인데, 클래스 부분에서 다시 알아보도록 하자
 
 # 리스트와 뒤에서 배울 dictionary, tuple 등은 iterable 객체이다
 # 파이썬에서 iterable(반복 가능한) 객체는 굉장히 특별한데, unpack이라는 개념을 알고 있으면 좋다
