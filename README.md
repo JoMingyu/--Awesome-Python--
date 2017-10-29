@@ -24,10 +24,10 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 
 ### Flask
 [2017 스마트 관광앱 공모전] <https://github.com/Daedongyo-Tourism/Daedongyo-Tourism_Backend>  
+[2017 서울시 앱 공모전] <https://github.com/Seoul-People/Seoul-People_Backend>  
 [DMS] <https://github.com/DSM-DMS/DSM-Dormitory-Management-System>  
 [안드로이드 실시간 사전 : Pick] <https://github.com/JoMingyu/Pick>  
 [전공 프로젝트 도와주기 : WakeHeart] <https://github.com/JoMingyu/WakeHeart>  
-[2017 서울시 앱 공모전] <https://github.com/Seoul-People/Seoul-People_Backend>  
 [동아리 경진대회 리메이크] <https://github.com/DSM-GRAM/Artist-Soongsil>  
 [전공 프로젝트] <https://github.com/JoMingyu/Daejeon-People>
 
@@ -69,3 +69,18 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 - Comprehension의 크기가 큰데도 불구하고 Comprehension에 고집을 부리지 맙시다. Generator가 있습니다.
 - 인덱스 기반 loop를 위해 range(len())을 사용하기보다 enumerate()를 사용합시다.
 - import는 빌트인 - site-package - 사용자 정의 모듈 순으로 합시다.
+- 함수의 기본 인수는 모듈 로드 시점의 함수 정의 과정에서 딱 한 번만 평가됩니다. 따라서 값이 동적인 키워드 인수에는 기본값으로 None을 사용하고, 함수의 docstring에 실제 기본 동작을 문서화합시다.
+- 키워드 전용 인수를 사용하면 명료성을 강요할 수 있습니다.
+- 리스트에서 원하는 값을 제거하려면 del list_[list_.index()]보다 list_.remove() 구문이 더 좋습니다.
+
+## 파이썬 엑셀 라이브러리 비교
+- 읽기 : xlrd, openpyxl
+1. 모두 .xlsx 지원, xlrd는 .xls도 지원.
+2. 성능은 xlrd이 더 빠름.
+3. xlwt가 .xls만 지원하는 것과 다르게 .xlsx도 지원하므로 읽기는 xlrd를 쓰는 편이 좋을 것 같음.
+
+- 쓰기 : xlwt, openpyxl, xlsxwriter, pyexcelerate
+1. xlwt를 제외하고 모두 .xlsx를 지원.
+2. 문서는 xlsxwriter가 가장 좋음.
+3. 성능은 pyexcelerate, xlwt, xlsxwriter, openpyxl 순으로 좋음.
+4. 어지간하면 xlsxwriter가 무난한 선택. 성능이 중요하다면 pyexcelerate 쓰자. .xlsx 지원이 필요하면 xlwt는 쓰지 말자.

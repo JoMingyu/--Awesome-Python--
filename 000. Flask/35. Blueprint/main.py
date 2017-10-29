@@ -1,5 +1,6 @@
-from flask import Flask, Blueprint
+﻿from flask import Flask, Blueprint
 # 플라스크는 어플리케이션을 블루프린트의 집합으로 고려한다. 이 방식은 대형 어플리케이션에 있어서 이상적이다
+# Blueprint를 이용해 모듈간 협업이 가능하다
 
 simple_blueprint = Blueprint('simple_blueprint', __name__)
 # 블루프린트 객체를 얻는다. 파라미터는 name, import_name 순이다

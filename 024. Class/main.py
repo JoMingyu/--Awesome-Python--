@@ -1,4 +1,4 @@
-# 클래스는 객체지향 프로그래밍의 필수 요소 중 하나다
+﻿# 클래스는 객체지향 프로그래밍의 필수 요소 중 하나다
 # 클래스는 객체를 찍어내기 위한 틀이라고 생각하면 될 것 같다
 # 클래스를 인스턴스화하면 객체가 나온다
 
@@ -18,6 +18,7 @@ class Account:
         # 클래스 변수의 접근
 
     # 소멸자
+    # del로 인해 소멸할 객체는 이 메소드를 call하며 소멸함
     def __del__(self):
         Account.num_of_account -= 1
 
@@ -37,7 +38,7 @@ print(Account.num_of_account)
 
 print(acc1.login('idid', 'pwpw'))
 print(acc2.login('hello', 'pw'))
-acc1.__del__()
-# 수동으로 소멸자를 불러내는 부분. 객체의 참조가 0이 되면 자동으로 call되기도 함
+del acc1
+# 수동으로 소멸자를 불러내는 부분.(acc1.__del__()과 같음) 객체의 참조가 0이 되면 자동으로 call되기도 함
 
 print(Account.num_of_account)

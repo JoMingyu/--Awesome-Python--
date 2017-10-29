@@ -46,7 +46,10 @@ app.config['JWT_AUTH_USERNAME_KEY'] = 'id'
 app.config['JWT_AUTH_PASSWORD_KEY'] = 'pw'
 # URL rule과 username, password key를 바꿔줄 수 있다
 
-jwt = JWT(app, authenticate, identity)
+JWT(app, authenticate, identity)
+
+app.config['JWT_AUTH_URL_RULE'] = '/auth2'
+JWT(app, authenticate, identity)
 
 
 @app.route('/protected')
