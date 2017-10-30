@@ -1,5 +1,4 @@
 ﻿class C:
-    # 데코레이터 파트에서 봤던 __call__이다
     def __init__(self, data):
         self.data = data
 

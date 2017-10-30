@@ -56,7 +56,7 @@ def docstring_sample_sum(a, b):
     :return: a+ b
     :rtype: int
     """
-    # 잘 쓰면 프로젝트 하는 친구들한테 사랑받을 수 있다
+    # 생활화하자. 잘 쓰면 프로젝트 하는 친구들한테 사랑받을 수 있다
 
     return a + b
 
