@@ -46,9 +46,10 @@ app.config['JWT_AUTH_USERNAME_KEY'] = 'id'
 app.config['JWT_AUTH_PASSWORD_KEY'] = 'pw'
 # URL rule과 username, password key를 바꿔줄 수 있다
 
-JWT(app, authenticate, identity)
+from datetime import timedelta
+app.config['JWT_EXPIRATION_DELTA'] = timedelta(days=365)
+# JWT_EXPIRATION_DELTA 옵션에 만료 시간을 설정할 수 있다. 기본값은 5분
 
-app.config['JWT_AUTH_URL_RULE'] = '/auth2'
 JWT(app, authenticate, identity)
 
 

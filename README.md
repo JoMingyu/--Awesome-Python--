@@ -25,6 +25,7 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 [SchAPI] <https://github.com/JoMingyu/Schapi>
 
 ### Flask
+[동아리 Jumpup : CompanyView] <https://github.com/DSM-GRAM/Jumpup-CompanyView>  
 [2017 스마트 관광앱 공모전] <https://github.com/Daedongyo-Tourism/Daedongyo-Tourism_Backend>  
 [2017 서울시 앱 공모전] <https://github.com/Seoul-People/Seoul-People_Backend>  
 [DMS] <https://github.com/DSM-DMS/DSM-Dormitory-Management-System>  
