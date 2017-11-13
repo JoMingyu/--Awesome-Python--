@@ -5,7 +5,8 @@ import datetime
 date = datetime.date(2017, 8, 7)
 # 숫자로 년, 월, 일을 받아서 date 객체를 생성
 # default로 지정되어 있는 값이 없으므로 인자가 모두 들어가야 한다
-print(date.year, date.month, date.day)
+print(date.year, date.month, date.day, date.weekday())
+# weekday는 요일. 월요일이 0, 일요일이 6
 
 today = datetime.date.today()
 # 오늘을 기준으로 객체를 생성할 경우
