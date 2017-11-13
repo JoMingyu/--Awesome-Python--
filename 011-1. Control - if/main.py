@@ -18,6 +18,10 @@ if not False:
 if False and False:
     print('False and False')
 
+# if statement를 축약할 수도 있다
+if 1 < 5 < 9:
+    print('between 1 and 9')
+
 # Iterable data 안에 특정 값이 들어 있는지 체크할 수가 있다(in/not in)
 lst = [1, 2, 3]
 if 4 in lst:
