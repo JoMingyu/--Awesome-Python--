@@ -1,6 +1,8 @@
 # TIL-Python
 Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 
+<https://www.python.org/>
+
 ## Python
 동적 타이핑 인터프리터 언어. 함수와 변수명에 스네이크 케이스, 클래스명에 파스칼 케이스를 사용. 반복 가능한 객체에 부여해 주는 syntactic sugar들이 많다. 현재는 언어의 유연함이나 Django와 Tensorflow로 인해 엄청나게 많은 사람들이 사용하고 있다.
 
@@ -18,7 +20,6 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 
 ## My own projects using Python
 ### PyPI Library
-[NNews] <https://github.com/JoMingyu/NNews>
 [Flask-restful-autoroute] <https://github.com/JoMingyu/Flask-restful-autoroute>  
 [Reflections] <https://github.com/JoMingyu/Reflections>  
 [TourAPI] <https://github.com/JoMingyu/TourAPI>  
@@ -26,9 +27,10 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 [SchAPI] <https://github.com/JoMingyu/Schapi>
 
 ### Flask
-[2017 서울시 공공 앱 오픈소스 프로젝트 경진대회 : Marketer] <https://github.com/JoMingyu/Marketer>  
-[스마트리빙 메이커톤 : Knock Knock] <https://github.com/Smart-Living-Knock-Knock/Knock-Knock_Backend>  
+[Tellin Backend Part] <https://github.com/Tellin-Inner-Communication/Tellin_Backend>  
+[Flask Large Application Example] <https://github.com/JoMingyu/Flask-Large-Application-Example>  
 [동아리 Jumpup : CompanyView] <https://github.com/DSM-GRAM/Jumpup-CompanyView>  
+[스마트리빙 메이커톤 : Knock Knock] <https://github.com/Smart-Living-Knock-Knock/Knock-Knock_Backend>  
 [1회 하이톤 : TT] <https://github.com/KimGenius/HighThon-Trump>  
 [DMS] <https://github.com/DSM-DMS/DSM-Dormitory-Management-System>  
 [2017 스마트 관광앱 공모전] <https://github.com/Daedongyo-Tourism/Daedongyo-Tourism_Backend>  
@@ -54,7 +56,7 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 
 ## 알아 두면 쓸데 많은 파이썬의 개념들
 - 모듈과 패키지 개념
-- 언더스코어(_)의 활용
+- 언더스코어(_)의 활용 : protected 표현, 매직 메소드 등
 - Python 3.6의 fstring
 - Comprehension과 unpack
 - Dictionary와 List의 여러가지 표현(_dict['new_name'] = _dict.pop('legacy_name'), sorted(_list, key=lambda) 등)
@@ -63,9 +65,8 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 - 단순 객체복제, Shallow copy, Deep copy의 차이
 - docstring
 - assertion
-- Decorators
 - with-as, import-as
-- datetime, pickle, re, json, numpy, PIL, urllib 등의 메이저한 패키지
+- datetime, pickle, re, json, urllib, bs 등의 메이저한 패키지
 - pip(requirements.txt, pigar, setup.py, twine)
 
 ## 팁
@@ -79,6 +80,7 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 - 함수의 기본 인수는 모듈 로드 시점의 함수 정의 과정에서 딱 한 번만 평가됩니다. 따라서 값이 동적인 키워드 인수에는 기본값으로 None을 사용하고, 함수의 docstring에 실제 기본 동작을 문서화합시다.
 - 키워드 전용 인수를 사용하면 명료성을 강요할 수 있습니다.
 - 리스트에서 원하는 값을 제거하려면 del list_[list_.index()]보다 list_.remove() 구문이 더 좋습니다.
+- 데이터베이스 컨트롤에 SQLAlchemy를 사용하면 정말 편합니다.
 
 ## 파이썬 엑셀 라이브러리 비교
 - 읽기 : xlrd, openpyxl
