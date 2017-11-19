@@ -4,9 +4,9 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 <https://www.python.org/>
 
 ## Python
-동적 타이핑 인터프리터 언어. 함수와 변수명에 스네이크 케이스, 클래스명에 파스칼 케이스를 사용. 반복 가능한 객체에 부여해 주는 syntactic sugar들이 많다. 현재는 언어의 유연함이나 Django와 Tensorflow로 인해 엄청나게 많은 사람들이 사용하고 있다.
+1991년에 발표된 인터프리터, 객체지향적, 동적 타이핑 언어. 가장 큰 특징이자 장점은 '반복 가능한 객체'이다. 반복 가능한 객체 덕분에 Comprehension과 Ternary operator, unpack, lambda 와 같은 개념이 생겨났다. 현재는 언어의 유연함이나 Django, Flask, Tensorflow, Keras 등으로 인해 엄청나게 많은 사람들이 사용하고 있다. 문법이 쉬워 배우기는 쉽지만, 다른 언어가 다 그렇듯 잘 쓰기는 어렵다.
 
-다른 언어들에서는 쉽게 찾아볼 수 없는 파이썬만의 독특한 매력이 있다. Comprehension과 Ternary operator, unpack, lambda 등 코드를 한 줄에 표현하는 것을 좋아한다. 'Life is short, you need python'이라는 말이 생겨날 정도로 파이썬은 생산성이 매우 높은 언어다. 현재의 소프트웨어 판에 참 잘 어울리는 '모듈화' 개념이 있으며 PEP로 인해 여러 개발자들 사이에 코딩 스타일이 굉장히 비슷하다. IDE 단에서 코딩 컨벤션을 강력하게 잡는다.
+다른 언어들에서는 쉽게 찾아볼 수 없는 파이썬만의 독특한 매력이 있다. 파이썬이 성장하며 '가장 아름다운 하나의 답이 존재한다'라는 파이썬의 명제 또한 성장해 왔다. Beautiful is better than ugly, Explicit is better than implicit, Simple is better than complex, Complex is better than complicated라는 4가지 철학 또한 수많은 파이썬 개발자들이 명심하고 있다. 따라서 다른 언어들의 코딩 스타일은 각자의 취향에 맞게 진화하는 반면(C 계열의 중괄호 위치 등), 파이썬은 위의 철학들을 만족시키는 하나의 스타일로 진화한다. 이에 PEP8이라는 코딩 컨벤션이 자리를 잡으며 파이썬스러움(Pythonic)이라는 단어가 유명해지게 되었는데, 복잡하지 않으면서 의미가 명확하고, 심플한 파이썬의 철학을 따르는 코드들을 지칭하는 개념이다. 물론, 이와 같이 선택지를 좁히는 게 자유도를 제약한다는 평도 있다.
 
 자바에서 private 필드에 접근하고 싶다면 리플렉션을 사용하거나, 클래스의 소스코드 자체를 편집해 버리면 된다. 파이썬에는 이에 대해 문화적인 차이가 존재한다. 파이썬에서는 private와 같은 보안에 대한 속임수를 없애버리고 프로그래머로 하여금 책임감을 갖도록 장려한다. 그리고 이는 실제로 효과가 있다고 한다. PEP8에서는 변수명 앞에 언더스코어(_, 또는 __)를 붙이는 방법으로 protected, 또는 private 변수를 모방한다. 원칙적으로 '해당 변수로의 접근이 막혀있지 않더라도 접근하지 말라'라는 의미로 사용된다.
 
