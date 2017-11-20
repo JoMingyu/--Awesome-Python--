@@ -1,4 +1,4 @@
-from flask import Flask
+﻿from flask import Flask
 
 app = Flask(__name__)
 
@@ -6,17 +6,22 @@ app = Flask(__name__)
 @app.route('/')
 def json():
     # json response를 해보자
-    # 파이썬은 사실 참 json같이 생긴 데이터 타입이 있다
+    # 파이썬에는 json과 대응되는 데이터 타입이 있다
 
-    response = [{'name': 'planb', 'age': 18}, {'name': 'jgc', 'age': 18}]
+    data = [{'name': 'planb', 'age': 18}, {'name': 'jgc', 'age': 18}]
     # list는 json array에, dictionary는 json object에 대응된다
 
     # 하지만 아래의 단순한 구문은 response에 성공하지 않는다
-    # return response
+    # return data
     # TypeError: 'list' object is not callable
+    
+    # json response를 위해 대표적으로 3가지 방법을 사용할 수 있다
+    # 1. return str(data)
+    # 2. return json.dumps(data)
+    # 위의 두 경우는 Content Type이 text/html이기 때문에 필요에 따라 따로 헤더를 적용해줘야 하는 등의 번거로움이 있다
 
-    # json 모듈을 사용할 수 있는데, json 데이터가 한 line에 쭉 리턴되기 때문에 보기 조금 불편하다
-    # flask의 jsonify를 사용하면 indent 적용된 예쁜 json 데이터를 응답할 수 있다
+    # flask의 jsonify는 flask.wrappers.Response의 객체를 반환한다
+    # Content Type이 application/json으로 설정되고, 반환 데이터도 문자열 처리된다
     from flask import jsonify
 
     return jsonify(response)
