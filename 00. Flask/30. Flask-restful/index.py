@@ -9,7 +9,7 @@ class Index(Resource):
     def get(self):
         return [1, 2, 3]
         # Flask의 route 데코레이터를 통한 라우팅에서 이 구문은 TypeError를 발생시키지만
-        # flask-restful은 이를 알아서 처리해주는 듯 하다
+        # Flask-restful의 Resource를 상속받아 API를 구현하면 리턴의 Content Type이 application/json으로 처리됨
 
     def post(self):
         abort(400)

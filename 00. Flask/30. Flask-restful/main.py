@@ -1,8 +1,7 @@
-# pip install flask-restful
-# Flask 공식 문서에선 별도로 언급하지 않는 좋은 모듈
-# RESTful API를 찍어내는 데에 도움을 준다
-from flask import Flask, Blueprint
+﻿from flask import Flask, Blueprint
 from flask_restful import Api
+# pip install flask-restful
+# Flask 공식 문서에선 별도로 언급하지 않는, Flask로 REST API를 구현하기 위한 좋은 모듈
 
 blueprint = Blueprint('sample_blueprint', __name__)
 api = Api(blueprint)
