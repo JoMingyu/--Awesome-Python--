@@ -27,27 +27,28 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 [SchAPI] <https://github.com/JoMingyu/Schapi>
 
 ### Flask
+[2017 드림쉐어 메디컬 해커톤 : DingDong] <https://github.com/Ding-Dong-App/Ding-Dong_Backend>  
 [Tellin Backend Part] <https://github.com/Tellin-Inner-Communication/Tellin_Backend>  
 [Flask Large Application Example] <https://github.com/JoMingyu/Flask-Large-Application-Example>  
 [동아리 Jumpup : CompanyView] <https://github.com/DSM-GRAM/Jumpup-CompanyView>  
 [스마트리빙 메이커톤 : Knock Knock] <https://github.com/Smart-Living-Knock-Knock/Knock-Knock_Backend>  
 [1회 하이톤 : TT] <https://github.com/KimGenius/HighThon-Trump>  
 [DMS] <https://github.com/DSM-DMS/DSM-Dormitory-Management-System>  
-[2017 스마트 관광앱 공모전] <https://github.com/Daedongyo-Tourism/Daedongyo-Tourism_Backend>  
-[2017 서울시 앱 공모전] <https://github.com/Seoul-People/Seoul-People_Backend>  
+[2017 스마트 관광앱 공모전 : 대동여관광] <https://github.com/Daedongyo-Tourism/Daedongyo-Tourism_Backend>  
+[2017 서울시 앱 공모전 : 서울사람] <https://github.com/Seoul-People/Seoul-People_Backend>  
 [안드로이드 실시간 사전 : Pick] <https://github.com/JoMingyu/Pick>  
-[전공 프로젝트 도와주기 : WakeHeart] <https://github.com/JoMingyu/WakeHeart>  
+[Java 프로젝트 도와주기 : WakeHeart] <https://github.com/JoMingyu/WakeHeart>  
 [동아리 경진대회 리메이크] <https://github.com/DSM-GRAM/Artist-Soongsil>  
-[전공 프로젝트] <https://github.com/JoMingyu/Daejeon-People>
+[2017 Java 프로젝트 : 대전사람] <https://github.com/JoMingyu/Daejeon-People>
 
 [Whale 확장앱 : SideDish] <https://github.com/JoMingyu/Whale-SideDish>
 
-[17회 청소년동아리 경진대회] <https://github.com/DSM-GRAM/Artist>  
-[4회 대한민국 SW융합 해카톤대회] <https://github.com/JoMingyu/Bubble>  
+[17회 청소년동아리 경진대회 : Artist] <https://github.com/DSM-GRAM/Artist>  
+[4회 대한민국 SW융합 해카톤대회 : Bubble] <https://github.com/JoMingyu/Bubble>  
 [Flask Server Quickstart] <https://github.com/JoMingyu/Server-Quickstart-Flask>  
-[2회 에너지 해커톤] <https://github.com/JoMingyu/Voltalk>  
-[교내 팀 프로젝트] <https://github.com/JoMingyu/Ccomet-Howmuch-ExchangeRate>  
-[12회 AppJam] <https://github.com/JoMingyu/Helpable>
+[2회 에너지 해커톤 : Voltalk] <https://github.com/JoMingyu/Voltalk>  
+[1차 팀 프로젝트 : Howmuch] <https://github.com/JoMingyu/Ccomet-Howmuch-ExchangeRate>  
+[12회 AppJam : Helpable] <https://github.com/JoMingyu/Helpable>
 
 ## Helpable Utilities
 [Pigar] <https://github.com/damnever/pigar>  
