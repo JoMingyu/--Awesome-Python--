@@ -44,6 +44,7 @@ print(User.objects.count())
 # CRUD 중 U
 User.objects(id='city7310').first().update(name='새로운 민규')
 print(User.objects().first().name)
+# update 메소드를 쓰거나, 모델 객체의 데이터를 바꾸고 save()하는 방법도 있음
 
 # CRUD 중 D
 User.objects.delete()
