@@ -1,28 +1,23 @@
 ﻿import re
-# re는 정규 표현식(Regular Expression)을 위한 모듈
+# 정규표현식에 관한 일들을 돕는 모듈
 
-# 1. 모듈 자체에서 함수를 제공한다. 가장 보편적으로 사용하는 함수
-print(re.findall('\d+', '123a1234'))
+pattern = re.compile('[a-z]+')
+# 패턴 컴파일
+print(type(pattern))
+# <class '_sre.SRE_Pattern'>
 
-# 2. 정규 표현식을 컴파일해서 패턴 객체를 얻을 수 있다
-regex = re.compile('\w+')
-# 그럼 패턴에 대해 문자열을 찾을 수 있다. findall() 함수는 정규식과 맞는 문자열들을 리스트로 반환한다
-groups = regex.findall('123!1231.asd')
+# 패턴 객체에서 정규 표현식 검사를 할 수도 있고, re의 함수에 접근하여 그 즉시 패턴을 입력할 수도 있음
+# findall은 정규 표현식에 맞는 모든 문자열을 리스트로 리턴
+print(pattern.findall('asdf123asd'))
+print(re.findall('[a-z]+', 'asdf123asd'))
+# 아래의 경우 함수 내에서 pattern을 컴파일한 이후 find를 돌리기 때문에 속도 면에서 손해를 볼 가능성이 있음
 
-# match와 search가 있다
+print(pattern.sub('replaced', 'asdf123asd'))
+# 문자열 replace를 정규표현식으로 수행. repl, str 순서
+# 해당 패턴에 맞는 문자열을 repl로 교체 후 반환
 
-# (1) match는 정규식과 매치되는지 판단한다(문자열의 처음부터 봄)
-match = regex.match('!123')
-# 정규식에 맞지 않을 땐 None이 리턴된다
-
-# 정규식에 맞으면 match 객체가 리턴된다
-match = regex.match('123')
-# match 객체는 group(), start(), end(), span() 함수를 가지고 있다.
-# 각각 문자열 리턴, 시작 위치 리턴, 끝 위치 리턴, 시작 위치와 끝 위치에 해당되는 튜플 리턴이다
-print(match.group(), match.start(), match.end(), match.span())
-# match 함수는 정규식에 맞는지를 판단하기 위해서 사용하곤 한다(None이면 안맞고, None이 아니면 맞다고 판단)
-
-# (2) search는 정규식 매치를 문자열 전체에서 본다
-search = regex.search('!123')
-# match에선 None이 리턴됐던 문자열이지만 search는 문자열 전체를 보므로 match 객체가 잘 리턴된다
-print(search.group())
+print(pattern.search('12asd45qw'))
+# 주어진 string 전체를 pattern으로 검색하여 일치하는 문자열을 찾아 match object로 반환
+# 문자열 전체에 대해 검색. 아래의 match 메소드와 대비됨
+print(pattern.match('12asd45qw'))
+# match object가 반환되지 않음. 문자열의 처음부터 검색하기 때문
