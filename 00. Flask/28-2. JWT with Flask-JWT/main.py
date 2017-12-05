@@ -1,7 +1,8 @@
 ﻿from flask import Flask, jsonify
 from flask_jwt import JWT, jwt_required, current_identity
+# pip install flask-jwt
 # flask_jwt 모듈을 이용하면 Flask에서 쉽게 JWT 기반 사용자 인증을 할 수 있다
-# 이해하면 쉬운데, 처음에 이해가 안돼서 5시간은 헤맸다
+# 공식 문서는 이해하기 굉장히 어렵다
 
 
 class User:

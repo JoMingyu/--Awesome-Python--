@@ -1,4 +1,4 @@
-# 타 모듈의 도움을 받을 수 있지만, '일단' 없이 해보자
+﻿# Flask의 JWT Authorization은 타 모듈의 도움을 받을 수 있지만, '일단' 없이 해보자
 # 배워 둔 미들웨어를 쓰면, 어느 정도 페이로드 관리를 해줄 수 있다
 from flask import Flask, request
 from werkzeug.wrappers import Request
