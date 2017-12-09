@@ -1,4 +1,4 @@
-from flask import Flask
+﻿from flask import Flask
 
 app = Flask(__name__)
 
@@ -14,5 +14,3 @@ print(app.secret_key)
 # 이 secret key는 app 객체의 secret_key 필드로도 참조 가능하다
 # Flask의 세션에서 시큐어 쿠키를 구현하기 위한 key가 될 때도 있고
 # Flask-JWT에서 authenticate 함수의 JWT 토큰 암호화를 위한 key가 될 때도 있다
-
-# Flask에 능숙한 파이썬 백엔드 개발자들은 이 config를 능숙하게 사용한다
