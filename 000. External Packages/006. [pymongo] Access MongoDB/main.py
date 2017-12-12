@@ -15,6 +15,7 @@ collection = None
 def initialize():
     client = MongoClient('localhost', 27017)
     # = MongoClient('mongodb://localhost:27017/')
+    # 클래스의 생성자 자체는 host와 port를 None으로 두고 있으나, 생성자 내부 코드에서 localhost와 27017을 기본으로 세팅해 준다
 
     db = client.test_db
     # test_db라는 이름을 가진 데이터베이스
