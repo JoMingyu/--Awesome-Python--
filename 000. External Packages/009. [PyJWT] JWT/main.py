@@ -3,6 +3,7 @@
 import jwt
 
 encoded = jwt.encode({'some': 'payload'}, 'secret!@@#*!#', 'HS256')
+# 페이로드, 비밀 키, 암호화 알고리즘 순
 # bytes를 반환
 
 print(encoded)
@@ -14,4 +15,4 @@ print(encoded.decode('utf-8'))
 
 print(jwt.decode(encoded, 'secret!@@#*!#', 'HS256'))
 # 토큰을 decode해서 페이로드를 받아오는 부분
-# 자동으로 dict 반환 해준다
+# dict 타입으로 반환됨
