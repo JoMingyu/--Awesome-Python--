@@ -15,5 +15,6 @@ app = Flask(__name__)
 app.register_blueprint(blueprint)
 # 블루프린트 등록
 
+# @api.resource()도 들어가야 함
 if __name__ == '__main__':
     app.run(debug=True)
