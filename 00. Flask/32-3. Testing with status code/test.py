@@ -1,4 +1,4 @@
-import unittest
+﻿import unittest
 from main import app
 
 
@@ -8,13 +8,12 @@ class Test(unittest.TestCase):
 
     def testSuccess(self):
         rv = self.client.get('/?test_key=123')
-        self.assertTrue('200' in rv.status)
-        # rv.status를 통해 status code를 얻어올 수 있는데
-        # code와 message가 함께 온다 (204 NO CONTENT)
+        self.assertEqual(200, rv.status_code)
+        # status code를 얻어올 수 있다
 
     def testFail(self):
         rv = self.client.get('/')
-        self.assertTrue('204' in rv.status)
+        self.assertEqual(200, rv.status_code)
 
 
 if __name__ == '__main__':
