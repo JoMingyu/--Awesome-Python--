@@ -24,49 +24,56 @@ Simple is better than complex.
 
 이 레포에서는 Python 3.6을 기준으로 코드들을 정리해 두었다.
 
-## Python Best Practices
-[The Best of the Best Practices Guide for Python] <https://gist.github.com/sloria/7001839>  
-[Python Tips] <http://book.pythontips.com/en/latest/ternary_operators.html>
+## Books
+- 파이썬을 여행하는 히치하이커를 위한 안내서
+- 처음 시작하는 파이썬
+- 고성능 파이썬
+- 파이썬 코딩의 기술(Effective Python)
+- 전문가를 위한 파이썬
+
+## Best Practices
+<a href="https://gist.github.com/sloria/7001839">The Best of the Best Practices Guide for Python</a>   
+<a href="http://book.pythontips.com/en/latest/ternary_operators.html">Python Tips</a>  
+<a href="https://github.com/SigmaQuan/Better-Python-59-Ways">Better Python 59 Ways</a>
 
 ## My own projects using Python
 ### PyPI Library
-[Flask-restful-autoroute] <https://github.com/JoMingyu/Flask-restful-autoroute>  
-[Reflections] <https://github.com/JoMingyu/Reflections>  
-[TourAPI] <https://github.com/JoMingyu/TourAPI>  
-[CoinAPI] <https://github.com/JoMingyu/CoinAPI>  
-[SchAPI] <https://github.com/JoMingyu/Schapi>
+<a href="https://github.com/JoMingyu/Flask-restful-autoroute">Flask-restful-autoroute</a>  
+<a href="https://github.com/JoMingyu/Reflections">Reflections</a>  
+<a href="https://github.com/JoMingyu/TourAPI">TourAPI</a>  
+<a href="https://github.com/JoMingyu/CoinAPI">CoinAPI</a>  
+<a href="https://github.com/JoMingyu/Schapi">Schapi</a>
 
 ### Flask
-[14회 AppJam : 공중분해] <https://github.com/Gongjung-Bunhae-App/Gongjung-Bunhae_Backend>
-[책첵] <https://github.com/JoMingyu/BookCheck-Backend>  
-[SW융합 해카톤대회 수상작 서비스화 : Bubble] <https://github.com/JoMingyu/Bubble-Backend>  
-[2017 드림쉐어 메디컬 해커톤 : DingDong] <https://github.com/Ding-Dong-App/Ding-Dong_Backend>  
-[Tellin Backend Part] <https://github.com/Tellin-Inner-Communication/Tellin_Backend>  
-[Flask Large Application Example] <https://github.com/JoMingyu/Flask-Large-Application-Example>  
-[동아리 Jumpup : CompanyView] <https://github.com/DSM-GRAM/Jumpup-CompanyView>  
-[스마트리빙 메이커톤 : Knock Knock] <https://github.com/Smart-Living-Knock-Knock/Knock-Knock_Backend>  
-[1회 하이톤 : TT] <https://github.com/KimGenius/HighThon-Trump>  
-[DMS] <https://github.com/DSM-DMS/DSM-Dormitory-Management-System>  
-[2017 스마트 관광앱 공모전 : 대동여관광] <https://github.com/Daedongyo-Tourism/Daedongyo-Tourism_Backend>  
-[2017 서울시 앱 공모전 : 서울사람] <https://github.com/Seoul-People/Seoul-People_Backend>  
-[안드로이드 실시간 사전 : Pick] <https://github.com/JoMingyu/Pick>  
-[Java 프로젝트 도와주기 : WakeHeart] <https://github.com/JoMingyu/WakeHeart>  
-[동아리 경진대회 리메이크] <https://github.com/DSM-GRAM/Artist-Soongsil>  
-[2017 Java 프로젝트 : 대전사람] <https://github.com/JoMingyu/Daejeon-People>
-
-[Whale 확장앱 : SideDish] <https://github.com/JoMingyu/Whale-SideDish>
-
-[17회 청소년동아리 경진대회 : Artist] <https://github.com/DSM-GRAM/Artist>  
-[4회 대한민국 SW융합 해카톤대회 : Bubble] <https://github.com/JoMingyu/Bubble>  
-[Flask Server Quickstart] <https://github.com/JoMingyu/Server-Quickstart-Flask>  
-[2회 에너지 해커톤 : Voltalk] <https://github.com/JoMingyu/Voltalk>  
-[1차 팀 프로젝트 : Howmuch] <https://github.com/JoMingyu/Ccomet-Howmuch-ExchangeRate>  
-[12회 AppJam : Helpable] <https://github.com/JoMingyu/Helpable>
+<a href="https://github.com/Modu-Buy-App/Modu-Buy_Backend">모두바이</a>
+<a href="https://github.com/DSM-DMS/Project-DMS-Backend">DMS Backend Rebuilding</a>  
+<a href="https://github.com/Gongjung-Bunhae-App/Gongjung-Bunhae_Backend">14회 AppJam : 공중분해</a>  
+<a href="https://github.com/JoMingyu/BookCheck-Backend">책첵</a>  
+<a href="https://github.com/JoMingyu/Bubble-Backend">SW융합 해카톤대회 수상작 서비스화 : Bubble</a>  
+<a href="https://github.com/Ding-Dong-App/Ding-Dong_Backend">2017 드림쉐어 메디컬 해커톤 : DingDong</a>  
+<a href="https://github.com/Tellin-Inner-Communication/Tellin_Backend">Tellin Backend Part</a>  
+<a href="https://github.com/JoMingyu/Flask-Large-Application-Example">Flask Large Application Example</a>  
+<a href="https://github.com/DSM-GRAM/Jumpup-CompanyView">동아리 Jumpup : CompanyView</a>  
+<a href="https://github.com/Smart-Living-Knock-Knock/Knock-Knock_Backend">스마트리빙 메이커톤 : Knock Knock</a>  
+<a href="https://github.com/KimGenius/HighThon-Trump">1회 하이톤 : TT</a>  
+<a href="https://github.com/DSM-DMS/DSM-Dormitory-Management-System">DMS</a>  
+<a href="https://github.com/Daedongyo-Tourism/Daedongyo-Tourism_Backend">2017 스마트 관광앱 공모전 : 대동여관광</a>  
+<a href="https://github.com/Seoul-People/Seoul-People_Backend">2017 서울시 앱 공모전 : 서울사람</a>  
+<a href="https://github.com/JoMingyu/Pick">안드로이드 실시간 사전 : Pick</a>  
+<a href="https://github.com/JoMingyu/WakeHeart">Java 프로젝트 도와주기 : WakeHeart</a>  
+<a href="https://github.com/DSM-GRAM/Artist-Soongsil">동아리 경진대회 리메이크</a>  
+<a href="https://github.com/JoMingyu/Daejeon-People">2017 Java 프로젝트 : 대전사람</a>  
+<a href="https://github.com/JoMingyu/Whale-SideDish">Whale 확장앱 : SideDish</a>  
+<a href="https://github.com/DSM-GRAM/Artist">17회 청소년동아리 경진대회 : Artist</a>  
+<a href="https://github.com/JoMingyu/Bubble">4회 대한민국 SW융합 해카톤대회 : Bubble</a>  
+<a href="https://github.com/JoMingyu/Voltalk">2회 에너지 해커톤 : Voltalk</a>  
+<a href="https://github.com/JoMingyu/Ccomet-Howmuch-ExchangeRate">1차 팀 프로젝트 : Howmuch</a>  
+<a href="https://github.com/JoMingyu/Helpable">12회 AppJam : Helpable</a>
 
 ## Helpable Utilities
-[Pigar] <https://github.com/damnever/pigar>  
-[Twine] <https://github.com/pypa/twine>  
-[Isort] <https://github.com/timothycrosley/isort>
+<a href="https://github.com/damnever/pigar">Pigar</a>  
+<a href="https://github.com/pypa/twine">Twine</a>  
+<a href="https://github.com/timothycrosley/isort">Isort</a>
 
 ## 알아 두면 쓸데 많은 파이썬의 개념들
 - 언더스코어(_)의 활용 : protected 표현, 매직 메소드 등
