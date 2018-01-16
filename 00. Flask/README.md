@@ -13,13 +13,13 @@ Python으로 작성된 마이크로 서버 프레임워크. 두개의 외부 라
 Flask는 내부적으로 Thread local 방식을 사용한다. Thread-safe한 상태를 유지하기 위해서 하나의 요청에서 함수들이 돌아가며 객체를 주고받을 필요가 없도록 했다. 이 때문에 문맥(Context)를 이해하는 일이 매우 중요하다.
 
 ## Flask best practices
-[Flask Best Practices(일본어)] <https://github.com/yoshiya0503/Flask-Best-Practices/wiki>  
-[Flask Hacks and Best Practices] <http://slides.skien.cc/flask-hacks-and-best-practices/>  
-[Organizing your project - Flask 1.0 doc] <http://exploreflask.com/en/latest/organizing.html>  
-[How to Structure Large Flask Applications] <https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications>
+<a href="https://github.com/yoshiya0503/Flask-Best-Practices/wiki">Flask Best Practices(일본어)</a>  
+<a href="http://slides.skien.cc/flask-hacks-and-best-practices">Flask Hacks and Best Practices</a>  
+<a href="http://exploreflask.com/en/latest/organizing.html">Organizing your project - Flask 1.0 doc</a>  
+<a href="https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications">How to Structure Large Flask Applications</a>
 
 ## 이상적인 구조
-<https://github.com/JoMingyu/Flask-Large-Application-Example>
+<a href="https://github.com/JoMingyu/Flask-Large-Application-Example">Flask Large Application Example</a>
 
 ## 팁
 1. request 데이터를 받는 문법에 따라, Flask는 응답을 자동으로 처리하는 경우가 있습니다.
@@ -41,8 +41,7 @@ class Test(Resource):
         return Response('', 200)
 ~~~
 4. Flask-JWT는 Flask 기반 JWT 라이브러리들 중 Star가 가장 많지만 개발이 중지된 상태이며 확장성이 그리 높지 않습니다. Flask-JWT-Extended 라이브러리를 사용하는 편이 더 좋습니다.
-5. Swagger로 서버를 문서화했으나 API 문서를 정상적으로 불러오지 못한다면, 서버 측에서 CORS 헤더를 정상적으로 반환하는지 확인하기 바랍니다.
-6. Flask의 한가지 단점은 인코딩 문제입니다. 모든 텍스트가 유니코드로 처리됩니다. 이를 해결하기 위해선 json 모듈의 도움을 받아야 합니다.
+5. Flask의 한가지 단점은 인코딩 문제입니다. 모든 텍스트가 유니코드로 처리됩니다. 이를 해결하기 위해선 json 모듈의 도움을 받아야 합니다.
 ~~~
 import json
 
