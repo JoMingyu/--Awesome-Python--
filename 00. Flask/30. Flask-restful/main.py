@@ -15,6 +15,14 @@ app = Flask(__name__)
 app.register_blueprint(blueprint)
 # 블루프린트 등록
 
-# @api.resource()도 들어가야 함
+from flask_restful import Resource
+# api 객체에 add_resource하는 방법도 있으나, 데코레이터를 이용할 수도 있음
+@api.resource('/test')
+class TestResource(Resource):
+    def get(self):
+        return {
+            'msg': 'hello!'
+        }
+
 if __name__ == '__main__':
     app.run(debug=True)
