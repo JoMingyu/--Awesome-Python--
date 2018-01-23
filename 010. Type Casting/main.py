@@ -5,7 +5,7 @@ print(type(num))
 # 파이썬은 빌트인을 통해 손쉽게 타입 캐스팅이 가능하다
 num = int(num)
 print(type(num))
-# 실제로 타입이 바뀐 걸 볼 수가 있다. 캐스팅에 문제가 있으면 ValueError를 뿜는다
+# 실제로 타입이 바뀐 걸 볼 수가 있다. 캐스팅에 문제가 있으면 ValueError가 발생한다(str('a') 등)
 
 str()
 int()
