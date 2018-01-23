@@ -1,4 +1,4 @@
-# TIL-Python
+# Awesome-Python
 Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 
 <https://www.python.org/>
@@ -10,13 +10,12 @@ Explicit is better than implicit.
 Simple is better than complex.
 ...
 ~~~
+TIL로 꾸준한 공부와 복습을 위해 정리하던 레포가 점점 커져 예제 저장소가 되었습니다. 제가 정리해 둔 예제들을 통해 저만 복습하는 게 아니라, 많은 파이썬 사용자들에게 도움이 되었으면 좋겠습니다. 필요한 예제가 있다면 Issue로 남기고, 기존 예제 개션/새로운 예제를 만들어 PR해 주시는 것도 큰 도움이 됩니다.
 
 ## Python
 1991년에 발표된 인터프리터, 객체지향적, 동적 타이핑 언어. 가장 큰 특징이자 장점은 '반복 가능한 객체'이다. 반복 가능한 객체 덕분에 Comprehension과 Ternary operator, unpack, lambda 와 같은 개념이 생겨났다. 현재는 언어의 유연함이나 Glue Language로서 생겨난 Django, Flask, Tensorflow, Keras 등의 수많은 프레임워크와 라이브러리로 인해 엄청나게 많은 사람들이 사용하고 있다. 문법이 쉬워 배우기는 쉽지만, 다른 언어가 다 그렇듯 잘 쓰기는 어렵다.
 
-다른 언어들에서는 쉽게 찾아볼 수 없는 파이썬만의 독특한 매력이 있다. 파이썬이 성장하며 '가장 아름다운 하나의 답이 존재한다'라는 파이썬의 명제 또한 성장해 왔다. Beautiful is better than ugly, Explicit is better than implicit, Simple is better than complex, Complex is better than complicated라는 4가지 철학 또한 수많은 파이썬 개발자들이 명심하고 있다. 따라서 다른 언어들의 코딩 스타일은 각자의 취향에 맞게 진화하는 반면(C 계열의 중괄호 위치 등), 파이썬은 위의 철학들을 만족시키는 하나의 스타일로 진화한다. 이에 PEP8이라는 코딩 컨벤션이 자리를 잡으며 파이썬스러움(Pythonic)이라는 단어가 유명해지게 되었는데, 복잡하지 않으면서 의미가 명확하고, 심플한 파이썬의 철학을 따르는 코드들을 지칭하는 개념이다. 물론, 이와 같이 선택지를 좁히는 게 자유도를 제약한다는 평도 있다.
-
-자바에서 private 필드에 접근하고 싶다면 리플렉션을 사용하거나, 클래스의 소스코드 자체를 편집해 버리면 된다. 파이썬에는 이에 대해 문화적인 차이가 존재한다. 파이썬에서는 private와 같은 보안에 대한 속임수를 없애버리고 프로그래머로 하여금 책임감을 갖도록 장려한다. 그리고 이는 실제로 효과가 있다고 한다. PEP8에서는 변수명 앞에 언더스코어(_, 또는 __)를 붙이는 방법으로 protected, 또는 private 변수를 모방한다. 원칙적으로 '해당 변수로의 접근이 막혀있지 않더라도 접근하지 말라'라는 의미로 사용된다.
+다른 언어들에서는 쉽게 찾아볼 수 없는 파이썬만의 독특한 매력이 있다. 파이썬이 성장하며 '가장 아름다운 하나의 답이 존재한다'라는 파이썬의 명제 또한 성장해 왔다. Beautiful is better than ugly, Explicit is better than implicit, Simple is better than complex, Complex is better than complicated라는 4가지 철학 또한 수많은 파이썬 개발자들이 명심하고 있다. 따라서 다른 언어들의 코딩 스타일은 각자의 취향에 맞게 진화하는 반면(C 계열의 중괄호 위치 등), 파이썬은 위의 철학들을 만족시키는 하나의 스타일로 진화한다. 이에 PEP8이라는 제안서가 코딩 컨벤션으로 자리를 잡으며 파이썬스러움(Pythonic)이라는 단어가 유명해지게 되었는데, 복잡하지 않으면서 의미가 명확하고, 심플한 파이썬의 철학을 따르는 코드들을 지칭하는 개념이다. 물론, 이와 같이 선택지를 좁히는 게 자유도를 제약한다는 평도 있다.
 
 파이썬은 C로 구현되어 있다. .NET 위에서 동작하는 IronPython, C기반 파이썬에서 스택을 없앤 Stackless Python, JVM 위에서 돌아가는 Jython, 파이썬 자체로 구현된 Pypy등이 있다. 파이썬으로 할 수 있는 일들은 여기서 볼 수 있다.
 
@@ -24,7 +23,7 @@ Simple is better than complex.
 
 이 레포에서는 Python 3.6을 기준으로 코드들을 정리해 두었다.
 
-## Books
+## 이 책 좋아요
 - 파이썬을 여행하는 히치하이커를 위한 안내서
 - 처음 시작하는 파이썬
 - 고성능 파이썬
@@ -45,7 +44,7 @@ Simple is better than complex.
 <a href="https://github.com/JoMingyu/Schapi">Schapi</a>
 
 ### Flask
-<a href="https://github.com/Modu-Buy-App/Modu-Buy_Backend">모두바이</a>
+<a href="https://github.com/Modu-Buy-App/Modu-Buy_Backend">모두바이</a>  
 <a href="https://github.com/DSM-DMS/Project-DMS-Backend">DMS Backend Rebuilding</a>  
 <a href="https://github.com/Gongjung-Bunhae-App/Gongjung-Bunhae_Backend">14회 AppJam : 공중분해</a>  
 <a href="https://github.com/JoMingyu/BookCheck-Backend">책첵</a>  
@@ -74,20 +73,6 @@ Simple is better than complex.
 <a href="https://github.com/damnever/pigar">Pigar</a>  
 <a href="https://github.com/pypa/twine">Twine</a>  
 <a href="https://github.com/timothycrosley/isort">Isort</a>
-
-## 알아 두면 쓸데 많은 파이썬의 개념들
-- 언더스코어(_)의 활용 : protected 표현, 매직 메소드 등
-- Python 3.6의 fstring
-- Comprehension과 unpack
-- Dictionary와 List의 여러가지 표현(_dict['new_name'] = _dict.pop('legacy_name'), sorted(_list, key=lambda) 등)
-- lambda
-- ternary operator(삼항 연산자) : if ternary&tupled ternary
-- 단순 객체복제, Shallow copy, Deep copy의 차이
-- docstring
-- assertion
-- with-as, import-as
-- datetime, pickle, re, json, urllib, bs 등의 메이저한 패키지
-- pip(requirements.txt, pigar, setup.py, twine)
 
 ## 팁
 - double leading underscore 방식의 네이밍(__example)은 파이썬 인터프리터에 의해 맹글링되기 때문에 private처럼 보이는 효과가 있는데, 이런 특징을 private를 표현하기 위해 사용하진 않아야 합니다.
