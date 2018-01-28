@@ -32,6 +32,7 @@ TIL로 꾸준한 공부와 복습을 위해 정리하던 레포가 점점 커져
 
 ## Best Practices
 <a href="https://gist.github.com/sloria/7001839">The Best of the Best Practices Guide for Python</a>   
+<a href="https://github.com/faif/python-patterns">A collection of design patterns/idioms in Python</a>  
 <a href="http://book.pythontips.com/en/latest/ternary_operators.html">Python Tips</a>  
 <a href="https://github.com/SigmaQuan/Better-Python-59-Ways">Better Python 59 Ways</a>
 
