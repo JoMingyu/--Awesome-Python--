@@ -78,10 +78,10 @@ TIL로 꾸준한 공부와 복습을 위해 정리하던 레포가 점점 커져
 ## 팁
 - double leading underscore 방식의 네이밍(__example)은 파이썬 인터프리터에 의해 맹글링되기 때문에 private처럼 보이는 효과가 있는데, 이런 특징을 private를 표현하기 위해 사용하진 않아야 합니다.
 - 한 슬라이스에 start, end, stride를 함께 쓰지 않는 것이 좋습니다. stride 문법이 종종 예상치 못한 동작을 해서 버그를 만들어내기도 하고, 슬라이싱 문법의 stride 부분이 혼란스러울 수 있습니다.
-- map과 filter 대신 Comprehension을 사용합시다.
 - Comprehension에서 표현식을 두 개 이상 사용하지 않는 것이 좋습니다. 한 Comprehension에서 for가 두 개 중첩되어 있다고 치면, 읽기 정말 어렵습니다.
 - Comprehension의 크기가 큰데도 불구하고 Comprehension에 고집을 부리지 맙시다. Generator가 있습니다.
 - 인덱스 기반 loop를 위해 range(len())을 사용하기보다 enumerate()를 사용합시다.
+- 헬퍼 함수를 잘 만들어 사용할 줄 알아야 합니다.(comprehension 안에서 복잡한 작업이 필요할 경우 등)
 - import는 빌트인 - site-package - 사용자 정의 모듈 순으로 합시다.
 - 함수의 기본 인수는 모듈 로드 시점의 함수 정의 과정에서 딱 한 번만 평가됩니다. 따라서 값이 동적인 키워드 인수에는 기본값으로 None을 사용하고, 함수의 docstring에 실제 기본 동작을 문서화합시다.
 - 키워드 전용 인수를 사용하면 명료성을 강요할 수 있습니다.
