@@ -4,7 +4,7 @@ def _sum(x, y):
 
 print(_sum(2, 4))
 
-# lambda 표현으로는?
+# lambda 표현으로는
 print((lambda x, y: x + y)(10, 20))
 # return이 없고 반환값을 만드는 표현식만 있음. 익명으로 생성되므로 필요한 곳에서 즉시 사용하고 버릴 수 있음
 # lambda는 변수에 할당할 수 있는데, 선언식 lambda는 PEP8 표준에 어긋나므로 사용하지 말자
@@ -24,4 +24,4 @@ print([x ** 2 for x in range(5)])
 print(list(filter(lambda x: x < 5, range(10))))
 
 # 리스트를 만들어내는 건 Comprehension, 만들어진 리스트를 컨트롤하는건 lambda 방식이 적합한 것 같다
-# 근데 람다는 반로썸 아저씨가 싫어한다. Comprehension으로 대체 가능하기 때문인 듯
+# 근데 이런 식의 lambda는 Comprehension으로 대체 가능하며 더 명확하기 때문에 map과 filter는 파이썬 사용자들이 꺼리는 함수로 알려져 있다
