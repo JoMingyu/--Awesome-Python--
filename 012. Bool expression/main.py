@@ -1,4 +1,7 @@
-﻿# Python의 bool 표현식은 간단한 조건 검사를 할 때 유용하다
+﻿# Python의 bool expression은 간단한 조건 검사를 할 때 유용하다
+# condition or condition
+# condition and condition
+# ...
 condition = True
 print(condition or 100)
 

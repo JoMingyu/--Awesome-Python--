@@ -1,13 +1,15 @@
-﻿# 구조적으로 프로그래밍을 하기 위해 필요한 조건문
+﻿# 파이썬의 if문은
 # 1. if - elif - else 형태로 조건분기를 구성한다
-# 2. if 안에 소괄호를 씌우지 않는다
+# 2. 조건문 안에 소괄호를 씌우지 않는다
 # 3. 중괄호가 아니라 콜론과 indent로 블럭을 구분한다
 
+# if condition:
+#     ...
 if True:
     print('True')
 
 # 기본 비교 연산자는 다른 언어들이랑 똑같다(<, >, =<, => 등등)
-# 논리 연산자는 조금 다르다(and, or, not)
+# 논리 연산자(보편적으로 생각하는 &&, ||, !)는 조금 더 직관적인 형태
 
 if True or False:
     print('True of False')
@@ -33,7 +35,7 @@ elif 1 in lst:
 else:
     print("I don't know")
 
-# 파이썬에는 ternary operator(삼항 연산자)가 if에 있다
+# 파이썬에는 ternary operator(삼항 연산자)를 위한 문법적인 지원이 if에 존재한다
 value = 4
 print('홀수' if value % 2 else '짝수')
 # condition_is_true if condition else condition_is_false
