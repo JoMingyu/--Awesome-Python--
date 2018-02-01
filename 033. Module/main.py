@@ -1,5 +1,5 @@
 ﻿# 코드 재사용을 위해서 모듈화는 참 중요하다
-# 여기도 main 모듈이다
+# 여기도 'main'이라는 이름을 가진 모듈이다(main.py)
 
 # another_module을 불러오려면 import를 쓰면 된다
 import another_module
@@ -15,7 +15,8 @@ from another_module import *
 say_hello()
 say_hi()
 
-# PEP8 표준의 import
+# PEP8 표준의 import는
+
 # 항상 파일의 맨 위에 import문을 놓는다
 # 모듈을 import할 때는 항상 모듈의 절대 이름을 사용하며 현재 모듈을 기준으로 한 상대 경로를 사용하지 않는다
 # 상대적인 import를 해야 한다면 명시적인 구문을 써서 from . import another_module이라고 한다
