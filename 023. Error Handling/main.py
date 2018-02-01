@@ -1,6 +1,6 @@
 ﻿# 파이썬은 Exception(예외) 말고 Error(오류)라는 표현을 쓴다
 # 에러 핸들링을 위해선 try - except - finally 구문을 사용한다
-# 가장 보편적인 오류인 IndexError를 잡아 보자
+# 보편적인 오류인 IndexError를 잡아 보자
 lst = [1, 2, 3]
 try:
     print(lst[3])
@@ -25,3 +25,4 @@ except:
 else:
     print('Success')
 # try문 내에서 오류가 발생하지 않을 경우 else문 내의 작업을 수행한다
+# try에서 오류 발생 -> except, 오류 미발생 -> else, 이후 finally를 실행하게 된다
