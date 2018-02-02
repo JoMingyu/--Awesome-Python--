@@ -5,12 +5,13 @@ pip install flask
 ~~~
 <https://github.com/pallets/flask>
 
-장고보다 Star가 1400개나 더 많다!
-
 ## 개요
 Python으로 작성된 마이크로 서버 프레임워크. 두개의 외부 라이브러리(Jinja2 템플릿 엔진, Werkzeug WSGI 툴킷)에 의존하고 있음. Flask의 '마이크로'는 핵싱 기능만 간결하게 유지하되 쉽게 확장 가능한 것을 목적으로 한다는 의미를 가지고 있다.
 
 Flask는 내부적으로 Thread local 방식을 사용한다. Thread-safe한 상태를 유지하기 위해서 하나의 요청에서 함수들이 돌아가며 객체를 주고받을 필요가 없도록 했다. 이 때문에 문맥(Context)를 이해하는 일이 매우 중요하다.
+
+## 주의사항
+Flask 자체에 내장된 WSGI 서버는 배포용으로 설계된 것이 아니므로, production level에서 서버를 구동시킬 경우 gunicorn이나 uWSGI와 같은 적절한 WSGI 서버를 붙여 주는 것이 좋습니다.
 
 ## Flask best practices
 <a href="https://github.com/yoshiya0503/Flask-Best-Practices/wiki">Flask Best Practices(일본어)</a>  
