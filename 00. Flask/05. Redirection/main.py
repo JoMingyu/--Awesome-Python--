@@ -18,7 +18,7 @@ def test():
     return 'here is test'
 
 
-# 만약 함수명을 통해 uri를 얻어내고 싶다면, url_for()를  쓰자
+# 만약 함수명을 통해 uri를 얻어내고 싶다면, url_for 함수를  쓰자
 @app.route('/index2')
 def index2():
     return redirect(url_for('test'))
