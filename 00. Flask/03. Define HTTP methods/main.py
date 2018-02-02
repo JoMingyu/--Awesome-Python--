@@ -1,14 +1,13 @@
 ﻿from flask import Flask
 
 app = Flask(__name__)
-# 평범하게 객체를 생성하고
 
 
 @app.route('/')
 def index():
     return 'hello'
 # '/'에 라우팅을 진행했다
-# 근데 이게 기본으로 GET 메소드에서만 작동한다
+# 해당 API endpoint는 기본적으로 GET 메소드에서만 작동한다
 # 대부분 웹서버는 HTTP 메소드를 지정해주어야 할 때가 많다
 
 
