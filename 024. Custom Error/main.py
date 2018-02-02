@@ -1,5 +1,5 @@
 # 커스텀 에러도 만들 수 있다
-# Exception 클래스를 상속받자
+# Java에서 Exception 클래스를 상속받아 구현하듯, 여기서도 Exception 클래스를 상속받자
 
 
 class CustomError(Exception):

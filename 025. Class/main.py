@@ -4,16 +4,17 @@
 
 
 class Account:
-    # 일단 클래스 변수와 인스턴스 변수로 나뉜다
+    # 클래스 내부의 변수는 '클래스 변수'와 '인스턴스 변수'로 나뉜다
+    
     num_of_account = 0
-    # 이건 클래스 변수
+    # 클래스 변수
 
     # 생성자
     def __init__(self, id, pw):
-        # 객체만이 가지는 필드를 가리키는 self 키워드가 있음. this와 거의 동일
+        # 객체 자체를 가르키는 self 키워드가 있음. Java의 this와 거의 동일
         self.id = id
         self.pw = pw
-        # 이건 인스턴스 변수
+        # 인스턴스 변수
         Account.num_of_account += 1
         # 클래스 변수의 접근
 
@@ -23,6 +24,8 @@ class Account:
         Account.num_of_account -= 1
 
     def login(self, id, pw):
+        # 클래스의 메소드는 객체 자신을 가르키는 self를 명시적으로 받아야 함
+        # self는 객체에서 메소드를 call하면 자동으로 채워짐
         if self.id == id and self.pw == pw:
             return True
         else:
@@ -34,7 +37,6 @@ acc2 = Account('city7310', 'PlanB')
 
 print(Account.num_of_account)
 # 클래스 변수 접근
-# 파이썬은 private 필드가 언어 차원에서 존재하지 않는 듯
 
 print(acc1.login('idid', 'pwpw'))
 print(acc2.login('hello', 'pw'))
