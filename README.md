@@ -10,7 +10,7 @@ Explicit is better than implicit.
 Simple is better than complex.
 ...
 ~~~
-TIL로 꾸준한 공부와 복습을 위해 정리하던 레포가 점점 커져 예제 저장소가 되었습니다. 제가 정리해 둔 예제들을 통해 저만 복습하는 게 아니라, 많은 파이썬 사용자들에게 도움이 되었으면 좋겠습니다. 필요한 예제가 있다면 Issue로 남기고, 기존 예제 개션/새로운 예제를 만들어 PR해 주시는 것도 큰 도움이 됩니다.
+TIL로 꾸준한 공부와 복습을 위해 정리하던 레포가 점점 커져 예제 저장소가 되었습니다. 제가 정리해 둔 예제들을 통해 저만 복습하는 게 아니라, 많은 파이썬 사용자들에게 도움이 되었으면 좋겠습니다. 필요한 예제가 있다면 Issue로 남기고, 기존 예제 개선/새로운 예제를 만들어 PR해 주시는 것도 큰 도움이 됩니다.
 
 ## Python
 1991년에 발표된 인터프리터, 객체지향적, 동적 타이핑 언어. 가장 큰 특징이자 장점은 '반복 가능한 객체'이다. 반복 가능한 객체 덕분에 Comprehension과 Ternary operator, unpack, lambda 와 같은 개념이 생겨났다. 현재는 언어의 유연함이나 Glue Language로서 생겨난 Django, Flask, Tensorflow, Keras 등의 수많은 프레임워크와 라이브러리로 인해 엄청나게 많은 사람들이 사용하고 있다. 문법이 쉬워 배우기는 쉽지만, 다른 언어가 다 그렇듯 잘 쓰기는 어렵다.
@@ -29,6 +29,9 @@ TIL로 꾸준한 공부와 복습을 위해 정리하던 레포가 점점 커져
 - 고성능 파이썬
 - 파이썬 코딩의 기술(Effective Python)
 - 전문가를 위한 파이썬
+
+## 파이썬 예제 모음
+<a href="https://www.programcreek.com/python/">ProgramCreek.com/python</a>
 
 ## Best Practices
 <a href="https://gist.github.com/sloria/7001839">The Best of the Best Practices Guide for Python</a>   
