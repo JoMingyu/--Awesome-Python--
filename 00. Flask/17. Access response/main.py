@@ -7,13 +7,11 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     response = make_response('Body data', 200)
-    # response 객체 얻기. 함수엔 반환할 body data를 넣어 준다
+    # 1. flask.helpers.make_response 함수를 이용한 방법
 
-    # response 객체에선 많은 것들을 건드릴 수 있다
-    # 대표적으로 헤더, 쿠키가 있는데 쿠키는 나중에 하려고 하니까 헤더만 써보자
-
-    # 그냥 딕셔너리 쓰는거랑 똑같다
+    # 헤더를 설정해 보자
     response.headers['Something'] = 'Value'
+    # werkzeug.datastructures.Headers 클래스의 인스턴스
 
     return response
 
@@ -21,8 +19,10 @@ def index():
 @app.route('/2')
 def index2():
     response = Response('Hello', 200)
-    # Response 클래스를 이용한 방법
-    # 이 방법은 자동완성이 지원돼서 좋다
+    # 2. flask.wrappers.Response 클래스를 이용한 방법
+    # flask.helpers에서 make_response를 뜯어보면, 결국은 Response 클래스를 이용해 객체를 만들어 낸다
+    # https://github.com/pallets/flask/blob/master/flask/wrappers.py 가장 하단의 Response 클래스를 살펴보면 된다
+
     return response
 
 app.run(debug=True)

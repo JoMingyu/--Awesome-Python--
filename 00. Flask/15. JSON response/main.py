@@ -21,7 +21,7 @@ def json():
     # 위의 두 경우는 Content Type이 text/html이기 때문에 필요에 따라 따로 헤더를 적용해줘야 하는 등의 번거로움이 있다
 
     # flask의 jsonify는 flask.wrappers.Response의 객체를 반환한다
-    # Content Type이 application/json으로 설정되고, 반환 데이터도 문자열 처리된다
+    # Content Type이 application/json으로 설정되고, 반환 데이터도 잘 직렬화되어 처리된다
     from flask import jsonify
 
     return jsonify(response)
