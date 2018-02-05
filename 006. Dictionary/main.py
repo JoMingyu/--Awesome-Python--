@@ -20,6 +20,9 @@ print(dic.get('keykey'))
 # 해당 key가 딕셔너리에 있는지 알고 싶으면
 print('hello' in dic)
 
+print(dic.items())
+# [(key, value), (key, value)] 형태로 딕셔너리의 데이터를 튜플로 이루어진 리스트로 만들어 리턴
+
 # key-value 쌍 삭제하는 건 리스트 때 썼던 del 키워드
 del dic[123]
 
