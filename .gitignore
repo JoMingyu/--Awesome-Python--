@@ -165,3 +165,4 @@ venv.bak/
 .mypy_cache/
 
 # End of https://www.gitignore.io/api/python,pycharm+all
+.DS_Store
