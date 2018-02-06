@@ -43,6 +43,19 @@ Simple is better than complex.
 ~~~
 파이썬 계명에 대한 생생한 역사는 <a href="https://www.wefearchange.org/2010/06/import-this-and-zen-of-python.html">배리 바르소의 블로그 게시글 'import this and Zen of Python'</a>에서 확인할 수 있습니다.
 
+### 개인적으로 정말 중요하다 생각하는 팁
+- double leading underscore 방식의 네이밍(__example)은 파이썬 인터프리터에 의해 맹글링되기 때문에 private처럼 보이는 효과가 있는데, 이런 특징을 private를 표현하기 위해 사용하진 않아야 합니다.
+- 한 슬라이스에 start, end, stride를 함께 쓰지 않는 것이 좋습니다. stride 문법이 종종 예상치 못한 동작을 해서 버그를 만들어내기도 하고, 슬라이싱 문법의 stride 부분이 혼란스러울 수 있습니다.
+- Comprehension에서 표현식을 두 개 이상 사용하지 않는 것이 좋습니다. 한 Comprehension에서 for가 두 개 중첩되어 있다고 치면, 읽기 정말 어렵습니다.
+- Comprehension의 크기가 큰데도 불구하고 Comprehension에 고집을 부리지 맙시다. Generator가 있습니다.
+- 인덱스 기반 loop를 위해 range(len())을 사용하기보다 enumerate()를 사용합시다.
+- 헬퍼 함수를 잘 만들어 사용할 줄 알아야 합니다.(comprehension 안에서 복잡한 작업이 필요할 경우 등)
+- import는 빌트인 - site-package - 사용자 정의 모듈 순으로 합시다.
+- 함수의 기본 인수는 모듈 로드 시점의 함수 정의 과정에서 딱 한 번만 평가됩니다. 따라서 값이 동적인 키워드 인수에는 기본값으로 None을 사용하고, 함수의 docstring에 실제 기본 동작을 문서화합시다.
+- 키워드 전용 인수를 사용하면 명료성을 강요할 수 있습니다.
+- 리스트에서 원하는 값을 제거하려면 del list_[list_.index()]보다 list_.remove() 구문이 더 좋습니다.
+- 데이터베이스 컨트롤에 SQLAlchemy를 사용하면 정말 편합니다.
+
 ## 이 책 좋아요
 - 파이썬을 여행하는 히치하이커를 위한 안내서
 - 처음 시작하는 파이썬
@@ -97,19 +110,6 @@ Simple is better than complex.
 <a href="https://github.com/damnever/pigar">Pigar</a>  
 <a href="https://github.com/pypa/twine">Twine</a>  
 <a href="https://github.com/timothycrosley/isort">Isort</a>
-
-## 팁
-- double leading underscore 방식의 네이밍(__example)은 파이썬 인터프리터에 의해 맹글링되기 때문에 private처럼 보이는 효과가 있는데, 이런 특징을 private를 표현하기 위해 사용하진 않아야 합니다.
-- 한 슬라이스에 start, end, stride를 함께 쓰지 않는 것이 좋습니다. stride 문법이 종종 예상치 못한 동작을 해서 버그를 만들어내기도 하고, 슬라이싱 문법의 stride 부분이 혼란스러울 수 있습니다.
-- Comprehension에서 표현식을 두 개 이상 사용하지 않는 것이 좋습니다. 한 Comprehension에서 for가 두 개 중첩되어 있다고 치면, 읽기 정말 어렵습니다.
-- Comprehension의 크기가 큰데도 불구하고 Comprehension에 고집을 부리지 맙시다. Generator가 있습니다.
-- 인덱스 기반 loop를 위해 range(len())을 사용하기보다 enumerate()를 사용합시다.
-- 헬퍼 함수를 잘 만들어 사용할 줄 알아야 합니다.(comprehension 안에서 복잡한 작업이 필요할 경우 등)
-- import는 빌트인 - site-package - 사용자 정의 모듈 순으로 합시다.
-- 함수의 기본 인수는 모듈 로드 시점의 함수 정의 과정에서 딱 한 번만 평가됩니다. 따라서 값이 동적인 키워드 인수에는 기본값으로 None을 사용하고, 함수의 docstring에 실제 기본 동작을 문서화합시다.
-- 키워드 전용 인수를 사용하면 명료성을 강요할 수 있습니다.
-- 리스트에서 원하는 값을 제거하려면 del list_[list_.index()]보다 list_.remove() 구문이 더 좋습니다.
-- 데이터베이스 컨트롤에 SQLAlchemy를 사용하면 정말 편합니다.
 
 ## 파이썬 엑셀 라이브러리 비교
 - 읽기 : xlrd, openpyxl
