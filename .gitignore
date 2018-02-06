@@ -166,3 +166,4 @@ venv.bak/
 
 # End of https://www.gitignore.io/api/python,pycharm+all
 .DS_Store
+.vscode/
