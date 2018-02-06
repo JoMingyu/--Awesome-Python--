@@ -2,6 +2,37 @@
 Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 
 <https://www.python.org/>
+
+TIL로 꾸준한 공부와 복습을 위해 정리하던 레포가 점점 커져 예제 저장소가 되었습니다. 제가 정리해 둔 예제들을 통해 저만 복습하는 게 아니라, 많은 파이썬 사용자들에게 도움이 되었으면 좋겠습니다. 필요한 예제가 있다면 Issue로 남기고, 기존 예제 개선/새로운 예제를 만들어 PR해 주시는 것도 큰 도움이 됩니다.
+
+## Python
+1991년에 발표된 인터프리터, 객체지향적, 동적 타이핑 언어. 가장 큰 특징이자 장점은 '반복 가능한 객체'이다. 반복 가능한 객체 덕분에 Comprehension과 unpack, lambda 와 같은 개념이 생겨났다. 현재는 언어의 유연함이나 Glue Language로서 생겨난 Django, Flask, Tensorflow, Keras 등의 수많은 프레임워크와 라이브러리로 인해 엄청나게 많은 사람들이 사용하고 있다. 문법이 쉬워 배우기는 쉽지만, 다른 언어가 다 그렇듯 잘 쓰기는 어렵다.
+
+다른 언어들에서는 쉽게 찾아볼 수 없는 파이썬만의 독특한 매력이 있다. 파이썬이 성장하며 '가장 아름다운 하나의 답이 존재한다'라는 파이썬의 명제 또한 성장해 왔다. Beautiful is better than ugly, Explicit is better than implicit, Simple is better than complex, Complex is better than complicated라는 4가지 철학 또한 존재한다. 따라서 다른 언어들의 코딩 스타일은 각자의 취향에 맞게 진화하는 반면(C 계열의 중괄호 위치 등), 파이썬은 위의 철학들을 만족시키는 하나의 스타일로 진화한다. 이에 PEP8이라는 제안서(코드 스타일 가이드)가 보편적인 코딩 컨벤션으로 자리를 잡으며 파이썬스러움(Pythonic)이라는 단어가 유명해지게 되었는데, 복잡하지 않으면서 의미가 명확하고, 심플한 파이썬의 철학을 따르는 코드들을 지칭하는 개념이다.
+
+파이썬은 C로 구현되어 있다. 일반적으로 생각하는 파이썬은 CPython을 지칭한다. .NET 위에서 동작하는 IronPython, CPython에서 인터프리터를 호출 스택과 분리한 Stackless Python, 바이트코드로 컴파일되어 JVM 위에서 돌아가는 Jython, 파이썬 자체로 구현된 Pypy등이 있다. 파이썬으로 할 수 있는 일들은 여기서 볼 수 있다.
+
+<https://github.com/vinta/awesome-python>
+
+## Pythonic(파이썬스러운) 코드를 작성하기 위한 팁
+파이썬 코드는 프로그래밍을 한 번도 해보지 않은 사람조차도 소스 코드를 통해 프로그램이 어떤 일을 하는지 이해할 정도로 접근하기 쉽습니다. 가독성(readability)은 파이썬 디자인의 핵심이며, 코드 작성자가 코드를 작성하는 데 소요하는 시간보다 수많은 사람이 코드를 읽는데 소요하는 시간이 훨씬 길다는 인식이 바탕에 깔려 있습니다.
+
+파이썬 코드가 비교적 쉽게 이해되는 것은 완전한 코드 스타일 가이드라인 모음집(PEP8과 PEP20 개선 제안)과 Pythonic이라는 관용어 때문입니다. 베테랑 파이썬 개발자가 코드의 일부분을 '파이썬스럽지' 않다고 한다면, 그 부분은 일반적으로 통용되는 가이드라인에 따라 작성되지 않았으며, 가독성을 고려한 코드 작성에 실패했음을 의미합니다. 그러나 멍청한 일관성은 소인배의 발상(a foolish consistency is the hobgoblin of little minds)이긴 합니다.
+
+### PEP8(코드 스타일 가이드)
+<a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>은 파이썬을 위한 코드 스타일 가이드이며 네이밍, 코드 레이아웃, 공백 등의 스타일 주제를 다룹니다. 파이썬의 정석적인 코드 스타일을 배우고 싶다면, PEP8을 정독하는 것도 좋습니다. 대체로 파이썬 코드를 작성할 때에는 PEP8을 준수하는 것이 좋습니다. 코드 스타일이 통일되면 여러 개발자가 코드의 일관성을 유지하며 개발할 수 있게 됩니다. 작성하고 있는 파이썬 코드가 PEP8을 잘 따르고 있는지 확인하고 싶다면, pep8이라는 유틸리티를 사용해 봅시다.
+~~~
+$ pip install pep8
+$ pep8 sample.py
+sample.py:69:11: E401 multiple imports on one line
+sample.py:77:1: E302 expected 2 blank lines, found 1
+sample.py:88:5: E301 expected 1 blank line, found 0
+sample.py:222:32: W602 deprecated form of raising exception
+sample.py:544:21: W601 .has_key() is deprecated, use 'in'
+~~~
+
+### PEP20(파이썬 계명)
+<a href="https://www.python.org/dev/peps/pep-0020/">PEP20</a>은 파이썬 코드를 작성할 때 겪는 의사 결정에 도움을 주는 원리 모움입니다. 파이썬 쉘에서 import this를 입력하면 전문을 볼 수 있습니다. 이름과는 달리 20개가 아닌 19개의 경구만 포함되어 있고, 마지막 경구는 아직 작성되지 않았습니다.
 ~~~
 >>> import this
 
@@ -10,18 +41,7 @@ Explicit is better than implicit.
 Simple is better than complex.
 ...
 ~~~
-TIL로 꾸준한 공부와 복습을 위해 정리하던 레포가 점점 커져 예제 저장소가 되었습니다. 제가 정리해 둔 예제들을 통해 저만 복습하는 게 아니라, 많은 파이썬 사용자들에게 도움이 되었으면 좋겠습니다. 필요한 예제가 있다면 Issue로 남기고, 기존 예제 개선/새로운 예제를 만들어 PR해 주시는 것도 큰 도움이 됩니다.
-
-## Python
-1991년에 발표된 인터프리터, 객체지향적, 동적 타이핑 언어. 가장 큰 특징이자 장점은 '반복 가능한 객체'이다. 반복 가능한 객체 덕분에 Comprehension과 Ternary operator, unpack, lambda 와 같은 개념이 생겨났다. 현재는 언어의 유연함이나 Glue Language로서 생겨난 Django, Flask, Tensorflow, Keras 등의 수많은 프레임워크와 라이브러리로 인해 엄청나게 많은 사람들이 사용하고 있다. 문법이 쉬워 배우기는 쉽지만, 다른 언어가 다 그렇듯 잘 쓰기는 어렵다.
-
-다른 언어들에서는 쉽게 찾아볼 수 없는 파이썬만의 독특한 매력이 있다. 파이썬이 성장하며 '가장 아름다운 하나의 답이 존재한다'라는 파이썬의 명제 또한 성장해 왔다. Beautiful is better than ugly, Explicit is better than implicit, Simple is better than complex, Complex is better than complicated라는 4가지 철학 또한 수많은 파이썬 개발자들이 명심하고 있다. 따라서 다른 언어들의 코딩 스타일은 각자의 취향에 맞게 진화하는 반면(C 계열의 중괄호 위치 등), 파이썬은 위의 철학들을 만족시키는 하나의 스타일로 진화한다. 이에 PEP8이라는 제안서가 코딩 컨벤션으로 자리를 잡으며 파이썬스러움(Pythonic)이라는 단어가 유명해지게 되었는데, 복잡하지 않으면서 의미가 명확하고, 심플한 파이썬의 철학을 따르는 코드들을 지칭하는 개념이다. 물론, 이와 같이 선택지를 좁히는 게 자유도를 제약한다는 평도 있다.
-
-파이썬은 C로 구현되어 있다. .NET 위에서 동작하는 IronPython, C기반 파이썬에서 스택을 없앤 Stackless Python, JVM 위에서 돌아가는 Jython, 파이썬 자체로 구현된 Pypy등이 있다. 파이썬으로 할 수 있는 일들은 여기서 볼 수 있다.
-
-<https://github.com/vinta/awesome-python>
-
-이 레포에서는 Python 3.6을 기준으로 코드들을 정리해 두었다.
+파이썬 계명에 대한 생생한 역사는 <a href="https://www.wefearchange.org/2010/06/import-this-and-zen-of-python.html">배리 바르소의 블로그 게시글 'import this and Zen of Python'</a>에서 확인할 수 있습니다.
 
 ## 이 책 좋아요
 - 파이썬을 여행하는 히치하이커를 위한 안내서
