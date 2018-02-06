@@ -2,6 +2,8 @@
 from flask import Flask
 # 간단한 작업은 간단하게 할 수 있고, 큰 서버도 어렵지 않게 다룰 수 있다
 # = Flask는 핵심기능만 간결하게 유지하고, 확장 가능한 것을 목적으로 한다
+# https://github.com/pallets/flask
+# http://flask-docs-kr.readthedocs.io/ko/latest/
 
 app = Flask(__name__)
 # 1. 현재 모듈에 대해 Flask 객체를 생성
@@ -9,6 +11,7 @@ app = Flask(__name__)
 
 @app.route('/')
 # 2. 데코레이터를 통해 '/'에 라우팅
+# 한 endpoint에 대해 할당된 함수를 view function이라고 부른다
 def index():
     return 'hello'
     # 문자열 'hello'를 응답으로 전달. status code는 자동 200으로 처리

@@ -10,7 +10,8 @@ app = Flask(__name__)
 def index():
     return 'hello'
 
-# 이후 run 메소드를 통해서 앱을 실행시키는데, 기본적으로 localhost:5000에 열린다
+# 이후 run 메소드를 통해서 앱을 실행(서버를 시작)
+# https://github.com/pallets/flask/blob/master/flask/app.py#L822
 # host, port, debug, load_dotenv 매개변수가 있고,
 # **options 파라미터를 통해 use_evalex, use_reloader, use_debugger, threaded 등의 매개변수를 추가로 받는다
 app.run(host='127.0.0.1', port=9055, debug=True, threaded=True)
@@ -24,4 +25,3 @@ app.run(host='127.0.0.1', port=9055, debug=True, threaded=True)
 # threaded 파라미터를 True로 전달하며 요청을 모두 새로운 스레드에서 처리하도록 만들어줄 수 있음
 # 서버가 동시에 처리할 수 있는 스레드 수는 SocketServer.ThreadingMixIn 클래스를 사용하는데, 기본적으로 스레드 수에 제한을 설정하지 않으므로
 # 프로덕션 전용으로 서버를 구동하려면 gunicorn이나 uWSGI와 같은 적절한 WSGI 서버를 붙여 주는 것이 좋음
-
