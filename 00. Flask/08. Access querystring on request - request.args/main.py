@@ -1,6 +1,8 @@
-﻿from flask import Flask
+﻿# -- 알아볼 부분
+# flask.globals.request - https://github.com/pallets/flask/blob/master/flask/globals.py#L59
+
+from flask import Flask
 from flask import request
-# https://github.com/pallets/flask/blob/master/flask/globals.py#L59
 # werkzeug.local.LocalStack으로 context를 얻어오고, 해당 context의 request stack에서 'request' 속성을 가져오는 아주 복잡한 구조
 
 app = Flask(__name__)
