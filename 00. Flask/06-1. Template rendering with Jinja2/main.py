@@ -1,6 +1,8 @@
+# -- 알아볼 부분
+# flask.templating.render_template() - https://github.com/pallets/flask/blob/master/flask/templating.py#L121
+
 from flask import Flask
 from flask import render_template
-# https://github.com/pallets/flask/blob/master/flask/templating.py#L121
 
 app = Flask(__name__)
 
@@ -11,7 +13,7 @@ app = Flask(__name__)
 # 주의해야 할 것은, Flask는 templates라는 폴더에서 템플릿을 찾는다는 점이다
 # templates라는 폴더는 Flask 인스턴스가 초기화되는 곳과 같은 level의 디렉토리에 위치해야 한다
 # 물론 Flask 인스턴스 초기화 과정에서 템플릿 디렉토리를 변경할 수 있다
-# https://github.com/pallets/flask/blob/master/flask/app.py#L341
+# flask.app.Flask.__init__() - https://github.com/pallets/flask/blob/master/flask/app.py#L341
 
 
 @app.route('/index')
