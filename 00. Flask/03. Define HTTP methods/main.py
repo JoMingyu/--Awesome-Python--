@@ -1,4 +1,7 @@
-﻿from flask import Flask
+﻿# -- 알아볼 부분
+# flask.app.Flask.route() - https://github.com/pallets/flask/blob/master/flask/app.py#L1186
+
+from flask import Flask
 
 app = Flask(__name__)
 
@@ -20,7 +23,5 @@ def test():
 # 대/소문자에 영향을 받지 않는다. pOsT라고 써도 잘 된다
 
 # Flask의 라우팅은 route 데코레이터 -> add_url_rule 메소드 -> app.view_functions[endpoint] = view_func 순서로 진행된다
-# 아래의 코드를 차례차례 따라가 보도록 하자
-# https://github.com/pallets/flask/blob/master/flask/app.py#L1186
 
 app.run(debug=True)
