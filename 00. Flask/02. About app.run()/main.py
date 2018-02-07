@@ -1,8 +1,9 @@
-﻿from flask import Flask
-# import
+﻿# -- 알아볼 부분
+# flask.app.Flask.run() - https://github.com/pallets/flask/blob/master/flask/app.py#L822
+
+from flask import Flask
 
 app = Flask(__name__)
-# Flask 인스턴스 생성
 
 
 # 라우팅
@@ -11,7 +12,6 @@ def index():
     return 'hello'
 
 # 이후 run 메소드를 통해서 앱을 실행(서버를 시작)
-# https://github.com/pallets/flask/blob/master/flask/app.py#L822
 # host, port, debug, load_dotenv 매개변수가 있고,
 # **options 파라미터를 통해 use_evalex, use_reloader, use_debugger, threaded 등의 매개변수를 추가로 받는다
 app.run(host='127.0.0.1', port=9055, debug=True, threaded=True)
