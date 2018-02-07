@@ -1,9 +1,12 @@
+# -- 알아볼 부분
+# flask.redirect() - https://github.com/pallets/flask/blob/master/flask/__init__.py#L18
+# werkzeug.utils.redirect() - https://github.com/pallets/werkzeug/blob/master/werkzeug/utils.py#L344
+# flask.helpers.url_for() - https://github.com/pallets/flask/blob/master/flask/helpers.py#L201
+
 from flask import Flask
 from flask import redirect
-# https://github.com/pallets/flask/blob/master/flask/__init__.py#L18
 # = from werkzeug.utils import redirect
 from flask import url_for
-# https://github.com/pallets/flask/blob/master/flask/helpers.py#L201
 
 app = Flask(__name__)
 
