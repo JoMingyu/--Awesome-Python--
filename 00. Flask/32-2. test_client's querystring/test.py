@@ -10,10 +10,10 @@ class Case(unittest.TestCase):
         pass
 
     def testPost(self):
-        rv = self.client.post('/', data={'test_key': 123})
-        # post 메소드에 data라는 파라미터를 통해 body-data를 보내줄 수 있다
+        res = self.client.get('/', query_string={'test_key': 123})
+        # query_string이라는 파라미터를 통해 딕셔너리 타입을 전달하면 querystring을 전달할 수 있다
 
-        self.assertEqual(123, int(rv.data))
+        self.assertEqual(123, int(res.data))
 
 if __name__ == '__main__':
     unittest.main()

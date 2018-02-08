@@ -3,10 +3,10 @@ from flask import Flask, request
 app = Flask(__name__)
 
 
-# POST의 body data를 받는 간단한 라우팅
-@app.route('/', methods=['POST'])
+# GET 요청의 querystring을 받는 라우팅
+@app.route('/', methods=['GET'])
 def index():
-    return request.form['test_key']
+    return request.args['test_key']
 
 
 if __name__ == '__main__':
