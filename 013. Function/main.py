@@ -21,6 +21,7 @@ f()
 
 def s(a, b):
     # 매개변수를 가진 함수
+    # 위치 인자라고 부른다
     return a + b
 
 print(s(1, 3))
@@ -28,23 +29,38 @@ print(s(1, 3))
 
 def s(a=10, b=10):
     # 초기값을 선언해둘 수 있다
-    # 선택적 인자라고 부른다
+    # 키워드 인자라고 부른다
     return a + b
 
 print(s(a=30))
 # 매개변수 전달은 일부분만 할 수 있다
 
 
-def s3(*numbers):
+def s(*args):
     # 가변인자로 받을 땐 *을 써주면 된다
+    # 가변 위치 인자 리스트라고 부른다
     # 가변인자로 전달된 값들은 튜플로 처리된다
     _sum = 0
-    for number in numbers:
+    for number in args:
         _sum += number
 
     return _sum
 
-print(s3(1, 2, 3, 4))
+print(s(1, 2, 3, 4))
+
+
+def f(**kwargs):
+    # 가변 키워드 인자 딕셔너리라고 부른다
+    # 함수 안에 명시되지 않은 키워드 인자를 개수의 제약 없이 자유롭게 정의하여 함수에 전달할 수 있다
+    print(kwargs['some_param'])
+
+f(some_param=3)
+
+# 따라서 파이썬에서 함수의 인자는 4가지로 분류된다
+# 1. 위치 인자
+# 2. 키워드 인자
+# 3. 가변 위치 인자 리스트
+# 4. 가변 키워드 인자 딕셔너리
 
 
 def docstring_sample_sum(a, b):
