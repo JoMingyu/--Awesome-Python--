@@ -1,7 +1,6 @@
-﻿# RDB의 ORM 개념처럼, MongoDB와 같은 Document oriented NoSQL 데이터베이스는 ODM을 지원한다
-# pip install mongoengine
-
+﻿# pip install mongoengine
 from model import *
+# RDB의 ORM 개념처럼, MongoDB와 같은 Document oriented NoSQL 데이터베이스는 ODM을 지원한다
 
 # CRUD 중 C
 user = User(id='city7310', pw='password', name='조민규').save()

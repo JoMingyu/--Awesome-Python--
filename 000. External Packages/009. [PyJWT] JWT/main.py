@@ -1,6 +1,6 @@
 # pip install PyJWT
-# 이 패키지를 이용해서 JWT 토큰을 만들어낼 수 있다
 import jwt
+# 이 패키지를 이용해서 JWT 토큰을 만들어낼 수 있다
 
 encoded = jwt.encode({'some': 'payload'}, 'secret!@@#*!#', 'HS256')
 # 페이로드, 비밀 키, 암호화 알고리즘 순

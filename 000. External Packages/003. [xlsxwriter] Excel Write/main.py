@@ -1,9 +1,8 @@
-﻿# 엑셀 파일을 건드리자
+﻿# pip install xlsxwriter
+from xlsxwriter import Workbook
+# 엑셀 파일을 건드리자
 # 다른 엑셀 write 라이브러리인 pyexcelerate보다 느리긴 하지만 문서가 굉장히 잘 되어 있다
 # xlwt도 이것보다 빠르긴 하지만 .xlsx 지원을 안하니 제끼자
-# pip install xlsxwriter
-
-from xlsxwriter import Workbook
 
 wb = Workbook('Test.xlsx')
 # Workbook 클래스의 인스턴스를 받아야 함

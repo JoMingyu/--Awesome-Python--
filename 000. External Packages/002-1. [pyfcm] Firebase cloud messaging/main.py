@@ -1,7 +1,6 @@
-﻿# FCM 푸쉬 메시지를 전송하자
-# pip install pyfcm
-
+﻿# pip install pyfcm
 from pyfcm import FCMNotification
+# FCM Notification을 위한 모듈
 
 fcm = FCMNotification(api_key='')
 # FCM 서버 키를 통해 객체를 만들자

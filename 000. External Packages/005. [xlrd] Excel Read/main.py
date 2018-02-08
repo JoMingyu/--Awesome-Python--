@@ -1,9 +1,8 @@
-# openpyxl은 .xls 파일을 읽지 못한다
 # pip install xlrd
-# only read를 목적으로만 함
-# 엑셀 Read에선 속도가 가장 빠른 듯 싶다
-
 import xlrd
+# openpyxl은 .xls 파일을 읽지 못한다
+# xlrd는 only read를 목적으로만 함
+# 엑셀 Read에선 속도가 가장 빠른 듯 싶다
 
 wb = xlrd.open_workbook('test.xls')
 ws = wb.sheet_by_index(0)

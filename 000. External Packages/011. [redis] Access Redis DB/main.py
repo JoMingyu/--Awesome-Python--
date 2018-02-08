@@ -1,11 +1,11 @@
+# pip install redis
+import redis
 # 고성능 k-v store 인메모리 NoSQL 데이터베이스인 Redis DB에 접근하기 위한 패키지
 # NoSQL & Cache 솔루션이며 메모리 기반으로 구성, 명시적으로 삭제 또는 expire를 설정하지 않으면 데이터는 영구적으로 보존됨
 # 데이터베이스, 또는 Cache로 사용될 수 있으며 성능은 초당 2만 ~ 10만회
 
 # Redis 설치 : https://github.com/MicrosoftArchive/redis/releases
 # NET STOP Redis 후 Redis 설치 경로에서 redis-server.exe를 통해 redis server를 열어 주자
-# pip install redis
-import redis
 
 r = redis.Redis()
 # Redis 클래스는 StrictRedis 클래스를 상속받고 있는데, 이 클래스의 생성자는 기본적으로 host='localhost', port=6379

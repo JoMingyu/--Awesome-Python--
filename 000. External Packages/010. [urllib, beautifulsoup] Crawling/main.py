@@ -1,6 +1,6 @@
-﻿# urllib과 Beautifulsoup을 이용해서 급식 파싱 예제를 짜보도록 하자
-# pip install bs4
+﻿# pip install bs4
 from urllib.request import urlopen
+# urllib과 Beautifulsoup을 이용해서 급식 파싱 예제를 짜보도록 하자
 # https://docs.python.org/3.4/library/urllib.html
 # 간단하게 페이지의 요소들을 읽어오기만 할 것이기 때문에 urlopen만 있으면 충분하다
 from bs4 import BeautifulSoup

@@ -1,7 +1,6 @@
-﻿# 파이썬에서 mysql server에 접근해 보자
-# pip install pymysql
-
+﻿# pip install pymysql
 import pymysql
+# 파이썬에서 mysql server에 접근해 보자
 connection = pymysql.connect(
     host='localhost',
     user='root',

@@ -1,13 +1,8 @@
 ﻿# pip install pymongo
-# [MongoDB download page]
-# https://www.mongodb.com/dr/fastdl.mongodb.org/win32/mongodb-win32-x86_64-2008plus-ssl-3.4.7-signed.msi/download
-
-# 당연한 이야기지만 MongoClient로 접근하려면 mongod를 통해 mongodb 서버를 실행시켜 주어야 한다
-# MongoDB는 Server -> database -> collection -> document 순서로 작아지는 개념이다
-
 import pymongo
 from pymongo import MongoClient
 # MongoDB 서버에 접근하기 위한 모듈
+# 당연한 이야기지만 MongoClient로 접근하려면 mongod를 통해 mongodb 서버를 실행시켜 주어야 한다
 
 collection = None
 

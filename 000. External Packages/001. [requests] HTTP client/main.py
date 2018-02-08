@@ -1,7 +1,6 @@
-﻿# urllib 기반의 간단한 HTTP 요청을 위한 모듈
-# pip install requests
-
+﻿# pip install requests
 import requests
+# urllib 기반의 간단한 HTTP 요청을 위한 모듈
 
 # request 함수가 있으나 메소드 명시하는 게 좋다
 response = requests.get('http://naver.com')
