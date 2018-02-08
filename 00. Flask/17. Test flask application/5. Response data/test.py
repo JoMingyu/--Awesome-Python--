@@ -11,6 +11,9 @@ class Test(unittest.TestCase):
         self.assertEqual(200, res.status_code)
         # status_code 프로퍼티를 이용해 status code를 얻어올 수 있다
 
+        print(res.data.decode())
+        # Response data
+
     def testFail(self):
         res = self.client.get('/')
         self.assertEqual(200, res.status_code)

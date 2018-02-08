@@ -22,3 +22,10 @@ app.config['SECRET_KEY'] = 'qwe'
 # Flask의 세션에서 시큐어 쿠키를 구현하기 위한 key가 될 때도 있고
 # JWT 토큰 암호화를 위한 key가 될 때도 있다
 # 따라서 secret key는 환경 변수에서 관리해주는 편이 좋다
+
+# Config 값은 대표적으로 파이썬 모듈 기반, 클래스 기반, 환경 변수 기반, JSON으로 관리할 수 있다
+class SomeConfig(object):
+    SOME_CONFIG = 1
+
+app.config.from_object(SomeConfig)
+print(app.config['SOME_CONFIG'])

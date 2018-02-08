@@ -6,7 +6,8 @@ from logging.handlers import RotatingFileHandler
 app = Flask(__name__)
 # app에는 logger라는 property가 있다
 print(app.logger)
-# logger에는 handler를 달아줘야 하는데, 이를 위해서 RotatingFileHandler를 import했다
+# logger에는 handler를 달아줘야 하는데, 이를 위해서 파이썬 빌트인 패키지인 logging에서 RotatingFileHandler를 import했다
+# https://docs.python.org/3/library/logging.handlers.html - logger의 종류는 정말 많다
 
 
 @app.before_first_request
