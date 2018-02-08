@@ -1,3 +1,6 @@
+# -- 알아볼 부분
+# flask.globals.session - https://github.com/pallets/flask/blob/master/flask/globals.py#L60
+
 from flask import Flask, request, session
 # session이라는 객체가 있다. 얘는 세션을 사용하는 데에 도움을 준다
 print(type(session))
@@ -8,7 +11,7 @@ print(type(session))
 # 따라서 세션을 사용하기 위한 비밀 키를 설정해 두어야 한다
 app = Flask(__name__)
 app.secret_key = 'akqwoe1ifiasdfooidfom'
-# 실제로 서버를 배포해야 한다면, 비밀 키 하드코딩은 추천하지 않는다
+# 실제로 서버를 배포해야 한다면, 비밀 키는 환경 변수에서 가져오도록 하자
 
 
 @app.route('/', methods=['GET', 'POST', 'DELETE'])
