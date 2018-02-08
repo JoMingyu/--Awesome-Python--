@@ -1,4 +1,7 @@
-﻿from flask import Flask
+﻿# -- 알아볼 부분
+# flask.json.jsonify() - https://github.com/pallets/flask/blob/master/flask/json/__init__.py#L203
+
+from flask import Flask
 
 app = Flask(__name__)
 
@@ -14,6 +17,7 @@ def json():
     # 하지만 아래의 단순한 구문은 response에 성공하지 않는다
     # return data
     # TypeError: 'list' object is not callable
+    # JSON 데이터를 직렬화해 주어야 한다
     
     # json response를 위해 대표적으로 3가지 방법을 사용할 수 있다
     # 1. return str(data)

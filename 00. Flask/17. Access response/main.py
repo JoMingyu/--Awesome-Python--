@@ -1,4 +1,11 @@
-from flask import Flask, make_response, Response
+# -- 알아볼 부분
+# flask.helpersmake_response() - https://github.com/pallets/flask/blob/master/flask/helpers.py#L152
+# flask.wrappers.Response - https://github.com/pallets/flask/blob/master/flask/wrappers.py#L177
+# werkzeug.wrappers.BaseResponse - https://github.com/pallets/werkzeug/blob/master/werkzeug/wrappers.py#L718
+
+from flask import Flask
+from flask import make_response
+from flask import Response
 # make_response() 함수 또는 Response 클래스를 통해 response 객체를 만들 수 있다
 
 app = Flask(__name__)
@@ -8,6 +15,8 @@ app = Flask(__name__)
 def index():
     response = make_response('Body data', 200)
     # 1. flask.helpers.make_response 함수를 이용한 방법
+    # 들어가는 argument가 없다면 Response 클래스를 사용하고, 외의 경우 Flask 인스턴스의 make_response 메소드를 사용
+    # https://github.com/pallets/flask/blob/master/flask/app.py#L1847
 
     # 헤더를 설정해 보자
     response.headers['Something'] = 'Value'
@@ -20,8 +29,6 @@ def index():
 def index2():
     response = Response('Hello', 200)
     # 2. flask.wrappers.Response 클래스를 이용한 방법
-    # flask.helpers에서 make_response를 뜯어보면, 결국은 Response 클래스를 이용해 객체를 만들어 낸다
-    # https://github.com/pallets/flask/blob/master/flask/wrappers.py 가장 하단의 Response 클래스를 살펴보면 된다
 
     return response
 
