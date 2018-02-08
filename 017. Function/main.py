@@ -13,6 +13,11 @@ def print_hello():
 
 print_hello()
 
+# 파이썬의 함수는 일급 객체이므로, 변수에 할당할 수 있다
+# https://medium.com/@lazysoul/functional-programming-%EC%97%90%EC%84%9C-1%EA%B8%89-%EA%B0%9D%EC%B2%B4%EB%9E%80-ba1aeb048059
+f = print_hello
+f()
+
 
 def s(a, b):
     # 매개변수를 가진 함수
