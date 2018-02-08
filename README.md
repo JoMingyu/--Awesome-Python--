@@ -47,14 +47,53 @@ Simple is better than complex.
 - double leading underscore 방식의 네이밍(__example)은 파이썬 인터프리터에 의해 맹글링되기 때문에 private처럼 보이는 효과가 있는데, 이런 특징을 private를 표현하기 위해 사용하진 않아야 합니다.
 - 한 슬라이스에 start, end, stride를 함께 쓰지 않는 것이 좋습니다. stride 문법이 종종 예상치 못한 동작을 해서 버그를 만들어내기도 하고, 슬라이싱 문법의 stride 부분이 혼란스러울 수 있습니다.
 - Comprehension에서 표현식을 두 개 이상 사용하지 않는 것이 좋습니다. 한 Comprehension에서 for가 두 개 중첩되어 있다고 치면, 읽기 정말 어렵습니다.
-- Comprehension의 크기가 큰데도 불구하고 Comprehension에 고집을 부리지 맙시다. Generator가 있습니다.
-- 인덱스 기반 loop를 위해 range(len())을 사용하기보다 enumerate()를 사용합시다.
-- 헬퍼 함수를 잘 만들어 사용할 줄 알아야 합니다.(comprehension 안에서 복잡한 작업이 필요할 경우 등)
-- import는 빌트인 - site-package - 사용자 정의 모듈 순으로 합시다.
-- 함수의 기본 인수는 모듈 로드 시점의 함수 정의 과정에서 딱 한 번만 평가됩니다. 따라서 값이 동적인 키워드 인수에는 기본값으로 None을 사용하고, 함수의 docstring에 실제 기본 동작을 문서화합시다.
 - 키워드 전용 인수를 사용하면 명료성을 강요할 수 있습니다.
 - 리스트에서 원하는 값을 제거하려면 del list_[list_.index()]보다 list_.remove() 구문이 더 좋습니다.
-- 데이터베이스 컨트롤에 SQLAlchemy를 사용하면 정말 편합니다.
+#### 같은 값으로 채워진 길이가 N인 리스트 만들기
+~~~
+l = [0] * 4
+print(l)
+# [0, 0, 0, 0]
+~~~
+#### Comprehension에 고집을 부리지 않는다
+~~~
+l = [i for i in range(10000000)] # Comprehension
+l = (i for i in range(10000000)) # Generator
+print(next(l))
+# 0
+print(next(l))
+# 1
+~~~
+#### 인덱스 기반 loop는 Iterator에 최적화된 enumerate() 활용
+~~~
+l = [i for i in range(10)]
+for i in range(len(l)):
+    print(i, l[i])
+
+for i, item in enumerate(l):
+    print(i, item)
+~~~
+#### 함수 인자의 기본값 평가
+함수 인자의 기본값은 모듈 로드 시점의 함수 정의 과정에서 딱 한 번만 바인딩됩니다.
+~~~
+from datetime import datetime
+def f(now=datetime.now()):
+    print(str(now))
+~~~
+따라서 값이 동적인 키워드 인수에는 기본값으로 None을 사용하고, 함수의 docstring에 실제 기본 동작을 문서화하는 것이 좋습니다.
+#### unpacking
+리스트나 튜플의 길이를 알면, 각 element의 값을 여러 개의 변수에 지정할 수 있습니다.
+~~~
+a, b, c = [1, 2, 3]
+a, b = b, a
+# 두 변수의 값 치환을 위해 사용
+
+a, *anothers = [1, 2, 3, 4]
+# Python 3의 확장 언패킹
+
+a, _, _, b = [1, 2, 3, 4]
+# 값 무시
+~~~
 
 ## 이 책 좋아요
 - 파이썬을 여행하는 히치하이커를 위한 안내서
@@ -81,6 +120,7 @@ Simple is better than complex.
 <a href="https://github.com/JoMingyu/Schapi">Schapi</a>
 
 ### Flask
+<a href="https://github.com/TblMaker/TableMaker-Backend">TableMaker</a>
 <a href="https://github.com/Modu-Buy-App/Modu-Buy_Backend">모두바이</a>  
 <a href="https://github.com/DSM-DMS/Project-DMS-Backend">DMS Backend Rebuilding</a>  
 <a href="https://github.com/Gongjung-Bunhae-App/Gongjung-Bunhae_Backend">14회 AppJam : 공중분해</a>  
