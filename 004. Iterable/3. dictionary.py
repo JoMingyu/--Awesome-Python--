@@ -20,6 +20,9 @@ print(dic.get('keykey'))
 # 해당 key가 딕셔너리에 있는지 알고 싶으면
 print('hello' in dic)
 
+# 아래 방법으로도 구할 수 있는데, 파이썬 개발자들 사이에선 deprecated 수준의 메소드이다
+print(dic.has_key('hello'))
+
 print(dic.items())
 # [(key, value), (key, value)] 형태로 딕셔너리의 데이터를 튜플로 이루어진 리스트로 만들어 리턴
 

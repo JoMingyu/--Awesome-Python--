@@ -25,6 +25,19 @@ for first, second in lst:
     # unpack되므로 리스트 내 각 튜플들을 순회한다
     print(first, second)
 
+# 인덱스 기반 반복을 써야 할 경우, enumerate() 빌트인 함수를 사용하면 좋다
+for idx, item in lst:
+    print(idx, item)
+
+# 딕셔너리를 반복할 경우, 기본적으로 key를 기준으로 반복한다
+d = {1: 1, 2: 2, 3: 3}
+for key in d:
+    print(key, d[key])
+
+# key-value 쌍을 함께 순회해야 할 경우 딕셔너리의 .items() 메소드를 사용하면 된다
+for key, value in d.items():
+    print(key, value)
+
 # 파이썬에는 for문에도 else를 쓸 수 있다
 for i in range(10):
     print(i)
