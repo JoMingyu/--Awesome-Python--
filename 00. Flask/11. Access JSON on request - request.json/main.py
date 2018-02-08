@@ -16,7 +16,7 @@ def json():
     # Content-Type은 application/json으로 설정되었으나 아무 데이터도 전달되지 않으면 status code 400을 지동으로 리턴한다
 
     # 요청의 타입이 json인지 확인해 주는 메소드도 있다
-    if not request.is_json():
+    if not request.is_json:
         return 'Please set your content type "application/json"!', 400
     
     print(type(req))
