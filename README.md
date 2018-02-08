@@ -6,7 +6,7 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 TIL로 꾸준한 공부와 복습을 위해 정리하던 레포가 점점 커져 예제 저장소가 되었습니다. 제가 정리해 둔 예제들을 통해 저만 복습하는 게 아니라, 많은 파이썬 사용자들에게 도움이 되었으면 좋겠습니다. 필요한 예제가 있다면 Issue로 남기고, 기존 예제 개선/새로운 예제를 만들어 PR해 주시는 것도 큰 도움이 됩니다.
 
 ## Python
-1991년에 발표된 인터프리터, 객체지향적, 동적 타이핑 언어. 가장 큰 특징이자 장점은 '반복 가능한 객체'이다. 반복 가능한 객체 덕분에 Comprehension과 unpack, lambda 와 같은 개념이 생겨났다. 현재는 언어의 유연함이나 Glue Language로서 생겨난 Django, Flask, Tensorflow, Keras 등의 수많은 프레임워크와 라이브러리로 인해 엄청나게 많은 사람들이 사용하고 있다. 문법이 쉬워 배우기는 쉽지만, 다른 언어가 다 그렇듯 잘 쓰기는 어렵다.
+1991년에 발표된 인터프리터, 객체지향적, 동적 타이핑 언어. 가장 큰 특징이자 장점은 '반복 가능한 객체'이다. 반복 가능한 객체 덕분에 Comprehension과 unpack, enumeration과 같은 파이썬만의 강력한 개념이 생겨났다. 현재는 언어의 유연함이나 Glue Language로서 생겨난 Django, Flask, Tensorflow, Keras 등의 수많은 프레임워크와 라이브러리로 인해 엄청나게 많은 사람들이 사용하고 있다. 문법이 쉬워 배우기는 쉽지만, 다른 언어가 다 그렇듯 잘 쓰기는 어렵다.
 
 다른 언어들에서는 쉽게 찾아볼 수 없는 파이썬만의 독특한 매력이 있다. 파이썬이 성장하며 '가장 아름다운 하나의 답이 존재한다'라는 파이썬의 명제 또한 성장해 왔다. Beautiful is better than ugly, Explicit is better than implicit, Simple is better than complex, Complex is better than complicated라는 4가지 철학 또한 존재한다. 따라서 다른 언어들의 코딩 스타일은 각자의 취향에 맞게 진화하는 반면(C 계열의 중괄호 위치 등), 파이썬은 위의 철학들을 만족시키는 하나의 스타일로 진화한다. 이에 PEP8이라는 제안서(코드 스타일 가이드)가 보편적인 코딩 컨벤션으로 자리를 잡으며 파이썬스러움(Pythonic)이라는 단어가 유명해지게 되었는데, 복잡하지 않으면서 의미가 명확하고, 심플한 파이썬의 철학을 따르는 코드들을 지칭하는 개념이다.
 
