@@ -1,5 +1,5 @@
 ﻿# Flask의 JWT Authorization은 타 모듈의 도움을 받을 수 있지만, '일단' 없이 해보자
-# 배워 둔 미들웨어를 쓰면, 어느 정도 페이로드 관리를 해줄 수 있다
+# 배워 둔 미들웨어를 쓰면, 요청에 대해 어느 정도의 페이로드 관리를 해줄 수 있다
 from flask import Flask, request
 from werkzeug.wrappers import Request
 import jwt
@@ -62,4 +62,3 @@ def private():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    # 되도록이면 flask를 위해 제공되는 flask-jwt를 쓰는 게 편하다

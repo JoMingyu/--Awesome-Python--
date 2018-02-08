@@ -1,8 +1,10 @@
 ﻿from flask import Flask, jsonify
-from flask_jwt import JWT, jwt_required, current_identity
+
 # pip install flask-jwt
-# flask_jwt 모듈을 이용하면 Flask에서 쉽게 JWT 기반 사용자 인증을 할 수 있다
-# 공식 문서는 이해하기 굉장히 어렵다
+from flask_jwt import JWT, jwt_required, current_identity
+# Flask에서 JWT 기반 사용자 인증을 돕는 라이브러리
+# star는 많지만 이슈는 많고 개발이 중단되어 있는 상태라 추천하기엔 많이 부족한 라이브러리
+# 게다가 맘에 들지 않는 제약조건도 상당함
 
 
 class User:
@@ -21,7 +23,7 @@ users = [
 
 
 def authenticate(userid, pw):
-    # POST /auth에 대한 경로를 열어주는 역할을 한다
+    # POST /auth에 대한 경로를 열어 Access token을 리턴해주는 역할의 함수
     # JSON으로 구성된 요청 데이터에 접근하는데, JSON body의 username과 password에 해당하는 각각의 값이 이 함수의 인자에 순서대로 들어온다
     # /auth로 설정된 default url rule과 username, password key를 바꿀 수 있는데, 아래에서 Flask 객체의 config를 다룰 때 알아보자
     for user in users:
@@ -32,16 +34,17 @@ def authenticate(userid, pw):
 
 
 def identity(payload):
-    # 서버의 다른 요소에선 페이로드에 직접 접근하지 않고 여기서 리턴해 주는 identity를 사용한다
+    # 서버의 다른 요소에선 페이로드에 직접 접근하지 않고 여기서 리턴해 주는 identity가 담긴 별도의 변수에 접근한다
     # 위에서 import한 current_identity에 값을 넣어주는 역할
     return payload['identity']
     # 여기서 리턴되는 페이로드는 werkzeug.local.LocalProxy 클래스로 wrapping되는데, 문자열로 캐스팅 가능하다
-    # 이 wrapping 과정을 모르고 있으면 MongoDB에서 bson InvalidDocument 에러로 고생할 수도 있다
+    # 이 wrapping 과정을 모르고 있으면 MongoDB에서 bson 관련 에러로 고생할 수 있다
 
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'super-secret'
 # JWT security algorithm을 위해 secret key가 필요하다
+
 app.config['JWT_AUTH_URL_RULE'] = '/auth-for-test'
 app.config['JWT_AUTH_USERNAME_KEY'] = 'id'
 app.config['JWT_AUTH_PASSWORD_KEY'] = 'pw'
