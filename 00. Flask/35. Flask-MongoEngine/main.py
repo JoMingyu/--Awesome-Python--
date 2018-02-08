@@ -1,7 +1,9 @@
 ﻿from flask import Flask
-from flask_mongoengine import MongoEngine
 # pip install flask-mongoengine
+from flask_mongoengine import MongoEngine
 # MongoEngine의 Flask Extension
+# Document로 선언된 모델을 WTForms 형태로 변환할 수 있는 부분이 강점
+# https://flask-mongoengine.readthedocs.io/en/latest/
 
 
 db = MongoEngine()

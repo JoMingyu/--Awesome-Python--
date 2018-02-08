@@ -11,8 +11,8 @@
 # Flask에서 SQLAlchemy를 사용할 것이라면 Flask의 SQLAlchemy 확장(Flask-SQLAlchemy)를 사용하는 것이 편하고 유연함
 
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 # pip install flask-sqlalchemy
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/dmdkz/test.db'
@@ -21,10 +21,11 @@ db = SQLAlchemy(app)
 
 
 class User(db.Model):
+    # https://github.com/mitsuhiko/flask-sqlalchemy/blob/master/flask_sqlalchemy/__init__.py
+    # 꽤 많은 부분을 SQLAlchemy에 의존하고 있으므로 사용 방식 또한 SQLAlchemy와 그리 다를 것 없음
     id = db.Column(db.String, primary_key=True)
     pw = db.Column(db.String, nullable=False)
     phone = db.Column(db.String(20), nullable=False, unique=True)
-    # Unresolved attribute reference warning이 뜨지만, 무시하고 진행하자
 
 
 User.query.delete()
