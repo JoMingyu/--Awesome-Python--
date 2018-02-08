@@ -1,4 +1,5 @@
-# 코드를 병렬로 실행시켜 보자
+# https://docs.python.org/3/library/threading.html
+# 멀티 스레딩은 병행성(Concurrency)을 구현하기 위한 가장 간단한 방법
 import threading
 import time
 
@@ -9,7 +10,7 @@ def func(arg):
         time.sleep(1)
 
 t1 = threading.Thread(target=func, args=('hihi',))
-# threading 모듈의 Thread 클래스를 이용하는 경우
+# 1. threading 모듈의 Thread 클래스를 이용하는 경우
 # 넘겨줄 인자를 설정할 땐 튜플로 설정해 주어야 한다
 
 t1.daemon = True
@@ -19,7 +20,7 @@ t1.start()
 
 
 class T(threading.Thread):
-    # Thread 클래스를 상속받아 구현하는 경우
+    # 2. Thread 클래스를 상속받아 구현하는 경우
     def run(self):
         # Thread start 시 이 run() 메소드가 실행된다
         while True:
@@ -34,3 +35,6 @@ t2.start()
 time.sleep(5)
 # 데몬 스레드를 살려두기 위해
 print('### End ###')
+
+# 파이썬은 GIL 구조로 인해 멀티 스레딩을 구현하더라도 실제는 1개의 스레드에서 각 요소가 time sharing하는 정말 말도 안되는 형태로 이루어진다
+# http://city7310.blog.me/221151692012

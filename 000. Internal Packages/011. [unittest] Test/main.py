@@ -1,3 +1,4 @@
+# https://docs.python.org/3/library/unittest.html
 # 파이썬은 단위 테스트(unit test)를 위한 모듈을 제공한다
 import unittest
 
@@ -19,7 +20,7 @@ def error_add(a, b):
 class Test(unittest.TestCase):
     # setUp과 tearDown 메소드는 Test Fixture라고 부르는데, 하나의 테스트 유닛이 시작하기 전과 끝난 후 호출된다
     # setUp -> 테스트 유닛 -> tearDown
-    # 테스트 유닛이 도는 순서는 (아마도) 사전 순서다
+    # 테스트 유닛이 도는 순서는 사전 순서다
     def setUp(self):
         print('set up')
 

@@ -1,3 +1,4 @@
+# https://docs.python.org/3/library/multiprocessing.html
 # 파이썬은 GIL 구조 때문에 멑티 스레딩을 돌려도 각 스레드가 time sharing하며 돌아간다
 # 그래서 병렬적으로 코드를 돌려야 할 경우(특히 계산) 멀티 스레딩보단 멀티 프로세싱을 쓴다
 import multiprocessing

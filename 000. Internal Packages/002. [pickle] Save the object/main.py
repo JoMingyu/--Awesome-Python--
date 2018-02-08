@@ -1,3 +1,4 @@
+# https://docs.python.org/3/library/pickle.html
 # pickle 모듈은 객체를 파일에 저장할 수 있음
 # 생각보다 훨씬 엄청난 메리트
 import pickle

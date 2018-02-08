@@ -1,3 +1,4 @@
+# https://docs.python.org/3/library/os.html
 import os
 # 파이썬의 주요 모듈 중 하나인 os 모듈
 # 운영체제에서 제공되는 기본적인 기능들을 다룰 수 있다

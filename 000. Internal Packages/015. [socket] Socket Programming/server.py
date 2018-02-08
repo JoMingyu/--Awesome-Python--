@@ -1,3 +1,4 @@
+# https://docs.python.org/3/library/socket.html
 # 네트워크 프로그래밍의 기초 중 하나인 소켓 프로그래밍
 # 소켓은 양방향 데이터 전송 가능
 

@@ -1,3 +1,4 @@
+# https://docs.python.org/3/library/copy.html
 # copy 모듈을 알아보자. 대부분 deep copy를 손쉽게 구현하기 위해서 사용한다
 import copy
 

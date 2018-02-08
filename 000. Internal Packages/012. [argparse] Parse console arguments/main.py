@@ -1,5 +1,5 @@
-﻿import argparse
-# 파이썬 3 표준 라이브러리에 이미 있다
+﻿# https://docs.python.org/3/library/argparse.html
+import argparse
 # argparse 모듈을 이용하면 커맨드 라인에서 실행 시의 매개변수를 파싱할 수 있다
 # sys.argv를 사용해도 되지만, argparse를 이용하면 훨씬 쉽게 관리할 수 있다
 

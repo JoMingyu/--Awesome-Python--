@@ -1,6 +1,5 @@
-﻿# SMTP를 통해 메일 전송을 해보자
-# pip install smtplib
-
+﻿# https://docs.python.org/3/library/smtplib.html
+# SMTP를 통해 메일 전송을 해보자
 from smtplib import SMTP
 from email.mime.text import MIMEText
 
@@ -24,3 +23,5 @@ message['to'] = dst_email
 
 smtp.sendmail(src_email, dst_email, message.as_string())
 smtp.quit()
+
+# 추가적으로, SMTP 인스턴스는 __enter__()와 __exit__()이 구현되어 있기 때문에 with-as 문을 사용하는 것도 좋다

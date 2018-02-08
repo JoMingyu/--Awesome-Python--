@@ -1,3 +1,4 @@
+# https://docs.python.org/3/library/time.html
 # time 모듈을 이용해 시간에 관한 조작을 할 수 있다
 import time
 

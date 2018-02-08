@@ -1,3 +1,4 @@
+# https://docs.python.org/3/library/pkgutil.html
 import pkgutil
 # pkgutil을 활용해 프로젝트의 패키지와 모듈들을 동적으로 다룰 수 있다
 import test

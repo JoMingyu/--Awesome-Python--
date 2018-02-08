@@ -1,5 +1,7 @@
+# https://docs.python.org/3/library/random.html
 import random
-# random 모듈엔 많은 함수가 있다
+# 수많은 종류의 랜덤 값들을 다루기 위한 모듈
+# 많은 함수들이 제공된다
 
 
 print(random.random())

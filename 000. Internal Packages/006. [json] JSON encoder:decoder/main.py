@@ -1,3 +1,4 @@
+# https://docs.python.org/3/library/json.html
 import json
 # 파이썬의 json 모듈은 파이썬 기본 자료형인 list, dictionary와 문자열 간 변환을 돕는다
 
