@@ -20,10 +20,10 @@ TIL로 꾸준한 공부와 복습을 위해 정리하던 레포가 점점 커져
 - [x] Basic internal packages(datetime, pickle, random, re, os, json, threading, socket, time, ...)
 - [x] Useful external packages(requests, openpyxl, urllib, beautifulsoup, ...)
 - [x] Web scraping examples
-- [ ] 68 Built-in functions
-- [ ] Standard library(Built-in packages)
-- [ ] Better Python 59 ways(in 'Effective Python')
-- [ ] Hidden features of Python
+- [ ] 68 Built-in functions example
+- [ ] Standard libraries(Built-in packages) example
+- [ ] Better Python 59 ways(in 'Effective Python') example
+- [ ] Hidden features of Python example
 - [ ] Flask code reading
 - [ ] Werkzeug code reading
 
