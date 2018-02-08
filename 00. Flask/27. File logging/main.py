@@ -1,4 +1,4 @@
-from flask import Flask, g
+from flask import Flask
 
 import logging
 from logging.handlers import RotatingFileHandler
@@ -26,20 +26,19 @@ def before_first_request():
         # app의 logger propery에 핸들러를 추가시킨다
 
         app.logger.setLevel(logging.INFO)
-        # logger의 level을 세팅해 준다. 기본값은 WARNING인데, 기본값으론 디버그 모드에서만 파일 로깅이 작동해서 불편하다
+        # logger의 level을 세팅해 준다.(어떤 단계 이상의 로그를 기록할지)
+        # 기본 level은 WARNING이다
 
     make_logger()
-    g.logger = app.logger
-    # 아직 Flask의 g 객체는 모르지만 일단 굉장히 윗단에 있는 글로벌 객체라고 생각하도록 하자
 
-    print(g.logger)
+    print(app.logger)
 
-    g.logger.info('------ Logger started ------')
+    app.logger.info('------ Logger started ------')
 
 
 @app.route('/')
 def index():
-    g.logger.info('Access index!')
+    app.logger.info('Access index!')
     return 'hello'
 
 if __name__ == '__main__':
