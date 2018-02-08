@@ -1,11 +1,10 @@
 ﻿from flask import Flask, jsonify, request
-from flasgger import Swagger, swag_from
 # pip install flasgger
-# https://github.com/rochacbruno/flasgger
+from flasgger import Swagger, swag_from
 
 # Flask를 위한 Swagger 패키지
 # flask-restful-swagger는 기존 flask-restful 앱에 적용하긴 좋지만 flask-restful에 너무 종속적이라는 단점이 있음
-# Documentation 방식도 여러가지라서 선택지가 많지만 기본 상태는 Swagger UI Version 2로 동작하기 때문에 UI가 똥망
+# flasgger는 Documentation 방식도 여러가지라서 선택지가 많지만 기본 상태는 Swagger UI Version 2로 동작하기 때문에 UI가 똥망
 # 따라서 아래의 config에서 통해 ui version을 3으로 바꿔 주도록 하자
 
 app = Flask(__name__)
