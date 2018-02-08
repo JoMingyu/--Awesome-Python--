@@ -1,4 +1,5 @@
-﻿# 시간을 다루는 datetime 모듈
+﻿# https://docs.python.org/3/library/datetime.html
+# 시간을 다루는 datetime 모듈
 # datetime, date, time 클래스가 있다
 import datetime
 
