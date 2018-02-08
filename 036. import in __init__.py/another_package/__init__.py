@@ -3,4 +3,5 @@
 # flask 패키지의 __init__.py에선 하위 모듈에 있는 클래스들을 import하는 부분이 있다
 
 # __init__.py는 패키지에 대한 초기화를 담당하는데, 이 범위엔 import도 속해 있다
+# __init__.py는 패키지 레벨 모듈이라고 생각하면 된다
 from .another_module import AnotherClass

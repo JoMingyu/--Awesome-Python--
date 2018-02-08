@@ -2,7 +2,6 @@
 # lazy(게으름)을 구현할 수 있어서 Comprehension이 클 경우 Generator를 사용하곤 한다
 # 일반적인 함수와 비슷하게 보이지만, 가장 큰 차이점은 yield 구문일 것이다
 
-
 def generator(n):
     i = 0
     while i < n:

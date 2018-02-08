@@ -5,7 +5,8 @@
 
 class Test:
     # 연산자 오버로딩은 매직 메소드들을 구현하여 만들어낼 수 있다
-    # add, sub, mul, truediv, floordiv, mod, pow부터 lshift, rshift, and, or, xor, abs, eq, lt, gt 등 많다
+    # add, sub, mul, truediv, floordiv, mod, pow부터 lshift, rshift, and, or, xor, abs, eq, lt, gt 등이 있다
+    # https://docs.python.org/3/reference/datamodel.html
     def __init__(self, n):
         self.n = n
 

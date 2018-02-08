@@ -13,7 +13,7 @@ del l2[2]
 # l2는 [1, 2]로 바뀌었을 것이다. 그런데 l1을 출력해 보면 함께 바뀌어 있다
 print(l1)
 
-# 기본적으로 mutable 객체일 때만 이와 같은 얕은 복사 문제가 생긴다
+# 기본적으로 mutable 객체일 때만 이와 같은 문제가 생긴다
 # 숫자나 문자열과 같은 immutable 객체는 위의 경우에 해당되지 않는다
 a = 10
 b = a
@@ -22,8 +22,10 @@ print(a, b)
 # b는 20으로 바뀌었으나 a는 그대로다
 
 # 얕은 복사의 경우는, 객체는 별도로 생성하고 안에 들어가 있는 값은 같은 객체를 참조한다
+from copy import copy
 l1 = [1, [1, 2, 3]]
-l2 = list(l1)
+l2 = copy(l1)
+#  = list(l1)
 # shallow copy
 print(l1 == l2)
 # True
@@ -44,3 +46,7 @@ l2 = deepcopy(l1)
 l2.append(9999)
 print(l1)
 # deep copy로 l3를 만들었기 때문에 l3를 조작하더라도 l1에는 영향을 끼치지 않는다
+
+# 그러나 deepcopy()는 생각보다 많이 느리다. json, ujson, pickle, cPickle을 사용할 수 있다
+# https://stackoverflow.com/a/29385667
+# ujson이 가장 빠른 것으로 나온다
