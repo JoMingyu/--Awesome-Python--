@@ -14,6 +14,19 @@ TIL로 꾸준한 공부와 복습을 위해 정리하던 레포가 점점 커져
 
 <https://github.com/vinta/awesome-python>
 
+## Loadmap
+- [x] Python basics(data types, if statement, looping, comprehension, function, error, decorator, module, package, ...)
+- [x] Flask basics(routing, redirection, template, request, response, blueprint, middleware, aborting, config, testing, ...)
+- [x] Basic internal packages(datetime, pickle, random, re, os, json, threading, socket, time, ...)
+- [x] Useful external packages(requests, openpyxl, urllib, beautifulsoup, ...)
+- [x] Web scraping examples
+- [ ] 68 Built-in functions
+- [ ] Standard library(Built-in packages)
+- [ ] Better Python 59 ways(in 'Effective Python')
+- [ ] Hidden features of Python
+- [ ] Flask code reading
+- [ ] Werkzeug code reading
+
 ## Pythonic(파이썬스러운) 코드를 작성하기 위한 팁
 파이썬 코드는 프로그래밍을 한 번도 해보지 않은 사람조차도 소스 코드를 통해 프로그램이 어떤 일을 하는지 이해할 정도로 접근하기 쉽습니다. 가독성(readability)은 파이썬 디자인의 핵심이며, 코드 작성자가 코드를 작성하는 데 소요하는 시간보다 수많은 사람이 코드를 읽는데 소요하는 시간이 훨씬 길다는 인식이 바탕에 깔려 있습니다.
 
