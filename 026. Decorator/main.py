@@ -45,6 +45,7 @@ def display():
 display()
 
 # 인수를 가진 함수를 데코레이팅해야 한다면, wrapper 함수에 인자를 추가하고 호출 시 사용하면 된다
+# 아래의 데코레이터가 가장 보편적인 형태
 def decorator(original_function):
     def wrapper(*args, **kwargs):
         print('Before {} function is called'.format(original_function.__name__))
@@ -57,3 +58,19 @@ def display(some, args):
     print('display function called with {} and {}'.format(some, args))
 
 display('da', 'ta')
+
+# 데코레이터가 인자를 가져야 한다면, decorator 함수를 감싸주자
+def some_decorator(*args):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            print('Before {} function is called'.format(func.__name__))
+            print('Arguments : {}'.format(args))
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+@some_decorator(1, 2, 3)
+def display(some, args):
+    print('display function called with {} and {}'.format(some, args))
+
+display(1, 2, 3)
