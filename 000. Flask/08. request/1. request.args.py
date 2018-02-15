@@ -16,7 +16,8 @@ app = Flask(__name__)
 def index():
     return request.args['test_key']
     # args라는 MultiDict 객체에 접근해서 빼오면 된다
-    # MultiDict는 werkzeug.datastructures.TypeConversionDict의 서브클래스인데,
+    # MultiDict는 werkzeug.datastructures.TypeConversionDict의 서브클래스
+    # https://github.com/pallets/werkzeug/blob/master/werkzeug/datastructures.py#L351
     # 딕셔너리와 거의 동일하게 동작하지만 .get() 메소드에서 type conversion을 지원한다는 장점이 있다
 
 app.run(debug=True)
