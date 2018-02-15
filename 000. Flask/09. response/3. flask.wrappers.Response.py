@@ -1,5 +1,5 @@
 # -- 알아볼 부분
-# flask.helpersmake_response() - https://github.com/pallets/flask/blob/master/flask/helpers.py#L152
+# flask.helpers.make_response() - https://github.com/pallets/flask/blob/master/flask/helpers.py#L152
 # flask.wrappers.Response - https://github.com/pallets/flask/blob/master/flask/wrappers.py#L177
 # werkzeug.wrappers.BaseResponse - https://github.com/pallets/werkzeug/blob/master/werkzeug/wrappers.py#L718
 
