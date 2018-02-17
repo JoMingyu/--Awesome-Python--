@@ -23,13 +23,13 @@ for i in range(10, 100, 5):
 # Python2에서 range()는 yield 처리를 하지 않아 값이 커지면 느렸고, 따라서 yield 처리를 하는 xrange가 함께 있었는데
 # 당시 range()에 비해 xrange()의 사용이 압도적으로 많아 Python3에선 둘을 나누지 않고 yield 처리하는 range()만을 가지고 있음
 
-# --- Pure python과 generator로 range() 함수를 표현한다면 아래와 같은 형태
+# --- Pure Python과 generator로 range() 함수를 표현한다면 아래와 같은 형태
 
 def is_valid_range(start, stop, step):
     # start보다 stop이 작은데(내림차로 range되는 경우인데) step은 양수일 경우를 필터링
     return True if (start - stop) // step < 0 else False
 
-def pyrange1(start, stop, step):
+def range1(start, stop, step):
     if is_valid_range(start, stop, step):
         # start가 2, stop이 7, step이 2인 상황이라고 쳤을 때
         # 아래의 while loop처럼 start != stop을 조건으로 해서(start <= stop을 조건으로 걸면 역방향 range()에는 대응 불가능하기 때문)
@@ -42,7 +42,7 @@ def pyrange1(start, stop, step):
             yield start
             start += step
 
-def pyrange2(stop):
+def range2(stop):
     start = 0
     step = 1
     if is_valid_range(start, stop, step):
