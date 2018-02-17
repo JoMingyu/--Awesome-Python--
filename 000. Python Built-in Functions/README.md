@@ -4,3 +4,8 @@ Python 3.6에는 총 <a href="https://docs.python.org/3/library/functions.html">
 - 함수 사용 예제
 - 코드 원본과 설명
 - 응용
+
+해당 예제들은 아래의 문서들을 참조합니다.
+
+- <a href="https://docs.python.org/3/library/functions.html">Python Standard Library</a>
+- <a href="https://github.com/python/cpython">python/cpython</a>
