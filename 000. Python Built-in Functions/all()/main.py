@@ -4,7 +4,7 @@ Return True if bool(x) is True for all values x in the iterable.
 If the iterable is empty, return True.
 """
 
-# all 함수는 파라미터로 반복가능한(iterable) 객체를 받는다
+# all 함수는 인자로 반복가능한(iterable) 객체를 받는다
 # 이터레이블 객체의 모든 요소가 참이면 True 를 반환하고, 거짓이 하나라도 있으면 False 를 반환한다
 
 # 모두 True(참) 이므로 True
