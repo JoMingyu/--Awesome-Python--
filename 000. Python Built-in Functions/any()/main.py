@@ -18,7 +18,7 @@ print(any([0, 0, 0, 0]))
 print(any([]))
 
 
-# any 함수의 원본
+# Pure python code 로 any 함수를 표현
 # all 함수의 코드와는 반대로 for 루프를 돌면서 요소 중, 참이 있다면 바로 True 를 반환하고, 아무 요소도 조건문에 걸리지 않으면 False 를 반환한다,
 def any(iterable):
     for element in iterable:

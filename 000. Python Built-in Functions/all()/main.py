@@ -17,7 +17,7 @@ print(all([1, 2, 3, 0, 4]))
 print(all([]))
 
 
-# all 함수 원본
+# Pure python code 로 all 함수를 표현
 # for 루프를 돌면서 없는 요소가 하나라도 있는지(거짓인지) 조건 검사를 한다
 def all(iterable):
     for element in iterable:
