@@ -79,10 +79,9 @@ _Py_c_abs(Py_complex z)
 {
     double result;
     
-    # 복소수의 실수부나 허수부가 무한소수일 경우
+    # 복소수의 실수부나 허수부가 무한일 경우
     if (!Py_IS_FINITE(z.real) || !Py_IS_FINITE(z.imag)) {
         
-        # 유효한 무한소수이면 C언의 함수인 fabs 로 절댓값을 구한 후, 리턴한다
         if (Py_IS_INFINITY(z.real)) {
             result = fabs(z.real);
             errno = 0;
