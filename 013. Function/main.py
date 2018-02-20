@@ -18,6 +18,17 @@ print_hello()
 f = print_hello
 f()
 
+# 함수가 일급 객체로 취급되며 closure도 사용할 수 있다
+def outer(n):
+    def inner():
+        return n
+    return inner
+
+inner = outer(3)
+print(inner())
+# inner 함수는 outer 함수의 지역변수인 n을 참조한다
+# outer로 전달한 파라미터 n은, inner 함수를 리턴하며 outer가 종료됨과 동시에 사라지지 않고 그대로 남아있다는 것이다
+# http://schoolofweb.net/blog/posts/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%81%B4%EB%A1%9C%EC%A0%80-closure/
 
 def s(a, b):
     # 매개변수를 가진 함수
