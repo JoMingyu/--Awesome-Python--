@@ -2,7 +2,13 @@
 # 이럴 때에는 Helper function 을 만들면 가독성을 높일 수 있다.
 # Helper function 을 쓰는 당신! 힙한 pythonista 시군요!
 
-color = {'red': ['5'], 'green': ['0'], 'blue': ['']}
+# 예시를 들어 쿼리스트링을 디코드 해야 한다고 하자
+from urllib.parse import parse_qs
+color = parse_qs('red=5&blue=0&green=', keep_blank_values=True)
+print(repr(color))
+# color = {'red': ['5'], 'green': ['0'], 'blue': ['']}
+
+
 # color에서 red, green, blue 에 있는 리스트의 값을 int 형으로 값을 뽑아보자.
 # 만약 값이 없다면 기본값 0을 넣기로 하자
 red = int(color.get('red')[0] or 0)
