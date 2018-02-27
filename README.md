@@ -23,20 +23,6 @@ TIL로 꾸준한 공부와 복습을 위해 정리하던 레포가 점점 커져
 - 엔지니어를 위한 파이썬
 - 고성능 파이썬
 
-## Loadmap
-- [x] Python basics(data types, if statement, looping, comprehension, function, error, decorator, module, package, ...)
-- [x] Flask basics(routing, redirection, template, request, response, blueprint, middleware, aborting, config, testing, ...)
-- [x] Basic internal packages(datetime, pickle, random, re, os, json, threading, socket, time, ...)
-- [x] Useful external packages(requests, openpyxl, urllib, beautifulsoup, ...)
-- [x] Web scraping examples
-- [ ] 68 Built-in functions example
-- [ ] 33 Built-in keywords example
-- [ ] Standard libraries(Built-in packages) example
-- [ ] Better Python 59 ways(in 'Effective Python') example
-- [ ] Hidden features of Python example
-- [ ] Flask code reading
-- [ ] Werkzeug code reading
-
 ## Pythonic(파이썬스러운) 코드를 작성하기 위한 팁
 파이썬 코드는 프로그래밍을 한 번도 해보지 않은 사람조차도 소스 코드를 통해 프로그램이 어떤 일을 하는지 이해할 정도로 접근하기 쉽습니다. 가독성(readability)은 파이썬 디자인의 핵심이며, 코드 작성자가 코드를 작성하는 데 소요하는 시간보다 수많은 사람이 코드를 읽는데 소요하는 시간이 훨씬 길다는 인식이 바탕에 깔려 있습니다.
 
@@ -67,11 +53,15 @@ Simple is better than complex.
 파이썬 계명에 대한 생생한 역사는 <a href="https://www.wefearchange.org/2010/06/import-this-and-zen-of-python.html">배리 바르소의 블로그 게시글 'import this and Zen of Python'</a>에서 확인할 수 있습니다.
 
 ### 개인적으로 정말 중요하다 생각하는 팁
-- double leading underscore 방식의 네이밍(__example)은 파이썬 인터프리터에 의해 맹글링되기 때문에 private처럼 보이는 효과가 있는데, 이런 특징을 private를 표현하기 위해 사용하진 않아야 합니다.
+- `Comprehension`은 List 말고도 여러 종류가 있습니다 - List Comprehension, Dictionary Comprehension, Set Comprehension, Generator Expression
+- 함수가 일급 객체인 파이썬에게 클로저와 데코레이터는 정말 강력한 무기입니다.
+- 실행 비용이 비싸지만 동일한 입력을 했을 때 동일한 결과를 반환하는 함수라면 `메모이제이션(@memoize)`을 사용하면 좋습니다.
+- 파이썬의 comparison operator는 체이닝 가능합니다.(`5 < a  and a < 7`은 `5 < a < 7`로 표현 가능)
+- double leading underscore 방식의 네이밍(`__example`)은 파이썬 인터프리터에 의해 맹글링되기 때문에 private처럼 보이는 효과가 있는데, 이런 특징을 private를 표현하기 위해 사용하진 않아야 합니다.
 - 한 슬라이스에 start, end, stride를 함께 쓰지 않는 것이 좋습니다. stride 문법이 종종 예상치 못한 동작을 해서 버그를 만들어내기도 하고, 슬라이싱 문법의 stride 부분이 혼란스러울 수 있습니다.
 - Comprehension에서 표현식을 두 개 이상 사용하지 않는 것이 좋습니다. 한 Comprehension에서 for가 두 개 중첩되어 있다고 치면, 읽기 정말 어렵습니다.
-- 키워드 전용 인수를 사용하면 명료성을 강요할 수 있습니다.
-- 리스트에서 원하는 값을 제거하려면 del list_[list_.index()]보다 list_.remove() 구문이 더 좋습니다.
+- `키워드 전용 인수`를 사용하면 명료성을 강요할 수 있습니다.
+- 파이썬에선 기본적으로 `GC`와 `레퍼런스 카운팅`을 통해 메모리를 관리합니다. 다만, 파이썬의 가비지 컬렉팅은 순환 참조를 탐지하고 해결하기 위해 존재하므로 순환 참조를 만들지 않는다고 확신할 수 있으면 `gc.disable()`을 통해 GC를 비활성화시켜도 됩니다.
 #### 같은 값으로 채워진 길이가 N인 리스트 만들기
 ~~~
 l = [0] * 4
@@ -80,8 +70,8 @@ print(l)
 ~~~
 #### Comprehension에 고집을 부리지 않는다
 ~~~
-l = [i for i in range(10000000)] # Comprehension
-l = (i for i in range(10000000)) # Generator
+l = [i for i in range(10000000)] # Comprehension. 메모리에 1000만 개를 미리 준비하므로 리소스 낭비 가능성이 높음
+l = (i for i in range(10000000)) # Generator. yield를 이용해 원하는 시기에 다음 요소에 접근할 수 있는 iterator
 print(next(l))
 # 0
 print(next(l))
@@ -140,8 +130,8 @@ a, _, _, b = [1, 2, 3, 4]
 <a href="https://github.com/JoMingyu/Schapi">Schapi</a>
 
 ### Flask
-<a href="https://github.com/Highthon-Stepping-Stone/Stepping-Stone-Backend">2회 하이톤 : 디딤돌</a>
-<a href="https://github.com/TblMaker/TableMaker-Backend">TableMaker</a>
+<a href="https://github.com/Highthon-Stepping-Stone/Stepping-Stone-Backend">2회 하이톤 : 디딤돌</a>  
+<a href="https://github.com/TblMaker/TableMaker-Backend">TableMaker</a>  
 <a href="https://github.com/Modu-Buy-App/Modu-Buy_Backend">모두바이</a>  
 <a href="https://github.com/DSM-DMS/Project-DMS-Backend">DMS Backend Rebuilding</a>  
 <a href="https://github.com/Gongjung-Bunhae-App/Gongjung-Bunhae_Backend">14회 AppJam : 공중분해</a>  
