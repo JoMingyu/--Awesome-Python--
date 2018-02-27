@@ -1,6 +1,7 @@
 ﻿# pip install pyfcm
 from pyfcm import FCMNotification
-# FCM Notification을 위한 모듈
+# FCM Notification을 위한 모듈. 원랜 firebase 측으로 HTTP request를 전송해야 하지만
+# 어떤 개발자가 이게 불편하다고 느꼈는지 pyfcm을 만들어 두었다
 
 fcm = FCMNotification(api_key='')
 # FCM 서버 키를 통해 객체를 만들자

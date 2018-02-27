@@ -1,5 +1,5 @@
 ﻿from pyfcm import FCMNotification
-# fcm 푸쉬 메시지는 data message를 전송할 수 있다
+# fcm 푸쉬 메시지는 data message를 전송할 수 있다. 일반적으로 JSON이며 pyfcm 측에서는 data_message 인자로 딕셔너리를 전달하면 알아서 직렬화 처리해준다
 
 fcm = FCMNotification(api_key='')
 
