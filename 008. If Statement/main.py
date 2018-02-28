@@ -21,6 +21,7 @@ if False and False:
     print('False and False')
 
 # if statement를 축약할 수도 있다
+# Comparison Operator Chaining
 if 1 < 5 < 9:
     print('between 1 and 9')
 
