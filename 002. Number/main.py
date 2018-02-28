@@ -2,7 +2,7 @@
 a = 13
 # 정수형 변수 선언 : 동적 타입 언어기 때문에 단순 assign만 해주고 나면 런타임에 타입 검사를 수행한다
 
-# 타입은 print()와 같은 built-in function인 type() 함수를 사용할 수 있다
+# 타입은 print()와 같은 built-in function인 type() 함수로 확인할 수 있다
 print(type(a))
 # <class 'int'>
 
@@ -12,7 +12,7 @@ a = 3.5
 # 파이썬에서 실수는 float 타입만 사용한다
 print(type(a))
 
-a = 0.8e + 15
+a = 0.8e15
 # e 표기법
 print(a)
 
