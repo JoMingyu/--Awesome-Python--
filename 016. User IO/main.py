@@ -7,4 +7,5 @@ user_input = input('입력 > ')
 print(user_input)
 
 # input 함수의 타입은 무조건 str
-# 타입 캐스팅이 필요하다. 21에서 알아보자
+# 데이터를 가변으로, 모두 int로 받으려면
+user_input = [int(data) for data in input().split(' ')]
