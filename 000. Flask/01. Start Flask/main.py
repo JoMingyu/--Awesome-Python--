@@ -20,11 +20,11 @@ def index():
 
 
 @app.route('/custom/<int:param>')
-# 사용자 정의 URL, 타입은 생략할 수 있으며 기본 타입은 str
+# Path parameter, 타입은 생략할 수 있으며 기본 타입은 str
 def custom(param):
     return param
 
+app.run()
 # 3. 서버 run
 # flask.app.Flask.run() - https://github.com/pallets/flask/blob/master/flask/app.py#L822
-app.run()
 # localhost:5000에서 동작한다
