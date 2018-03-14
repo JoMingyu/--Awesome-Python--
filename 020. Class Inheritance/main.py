@@ -6,12 +6,14 @@
 class Animal:
     def walk(self):
         # 상위 클래스는 공통적인 특성을 가지는 메소드 같은것들을 선언해 둔다
-        print(self.__class__.__name__, 'is walking')
+        print('{} is walking'.format(self.__class__.__name__))
 
 
 # 그리고 상속은
 class Cat(Animal):
     def walk(self):
+        # 함수 오버로딩은 불가능하지만, 메소드 오버라이딩은 가능하다
+        print('Cat is walking!')
         super(Cat, self).walk()
         # 상위 클래스의 메소드 호출
 
