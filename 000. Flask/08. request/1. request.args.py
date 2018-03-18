@@ -7,7 +7,7 @@ from flask import request
 
 app = Flask(__name__)
 # 요청 데이터에 접근할 필요가 있다
-# GET에서 자주 사용하는 querystring(ex - localhost:5000/?a=1&b=2)에 접근하도록 하자
+# GET에서 자주 사용하는 Query Paramter( = querystring(ex - localhost:5000/?a=1&b=2) )에 접근하도록 하자
 
 # 요청 데이터는 flask 패키지에서 request 객체에 접근해야 한다
 
