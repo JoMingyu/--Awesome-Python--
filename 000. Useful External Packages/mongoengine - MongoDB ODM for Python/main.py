@@ -24,8 +24,8 @@ print(list(data))
 # User 객체들의 list가 필요하지 않고, 즉시 데이터를 반환할 필요가 있다면 as_pymongo()의 리턴인 QuerySet에 list 캐스팅을 하자
 print(list(data.as_pymongo()))
 # as_pymongo()의 경우, value가 None인 key는 제거해 버리며 primary key는 _id로 바뀌므로 주의해야 한다
-# as_pymongo()를 쓰지 않는 편이 오히려 코드가 간결해질 때가 많다
-# 리스트를 돌며 필요없는 데이터들을 del하는 경우 자주 사용하게 되는데, objects의 반환에 Comprehension으로 필터링하는 편이 더 좋다
+# 클래스에 명시해 둔 그대로 가져오고 싶다면, 각 object의 _data 필드에 접근하면 된다
+print(data.first()._data)
 
 print(type(data.first()))
 # User 객체 하나에 접근(data.first() = data[0])
