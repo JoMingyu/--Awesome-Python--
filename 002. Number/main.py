@@ -2,6 +2,9 @@
 a = 13
 # 정수형 변수 선언 : 동적 타입 언어기 때문에 단순 assign만 해주고 나면 런타임에 타입 검사를 수행한다
 
+# 아래처럼 정적 타이핑도 가능
+a: int = 13
+
 # 타입은 print()와 같은 built-in function인 type() 함수로 확인할 수 있다
 print(type(a))
 # <class 'int'>
