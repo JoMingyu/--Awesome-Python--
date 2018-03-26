@@ -12,7 +12,7 @@ app.config['CONFIG'] = 'hello?'
 print(app.config)
 # 수많은 설정 값(DEBUG, TESTING, JSONIFY_MIMETYPE 등)들이 이미 들어가 있다
 # https://github.com/pallets/flask/blob/master/flask/app.py#L271
-# app 객체의 프로퍼티 형태로 즉시 접근 가능하다
+# 이미 들어가 있는 해당 설정 값들은 app 객체의 프로퍼티 형태로 즉시 접근 가능하다
 print(app.debug, app.testing, app.secret_key)
 
 print(app.config['CONFIG'])
