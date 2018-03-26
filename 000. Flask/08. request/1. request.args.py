@@ -19,5 +19,6 @@ def index():
     # MultiDict는 werkzeug.datastructures.TypeConversionDict의 서브클래스
     # https://github.com/pallets/werkzeug/blob/master/werkzeug/datastructures.py#L351
     # 딕셔너리와 거의 동일하게 동작하지만 .get() 메소드에서 type conversion을 지원한다는 장점이 있다
+    # request.args.to_dict()를 이용해 딕셔너리로 변환할 수도 있다
 
 app.run(debug=True)
