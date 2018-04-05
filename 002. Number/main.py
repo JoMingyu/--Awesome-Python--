@@ -34,7 +34,7 @@ print(5 / 2)
 # 일반적인 나눗셈. 나누어 떨어지더라도 몫은 무조건 float. true div라고 말함
 
 print(5 // 2)
-# 반올림하여 몫을 int로 반환, floor div라고 말함
+# 소숫점 아래 부분을 버리고 몫을 int로 반환, floor div라고 말함
 
 print(5 ** 2)
 # 제곱
