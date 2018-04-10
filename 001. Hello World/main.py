@@ -1,5 +1,5 @@
 print('Hello World')
-# 수많은 built-in function 중 하나인 print
 # 파이썬의 확장자는 .py, 인터프리터 특성 상 한줄 한줄씩 읽어간다
 # 주석은 '#' 기호로 쓴다
+print("Hello World")
 # 파이썬은 문자열을 감싸는 따옴표의 종류에 제한을 두지 않는다
