@@ -1,8 +1,10 @@
 # List와 Tuple은 Python의 대표적인 Iterable(반복 가능한) 객체이며 유한 개의 사물의 순서 있는 열거를 표현한다
-# Iterable은 객체지향 디자인 패턴 중 iterator pattern에 영향을 받았으며, Python에서는 __iter__() 메소드가 정의된 객체를 iterable이라고 정의하고 있다
+# 이는 한 번에 하나의 요소를 반환할 수 있는 객체를 의미하며, Python에서는 해당 객체의 iterator를 반환하는 __iter__() 메소드 또는
+# 의미론적으로 Sequence를 구현하는 __getitem__() 메소드가 정의된 객체를 iterable이라고 정의하고 있다
+# Iterable은 객체지향 디자인 패턴 중 iterator pattern에 영향을 받았다
 
-# List와 Tuple은 Sequence라고도 이야기할 수 있다
-# 이는 __len__()과 __getitem__() 메소드가 정의되고, 인덱싱과 슬라이싱이 지원되는 객체를 의미하나 일단 순서 있는 열거를 표현하는 자료형이라고만 이해하도록 하자
+# List와 Tuple은 __getitem__()을 구현하여 정수 인덱스를 통한 요소 접근을 지원하며,
+# 길이를 반환하는 __len__()이 구현되어 있기 때문에 Sequence라고도 이야기할 수 있다
 
 # -- List
 l = [1, 2, 3, 4, 5, -6.8]
