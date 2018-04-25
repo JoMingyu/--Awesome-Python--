@@ -6,7 +6,7 @@ client_socket = socket()
 # == socket(AF_INET, SOCK_STREAM)
 
 host = 'localhost'
-port = 3000
+port = 30000
 
 client_socket.connect((host, port))
 print('Connected {0}'.format(host))
@@ -24,6 +24,7 @@ def msg_getter():
     while True:
         print('Data Received : {0}'.format(client_socket.recv(1024).decode('utf-8')))
         # recv의 리턴 데이터는 bytes
+
 
 threading.Thread(target=msg_sender).start()
 threading.Thread(target=msg_getter).start()

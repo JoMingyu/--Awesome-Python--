@@ -13,7 +13,7 @@ import threading
 server_socket = socket(AF_INET, SOCK_STREAM)
 # family, type 순. 기본값은 위와 같은 AF_INET, SOCK_STREAM
 
-server_socket.bind(('', 3000))
+server_socket.bind(('', 30000))
 print('Bind Successfully')
 # 소켓을 해당 호스트와 포트에 바인딩
 
@@ -38,6 +38,7 @@ def msg_sender():
 def msg_getter():
     while True:
         print('Data Received : {0}'.format(client_socket.recv(1024).decode('utf-8')))
+
 
 threading.Thread(target=msg_sender).start()
 threading.Thread(target=msg_getter).start()
