@@ -31,3 +31,5 @@ print('My nickname is {}, age is {}'.format(nickname, age))
 # 4. fstring
 print(f'My nickname is {nickname}, age is {age}')
 # Python 3.6부터 지원하며, 아직 자주 사용되진 않음
+
+# -- 메소드
