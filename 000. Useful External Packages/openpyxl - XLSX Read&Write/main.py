@@ -1,8 +1,9 @@
 ﻿# https://github.com/ericgazoni/openpyxl
 # pip install openpyxl
 from openpyxl import load_workbook, Workbook
-# openpyxl은 read&write 둘 다 가능하다
+# read&write 둘 다 가능한 엑셀 라이브러리
 # 셀 참조 방식도 간단하고 직관적이지만 인지도 있는 엑셀 라이브러리들 중 속도가 가장 느리다
+# 속도에 구애받지 않는 환경이라면 가장 편하다
 
 wb = Workbook()
 # workbook 생성
