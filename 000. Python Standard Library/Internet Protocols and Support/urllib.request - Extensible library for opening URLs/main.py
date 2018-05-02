@@ -3,13 +3,11 @@
 from urllib.request import urlopen, Request
 import ssl
 
-def get_redirected_url(url):
+def get_ssl_context(url):
     # https 주소로 접속할 때 ssl context를 생성하기 위함
-    context = ssl._create_unverified_context()
-    return urlopen(url, context=context)
-    # urlopen(url, data=None, [timeout, ]*, cafile=None, capath=None, cadefault=False, context=None)
+    return ssl._create_unverified_context()
 
-res = get_redirected_url('https://github.com/JoMingyu')
+res = urlopen('https://github.com/JoMingyu', context=get_ssl_context())
 # http.client.HTTPResponse 객체가 반환됨
 
 print(res.getcode())
