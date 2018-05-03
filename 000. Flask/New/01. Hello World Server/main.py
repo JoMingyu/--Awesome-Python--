@@ -4,6 +4,9 @@ from flask import Flask
 # 간단한 작업은 간단하게 할 수 있고, 큰 서버도 어렵지 않게 다룰 수 있다 = Flask는 핵심기능만 간결하게 유지하고, 확장 가능한 것을 목적으로 한다
 
 app = Flask(__name__)
+# [app.Flask]
+#     def __init__(self, import_name, static_path=None, static_url_path=None,
+#     static_folder='static', template_folder='templates', instance_path=None, instance_relative_config=False)
 # 1. 현재 모듈에 대해 Flask 객체를 생성
 
 @app.route('/')
