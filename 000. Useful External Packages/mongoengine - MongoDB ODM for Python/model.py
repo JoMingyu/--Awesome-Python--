@@ -23,10 +23,10 @@ class User(Document):
     pw = StringField(required=True)
     name = StringField(required=True, default='익명', max_length=10)
     # 테이블의 구조가 일반 ORM에서 정의되는 방식과 유사
-    # 핵심적인 차이점은 MongoDB 자체에서 스키마가 적용되진 않는다는 것
-    # 어플리케이션 레벨에서만 적용됨
-    # 필드의 default 값은 ListField와 DictField가 아닌 이상 default None 처리됨
-    # mongoengine.base.fields.py의 BaseField 클래스 생성자를 보면 알 수 있음
+    # 핵심적인 차이점은 MongoDB 자체에서 스키마가 적용되진 않는다는 것(어플리케이션 레벨에서만 적용되는 제약)
+    # 필드의 default 값은 ListField와 DictField가 아닌 이상 None으로 처리됨
+    # default가 callable하다면(함수나 클래스라면) document가 save될 때 호출하고, 반환값을 저장한다
+    # -> default=datetime.now라면 save 시 해당 필드가 명시되지 않은 경우 해당 함수를 호출하여 필드에 적용
 
 
 class Comment(EmbeddedDocument):
