@@ -22,6 +22,8 @@ def index():
 @app.route('/custom/<int:param>')
 # Path parameter, 타입은 생략할 수 있으며 기본 타입은 str
 def custom(param):
+    # Path parameter가 있다면 view function에 동일한 이름으로 인자를 정의해 두어야 한다
+    # 위처럼 Path parameter에 타입을 명시하는 경우, 타입까지 자동 캐스팅된다
     return param
 
 app.run()
