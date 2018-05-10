@@ -63,7 +63,7 @@ virtualenv의 사용법은 아주 간단합니다.
 `> deactivate`
 
 ### 의존성 관리
-Python에선 의존성 관리를 위해 `setup.py`와 `requirements.txt`를 사용합니다.
+Python에선 의존성 관리를 위해 `setup.py`와 `requirements.txt`를 사용합니다. 둘은 **추상 의존성**과 **구체적인 의존성**의 차이가 있습니다.
 #### setup.py
 `setup.py`는 **파이썬 라이브러리**의 메타데이터를 명시하기 위해 사용합니다.
 
@@ -81,15 +81,17 @@ setup(
 )
 ```
 
+라이브러리를 가져올 URL이나 버전 등이 명시되어 있지 않습니다. 일종의 추상 의존성(abstract dependencies) 형태입니다.
+
 #### requirements.txt
-`requirements.txt`는 **파이썬 어플리케이션(배포 용도)**의 의존성 관리를 위해 사용합니다. 파이썬 어플리케이션은 일반적으로 의존성 라이브러리에 종속되어 있습니다. 이러한 의존 라이브러리의 정보를 저장할 수 있도록 `pip`는 `requirements` 파일을 생성하고, 해당 파일을 통해 라이브러리를 설치하는 기능을 가지고 있습니다.
+`requirements.txt`는 **파이썬 어플리케이션**(일반적으로 배포 용도)의 의존성 관리를 위해 사용합니다. 파이썬 어플리케이션은 대부분 의존성 라이브러리에 종속되어 있습니다. 이러한 의존 라이브러리의 정보를 저장할 수 있도록 `pip`는 `requirements` 파일을 생성하고, 해당 파일을 통해 라이브러리를 설치하는 기능을 가지고 있습니다. 아래는 `requirements.txt`의 예입니다.
 
 ```
 requests==1.2.0
 bcrypt==1.0.2
 ```
 
-[pigar](https://github.com/damnever/pigar)같은 유틸리티를 통해 requirements.txt를 생성하고, pip를 이용해 해당 파일에 적힌 의존성들을 설치할 수 있습니다.
+라이브러리에서는 넓은 범위의 버전 지정을 사용하는 편이지만, 어플리케이션은 특정한 버전에 대해 의존성을 가지는 경우가 많습니다. 따라서 이는 구체적인 의존성을 위해 사용됩니다. [pigar](https://github.com/damnever/pigar)같은 유틸리티를 통해 requirements.txt를 생성하고, pip를 이용해 해당 파일에 적힌 의존성들을 설치할 수 있습니다.
 
 `> pip install -r requirements.txt`
 
