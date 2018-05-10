@@ -63,7 +63,35 @@ virtualenv의 사용법은 아주 간단합니다.
 `> deactivate`
 
 ### 의존성 관리
+Python에선 의존성 관리를 위해 `setup.py`와 `requirements.txt`를 사용합니다.
+#### setup.py
+`setup.py`는 **파이썬 라이브러리**의 메타데이터를 명시하기 위해 사용합니다.
 
+```
+from setuptools import setup
+
+setup(
+    name="MyLibrary",
+    version="1.0",
+    install_requires=[
+        "requests",
+        "bcrypt",
+    ],
+    # ...
+)
+```
+
+#### requirements.txt
+`requirements.txt`는 **파이썬 어플리케이션(배포 용도)**의 의존성 관리를 위해 사용합니다. 파이썬 어플리케이션은 일반적으로 의존성 라이브러리에 종속되어 있습니다. 이러한 의존 라이브러리의 정보를 저장할 수 있도록 `pip`는 `requirements` 파일을 생성하고, 해당 파일을 통해 라이브러리를 설치하는 기능을 가지고 있습니다.
+
+```
+requests==1.2.0
+bcrypt==1.0.2
+```
+
+[pigar](https://github.com/damnever/pigar)같은 유틸리티를 통해 requirements.txt를 생성하고, pip를 이용해 해당 파일에 적힌 의존성들을 설치할 수 있습니다.
+
+`> pip install -r requirements.txt`
 
 ### 테스팅
 
