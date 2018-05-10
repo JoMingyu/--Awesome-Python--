@@ -95,8 +95,6 @@ bcrypt==1.0.2
 
 `> pip install -r requirements.txt`
 
-### 테스팅
-
 ## Tutorials
 <a href="https://wikidocs.net/book/1">점프 투 파이썬</a>  
 <a href="http://tcpschool.com/python/intro">TCPSchool - Python</a>  
