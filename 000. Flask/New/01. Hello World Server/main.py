@@ -27,6 +27,7 @@ def index():
 # 아래의 view function은 'GET /custom/{param}'에 대한 요청 처리를 담당
 def custom(param):
     # Path parameter가 존재하면, view function에서 동일한 이름으로 인자를 받아 주어야 함
+    # Path parameter에 타입이 명시되어 있으면 view function에 넘어오는 인자도 해당 타입으로 캐스팅됨
     return param
 
 if __name__ == '__main__':
