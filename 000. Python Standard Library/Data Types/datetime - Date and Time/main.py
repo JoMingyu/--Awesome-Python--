@@ -66,6 +66,9 @@ print(now.date())
 print(now.time())
 # 시간만 가져오기
 
+print(now.isocalendar()[1])
+# 오늘이 올해의 몇 번째 주인지 출력
+
 # 아래의 class attribute들을 지원한다
 print(datetime.datetime.min)
 # datetime(MINYEAR, 1, 1, tzinfo=None)
