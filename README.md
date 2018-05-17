@@ -104,7 +104,7 @@ setup.py에서는 넓은 범위의 버전 지정을 사용하는 편이지만, �
 
 ```
 > pigar
-> pip install -r requirements.txt
+> pip3 install -r requirements.txt
 ```
 
 특정 디렉토리에서만 의존성을 뽑아낼 수도 있습니다. pigar에 `-P` 플래그를 붙입니다.
@@ -184,6 +184,7 @@ test_sample.py:5: AssertionError
 - nose : 테스트를 쉽게 찾아 수행할 수 있도록 unittest를 확장한 것입니다. 자동으로 테스트를 발견하기 때문에, 수작업으로 test suite를 만드는 수고를 덜 수 있습니다. 또한 xUnit 호환 테스트 결과, 커버리지 리포트 등과 같이 다양한 플러그인도 제공합니다.
 
 ```
+> pip3 install nose
 > python3 -m "nose" tests/
 ```
 
@@ -203,18 +204,24 @@ testForbidden (Server.tests.transplant_class.<locals>.C) ... ok
 ...
 ```
 
-## Tutorials
-<a href="https://wikidocs.net/book/1">점프 투 파이썬</a>  
-<a href="http://tcpschool.com/python/intro">TCPSchool - Python</a>  
-<a href="https://docs.python.org/3/tutorial/">The Python Tutorial</a>
+- tox : 자동화된 테스트 환경 관리와 다양한 인터프리터 설정 하에서의 테스트를 위한 도구입니다. 아래는 tox의 설정 파일인 `tox.ini`의 예입니다.
 
-## 읽을거리
-<a href="https://tech.ssut.me/2017/04/06/yes-python-is-slow-and-i-dont-care/">네 Python은 느립니다. 하지만 저는 신경쓰지 않습니다.</a>  
-<a href="https://www.python.org/dev/peps/pep-0008/">PEP8 Style Guide</a>  
-<a href="https://github.com/SigmaQuan/Better-Python-59-Ways">Better Python 59 Ways</a>  
-<a href="https://gist.github.com/sloria/7001839">The Best of the Best Practices Guide for Python</a>   
-<a href="https://github.com/faif/python-patterns">A collection of design patterns/idioms in Python</a>  
-<a href="http://book.pythontips.com/en/latest/ternary_operators.html">Python Tips</a>
+```
+[tox]
+envlist = py27,py35,py36,pypy
+
+[testenv]
+commands =
+    pip3 install -r requirements.txt
+    pytest          # or any other test runner that you might use
+```
+
+`tox` 커맨드를 실행하면, 해당 디렉토리에서 `tox.ini`를 찾아 거기에 적혀 있는 대로 테스트를 실행합니다.
+
+```
+> pip3 install tox
+> tox
+```
 
 ## 진입장벽
 파이썬 코드는 프로그래밍을 한 번도 해보지 않은 사람조차도 소스 코드를 통해 프로그램이 어떤 일을 하는지 이해할 정도로 접근하기 쉬운데, 바로 가독성 때문입니다. 가독성(readability)은 파이썬 디자인의 핵심이며, 코드 작성자가 코드를 작성하는 데 소요하는 시간보다 수많은 사람이 코드를 읽는데 소요하는 시간이 훨씬 길다는 인식이 바탕에 깔려 있습니다.
@@ -244,20 +251,3 @@ Simple is better than complex.
 ...
 ~~~
 파이썬 계명에 대한 생생한 역사는 <a href="https://www.wefearchange.org/2010/06/import-this-and-zen-of-python.html">배리 바르소의 블로그 게시글 'import this and Zen of Python'</a>에서 확인할 수 있습니다.
-
-## Helpable Utilities
-<a href="https://github.com/damnever/pigar">Pigar</a>  
-<a href="https://github.com/pypa/twine">Twine</a>  
-<a href="https://github.com/timothycrosley/isort">Isort</a>
-
-## 파이썬 엑셀 라이브러리 비교
-- 읽기 : xlrd, openpyxl
-1. 모두 .xlsx 지원, xlrd는 .xls도 지원.
-2. 성능은 xlrd이 더 빠름.
-3. xlwt가 .xls만 지원하는 것과 다르게 .xlsx도 지원하므로 읽기는 xlrd를 쓰는 편이 좋을 것 같음.
-
-- 쓰기 : xlwt, openpyxl, xlsxwriter, pyexcelerate
-1. xlwt를 제외하고 모두 .xlsx를 지원.
-2. 문서는 xlsxwriter가 가장 좋음.
-3. 성능은 pyexcelerate, xlwt, xlsxwriter, openpyxl 순으로 좋음.
-4. 어지간하면 xlsxwriter가 무난한 선택. 성능이 중요하다면 pyexcelerate 쓰자. .xlsx 지원이 필요하면 xlwt는 쓰지 말자.
