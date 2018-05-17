@@ -17,6 +17,7 @@ app.config.update(
     JWT_ACCESS_TOKEN_EXPIRES=timedelta(days=1),
     JWT_REFRESH_TOKEN_EXPIRES=timedelta(days=30),
     JWT_HEADER_TYPE='JWT'
+    # 기본값은 'Bearer'
 )
 # JWT_SECRET_KEY 설정도 있으나, 이게 설정되지 않았다면 SECRET_KEY를 참조한다
 # Access token은 유효기간을 짧게, Refresh token은 유효기간을 길게 설정하여 자주 Refresh하도록 하는 것이 이상적이다
@@ -56,6 +57,8 @@ def refresh():
 
 @app.route('/protected')
 @jwt_required
+# JWT access token이 헤더에 함께 전달되어야 view function이 호출됨
+# 제대로 된 access token이 전달되지 않으면 401 반환
 def protected():
     return jsonify({
         'identity': get_jwt_identity()
