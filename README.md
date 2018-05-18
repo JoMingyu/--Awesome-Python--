@@ -10,7 +10,7 @@ C로 구현되었고, 1991년에 발표된 인터프리터, 바이트코드 컴�
 
 다른 언어들에서는 쉽게 찾아볼 수 없는 파이썬만의 독특한 매력이 있는데, 바로 '문화'입니다. 파이썬이 성장하며 '가장 아름다운 하나의 답이 존재한다'라는 파이썬의 명제가 성장해 왔습니다. 다른 언어들의 코딩 스타일은 각자의 취향에 맞게 진화하는 반면(C 계열의 중괄호 위치 등), 파이썬은 위의 철학들을 만족시키는 하나의 스타일로 진화해 왔습니다. 이에 [PEP8](https://www.python.org/dev/peps/pep-0008/)이라는 제안서(코드 스타일 가이드)가 보편적인 코딩 컨벤션으로 자리를 잡으며 파이썬스러움(Pythonic)이라는 단어가 유명해지게 되었는데, 복잡하지 않으면서 의미가 명확하고, 심플한 파이썬의 철학을 따르는 코드들을 지칭하는 개념입니다. 그래서 처음 보는 개발자 둘이 파이썬 코드를 작성하더라도, 코드의 레이아웃이나 컨벤션들이 거의 비슷합니다. Python 개발자들은 '가장 아름다운 하나의 답'을 찾기 위한 'Best Practice(모범 사례)'를 타 언어 개발자들보다 훨씬 많이 신경쓰고 있습니다.
 
-파이썬은 C로 구현되어 있습니다. 일반적으로 생각하는 파이썬은 CPython을 지칭합니다. .NET 위에서 동작하는 IronPython, CPython에서 인터프리터를 호출 스택과 분리한 Stackless Python, 바이트코드로 컴파일되어 JVM 위에서 돌아가는 Jython, 파이썬 자체로 구현된 Pypy등이 있습니다.
+파이썬은 C로 구현되어 있습니다. 일반적으로 생각하는 파이썬은 CPython을 지칭합니다. .NET 위에서 동작하는 IronPython, CPython에서 인터프리터를 호출 스택과 분리한 Stackless Python, 바이트코드로 컴파일되어 JVM 위에서 돌아가는 Jython, 파이썬 자체로 구현된 Pypy등이 있습니다. CPython은 크게 Python2와 Python3로 버전이 나뉘어 있습니다.
 
 <https://github.com/vinta/awesome-python>
 
@@ -24,43 +24,52 @@ C로 구현되었고, 1991년에 발표된 인터프리터, 바이트코드 컴�
 - 고성능 파이썬
 
 ## '예제 모음'에서 어느 정도의 '튜토리얼'이 되기까지
-처음에 이 저장소가 만들어진 건, 예제들을 모아 파이썬을 복습하기 위함이었습니다. 조금 체계적으로 정리하려던 욕심이 어느 정도의 순서를 만들게 되었고, 블로그에서 강좌에 가까운 글들도 나름대로 조금씩 썼습니다. 블로그에 쓰던 '프로그래밍 입문자를 위한 Python 가이드' 수준의 너무 구체적인 설명과, 설명 없는 단순한 code snippet 모음 사이의 타협점을 찾고자 했고, '굳이 지금 설명해봤자 머리만 아픈 개념'은 굳이 그때 그때 설명하지 않고 나중으로 미루는 형태의 커리큘럼을 구성했습니다. 대부분의 튜토리얼은 함수를 배우기 전에 타입 캐스팅을 알려주고, 반복문을 배우기 전에 list comprehension을 알려주면서 '나중에 다시 배울 개념이다'라고 이해를 뒤로 미룹니다. 이해를 뒤로 미룰 바에, 설명을 뒤로 미루는 게 차라리 더 나을 것 같았습니다.
+처음에 이 저장소가 만들어진 건, 예제들을 모아 파이썬을 복습하기 위함이었습니다. 조금 체계적으로 정리하려던 욕심이 어느 정도의 순서를 만들게 되었고, 블로그에서 강좌에 가까운 글들도 나름대로 조금씩 썼습니다. 블로그에 쓰던 '프로그래밍 입문자를 위한 Python 가이드' 수준의 너무 구체적인 설명과, 설명 없는 단순한 code snippet 모음 사이의 타협점을 찾고자 했고, '알면 좋은데 굳이 지금 설명해봤자 머리만 아픈 개념'은 굳이 그 때 설명하지 않고 나중으로 미루는 형태의 커리큘럼을 구성했습니다. 대부분의 튜토리얼은 함수를 배우기 전에 타입 캐스팅을 알려주고, 반복문을 배우기 전에 list comprehension을 알려주면서 '나중에 다시 배울 개념이다'라고 이해를 뒤로 미룹니다. 이해를 뒤로 미룰 바에, 설명 자체를 뒤로 미루는 게 차라리 더 나을 것 같았습니다.
 
 변수, 함수의 개념, 객체지향, 조건 분기, 일급 객체, 클로저와 같은 '프로그래밍 자체'에 대한 설명은 지양하고, 파이썬의 개념들만 알차게 구성되어 있습니다. 'Python으로 시작하는 프로그래밍 입문'보다는 'Python 프로그래밍 입문'이라는 제목이 조금 더 잘 어울릴 튜토리얼일 것입니다. 여기에 들어 있는 예제들 + 패키지 관리 + virtualenv + 의존성 관리(setup.py, requirements.txt) + 테스트와 커버리지 리포트 정도만 배우면 그래도 파이썬의 세상에 한걸음은 떼었다고 보면 됩니다 :)
 
 ### 패키지 관리
 JavaScript 측에서 npm을 쓰는 것처럼, Python에선 pip를 사용합니다.
 
-`> pip --version`
+`$ pip --version`
 
 `pip install`과 `pip uninstall`을 이용해 각각 패키지를 설치하고, 삭제할 수 있습니다. `pip freeze`를 사용하면 현재 pip에 의해 설치되어 있는 모든 패키지를 확인할 수 있습니다. 이를 이용해 아래와 같이, 현재 설치되어 있는 모든 외부 패키지를 제거하는 커맨드를 작성할 수 있습니다.
 
-`> pip uninstall -y $(pip freeze)`
+`$ pip uninstall -y $(pip freeze)`
+
+Linux나 Linux 기반 운영체제(MacOS 등)에선, python2와 python3를 구분하고 있는 것처럼 pip도 pip2(pip)와 pip3를 구분하고 있습니다.
+
+```
+$ pip -V
+pip 10.0.1 from /usr/local/lib/python2.7/site-packages/pip (python 2.7)
+$ pip3 -V
+pip 9.0.3 from /Users/planb/Library/Python/3.6/lib/python/site-packages (python 3.6)
+```
 
 ### virtual enviroment
 virtual environemtn는 **특정 디렉토리 내에서만 적용될 격리된 Python 환경**을 구성해 줍니다. 처음엔 '도대체 이게 왜 필요해'라고 생각했는데, 3개의 프로젝트에서 사용하는 동일한 라이브러리가 서로 모두 버전이 다르고, 한 프로젝트에선 numpy, pytz, six처럼 '이 프로젝트 말고는 다른 데서 안쓸 패키지'가 많은 걸 보고 납득했습니다. 대표적으로 `virtualenv`라는 유틸리티를 사용하며, 이는 서드파티 유틸리티기 때문에 pip를 이용해 설치해야 합니다.
 
-`> pip install virtualenv`
+`$ pip install virtualenv`
 
 virtualenv의 사용법은 아주 간단합니다.
 
-`> virtualenv .venv`
+`$ virtualenv .venv`
 
 `virtualenv [venv_name]` 형태입니다. 위의 명령을 실행하면 `.venv`라는 이름의 디렉토리가 생기고, 그 밑에 가상 환경이 만들어집니다. Python의 특정 버전에 대하여 가상 환경을 구성하려면, `--python`이나 `-p` 옵션을 이용해 Python 버전을 명시하면 됩니다.
 
 ```
-> virtualenv -p python3 .venv
-> virtualenv --python python2.7 .venv
+$ virtualenv -p python3 .venv
+$ virtualenv --python python2.7 .venv
 ```
 
 가상 환경을 활성화하려면 아래 명령을 입력합니다.
 
 ```
 // MacOS, Linux
-> source .venv/bin/activate
+$ source .venv/bin/activate
 
 // Windows
-> .venv\Scripts\activate
+$ .venv\Scripts\activate
 ```
 
 가상 환경이 활성화되고 나면, 아래와 같이 쉘의 맨 앞에 가상 환경의 디렉토리명이 표시됩니다.
@@ -69,7 +78,7 @@ virtualenv의 사용법은 아주 간단합니다.
 
 활성화된 가상환경 안에서 `pip install ...`을 하면, 해당 가상 환경에만 패키지가 설치되어 적용됩니다. 다시 가상 환경에서 빠져나오려면 아래 명령을 입력합니다.
 
-`> deactivate`
+`$ deactivate`
 
 ### 의존성 관리
 Python에선 의존성 관리를 위해 `setup.py`와 `requirements.txt`를 사용합니다. 둘은 **추상 의존성**과 **구체적인 의존성**의 차이가 있습니다.
@@ -103,14 +112,14 @@ bcrypt==1.0.2
 setup.py에서는 넓은 범위의 버전 지정을 사용하는 편이지만, 어플리케이션은 특정한 버전에 대해 의존성을 가지는 경우가 많습니다. 따라서 이는 구체적인 의존성을 위해 사용됩니다. [pigar](https://github.com/damnever/pigar)를 통해 requirements.txt를 생성하고, pip의 -r 플래그를 이용해 해당 파일에 적힌 의존성들을 설치할 수 있습니다.
 
 ```
-> pigar
-> pip3 install -r requirements.txt
+$ pigar
+$ pip3 install -r requirements.txt
 ```
 
 특정 디렉토리에서만 의존성을 뽑아낼 수도 있습니다. pigar에 `-P` 플래그를 붙입니다.
 
 ```
-> pigar -P [PATH]
+$ pigar -P [PATH]
 ```
 
 ### 테스트
@@ -184,14 +193,14 @@ test_sample.py:5: AssertionError
 - nose : 테스트를 쉽게 찾아 수행할 수 있도록 unittest를 확장한 것입니다. 자동으로 테스트를 발견하기 때문에, 수작업으로 test suite를 만드는 수고를 덜 수 있습니다. 또한 xUnit 호환 테스트 결과, 커버리지 리포트 등과 같이 다양한 플러그인도 제공합니다.
 
 ```
-> pip3 install nose
-> python3 -m "nose" tests/
+$ pip3 install nose
+$ python3 -m "nose" tests/
 ```
 
 Python3의 경우 위처럼 `python3`에 -m 인자로 "nose"를 전달하여 nosetests를 실행할 수 있고, Python2의 경우 별도의 nosetests 커맨드를 실행하면 됩니다. 테스트에 대한 커버리지 리포트를 저장하려면, `--with-coverage` 파라미터를 붙여 줍니다.
 
 ```
-> python3 -m "nose" --with-coverage tests/
+$ python3 -m "nose" --with-coverage tests/
 ```
 
 해당 커맨드를 실행한 디렉토리에 `.coverage` 파일이 생겨납니다. 테스트 수행에 대해 조금 더 구체적인 로그를 보려면 `--verbose` 파라미터를 붙여 줍니다.
@@ -219,8 +228,8 @@ commands =
 `tox` 커맨드를 실행하면, 해당 디렉토리에서 `tox.ini`를 찾아 거기에 적혀 있는 대로 테스트를 실행합니다.
 
 ```
-> pip3 install tox
-> tox
+$ pip3 install tox
+$ tox
 ```
 
 ## 진입장벽
