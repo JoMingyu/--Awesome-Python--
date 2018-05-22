@@ -1,8 +1,8 @@
 # https://docs.python.org/3/library/pickle.html
+import pickle
 # pickle 모듈은 파이썬 객체를 직렬화/역직렬화하기 위한 binary protocol을 구현하고 있다
 # 파이썬 객체를 바이트 스트림으로 변환하는 것을 pickling이라고 하고, 역방향으로 변환하면 unpickling이라고 한다
 # Pickling은 보편적으로 serialization, marshalling, flattening이라고도 부른다
-import pickle
 
 some_dictionary = {'key1': 12, 'key2': 4}
 # Pickling하기 위한 딕셔너리
