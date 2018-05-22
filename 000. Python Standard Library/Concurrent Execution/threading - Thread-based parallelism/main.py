@@ -1,6 +1,6 @@
 # https://docs.python.org/3/library/threading.html
-# 멀티 스레딩은 병행(Parallelism)을 구현하기 위한 가장 간단한 방법
 import threading
+# 멀티 스레딩은 병행(Parallelism)을 구현하기 위한 가장 간단한 방법
 import time
 
 
@@ -74,6 +74,3 @@ t2.join()
 # t1과 t2가 종료되기까지 대기
 
 # 파이썬의 multithreading은 배타 제어 등을 위해 Lock, RLock, Semaphore, Event, Timer, Barrier 등을 지원한다
-
-# 파이썬은 GIL 구조로 인해 멀티 스레딩을 구현하더라도 실제는 1개의 스레드에서 각 요소가 time sharing하는 정말 말도 안되는 형태로 이루어진다
-# http://city7310.blog.me/221151692012
