@@ -15,6 +15,7 @@ s = """PlanB's Awesome Python"""
 
 # -- 문자열 포매팅
 # 문자열 안에 특정 값을 삽입하는 것을 말하며, 특정 값은 대체적으로 변수
+# https://www.python.org/dev/peps/pep-3101
 # 1. 포맷 코드 사용
 age = 19
 nickname = 'PlanB'
