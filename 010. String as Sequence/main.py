@@ -1,5 +1,5 @@
 s = 'PlanB'
-# 문자열도 Python의 빌트인 Sequence 객체기 때문에 인덱싱과 슬라이싱, 합과 곱 연산 가능
+# 문자열(string)도 Sequence 객체기 때문에 인덱싱과 슬라이싱, 합과 곱 연산 가능
 
 # 1. 인덱싱
 print(s[-3])
