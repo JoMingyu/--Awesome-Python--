@@ -1,7 +1,7 @@
-# List와 Tuple은 Python의 대표적인 Iterable(반복 가능한) 객체이며 유한 개의 사물의 순서 있는 열거를 표현한다
-# 이는 한 번에 하나의 요소를 반환할 수 있는 객체를 의미하며, Python에서는 해당 객체의 iterator를 반환하는 __iter__() 메소드 또는
+# List와 Tuple은 Python의 대표적인 Iterable(반복 가능한) 객체이며 유한 개의 객체 집합의 '순서 있는 열거'를 표현한다
+# Iterable은 한 번에 하나의 요소를 반환할 수 있는 객체를 의미하며, Python에서는 해당 객체의 iterator를 반환하는 __iter__() 메소드 또는
 # 요소의 접근을 위한 __getitem__() 메소드가 정의된 객체를 iterable이라고 정의하고 있다
-# Iterable은 객체지향 디자인 패턴 중 iterator pattern에 영향을 받았다
+# https://docs.python.org/3/glossary.html#term-iterable
 
 # -- List
 l = [1, 2, 3, 4, 5, -6.8]
