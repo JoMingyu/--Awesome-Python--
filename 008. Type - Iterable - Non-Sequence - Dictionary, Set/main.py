@@ -1,4 +1,4 @@
-# Dictionary와 Set은 List, Tuple처럼 Iterable 객체지만 순서가 보장되어 있지는 않음
+# Dictionary와 Set은 List, Tuple과 같은 Iterable 객체
 
 # -- Dictionary
 d = {1: 10, 2: 20}
@@ -6,7 +6,7 @@ d = {1: 10, 2: 20}
 # Dictionary는 임의의 키가 값에 매핑되는 연관 배열
 
 d = {(1, 2): 10}
-# key는 __hash__() 및 __eq__() 메소드가 있는 객체를, value는 어떤 자료형이든 사용 가능
+# key는 __hash__() 및 __eq__() 메소드가 있는(immutable한) 객체를, value는 어떤 자료형이든 사용 가능
 
 # 1. 요소 추가
 d[3] = 30
