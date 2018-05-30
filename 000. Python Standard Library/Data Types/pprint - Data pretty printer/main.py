@@ -1,6 +1,6 @@
 # https://docs.python.org/3/library/pprint.html
-# 파이썬 데이터를 예쁘게 출력하기 위한 모듈
 import pprint
+# 파이썬 데이터를 예쁘게 출력하기 위한 모듈
 
 data = ('Some', 'thing', 'problems', ('lumberjack', 'knights', 'hi', 'ham', 'miss', 'wonderful'))
 pp = pprint.PrettyPrinter(indent=4)
