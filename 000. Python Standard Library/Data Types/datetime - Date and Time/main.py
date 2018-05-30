@@ -1,6 +1,6 @@
 ﻿# https://docs.python.org/3/library/datetime.html
-# 시간을 다루는 datetime 모듈
 import datetime
+# 시간을 다루는 datetime 모듈
 
 # 먼저 datetime은 두 개의 상수를 지원한다
 print(datetime.MINYEAR)
