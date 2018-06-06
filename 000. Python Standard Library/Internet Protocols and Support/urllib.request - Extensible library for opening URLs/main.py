@@ -1,6 +1,6 @@
 # https://docs.python.org/3/library/urllib.request.html#module-urllib.request
-# URL open을 위한 확장 가능한 라이브러리
 from urllib.request import urlopen, Request
+# URL open을 위한 확장 가능한 라이브러리
 import ssl
 
 def get_ssl_context(url):
