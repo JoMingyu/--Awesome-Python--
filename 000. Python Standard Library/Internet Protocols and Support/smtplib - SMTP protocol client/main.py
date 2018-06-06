@@ -1,7 +1,7 @@
 ﻿# https://docs.python.org/3/library/smtplib.html
+from smtplib import SMTP
 # smtplib 모듈은 SMTP나 ESMTP listener daemon에게 메일 전송이 가능한 SMTP 클라이언트 세션 객체이다
 # RFC 821(Simple Mail Transfer Protocol), RFC 1869(SMTP Service Extensions) 기반으로 설계되어 있다
-from smtplib import SMTP
 from email.mime.text import MIMEText
 
 src_email = 'city7312@naver.com'
