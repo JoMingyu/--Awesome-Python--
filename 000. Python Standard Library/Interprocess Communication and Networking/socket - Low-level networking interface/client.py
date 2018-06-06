@@ -1,5 +1,4 @@
-﻿# 클라이언트 모듈
-from socket import socket
+﻿from socket import socket
 import threading
 
 client_socket = socket()

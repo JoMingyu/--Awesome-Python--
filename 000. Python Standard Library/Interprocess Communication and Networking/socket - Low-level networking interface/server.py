@@ -1,13 +1,11 @@
 # https://docs.python.org/3/library/socket.html
+from socket import socket, AF_INET, SOCK_STREAM
 # 네트워크 프로그래밍의 기초 중 하나인 소켓 프로그래밍
 # 소켓은 양방향 데이터 전송 가능
 
 # TCP는 1:1, Byte Stream 형식으로 데이터를 주고받으며 3way handshake 과정 존재
 # UDP는 1:1/1:n/n:m, Datagram 형식으로 데이터를 주고받으며 3way handshake 과정 미존재
 # TCP가 UDP보다 빠르지만 그렇게 큰 차이는 나지 않음
-
-# 서버 모듈
-from socket import socket, AF_INET, SOCK_STREAM
 import threading
 
 server_socket = socket(AF_INET, SOCK_STREAM)
