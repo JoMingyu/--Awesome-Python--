@@ -7,8 +7,12 @@ class Something:
     # pass statement만으로 이루어진, 틀만을 가지고 있는 클래스
 
 
-some = Something()
+instance = Something()
 # [ClassName]()
+
+NewSomething = Something
+# 클래스도 일급 객체로서 변수에 assign 가능
+instance = NewSometing()
 
 
 class Account:
