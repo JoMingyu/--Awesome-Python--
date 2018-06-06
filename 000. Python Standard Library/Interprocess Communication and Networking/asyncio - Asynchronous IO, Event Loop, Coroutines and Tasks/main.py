@@ -1,4 +1,5 @@
 # https://docs.python.org/3/library/asyncio.html
+import asyncio
 # asyncio는 Python 3.4에서 새로 추가되었다. 코루틴을 사용하여 단일 스레드 concurrent 코드를 작성하고
 # Node.js의 event-driven과 동일한 Non-blocking I/O와 같은 형태의 비동기 IO를 통해 조금 더 효율적으로 동시에 코드를 돌릴 수 있게 해준다
 # CPU에 부하가 집중되는 다른 작업들과는 달리 I/O 작업은 CPU와 개별적으로 동작이 가능하다는 점에 착안하여, I/O 처리를 기다리는 역할을 코루틴에게 위임하고
@@ -6,8 +7,6 @@
 
 # 여기서 말하는 코루틴은 generator를 이용해 메인 루틴과 흐름을 분리하여 동작하는(yield에 값을 send하는, 동기 코루틴) 기존의 코루틴과는 완전히 구분할 필요가 있다
 # 동작하는 방식 자체로는 코루틴이라는 표현은 정확하나, 일반적으로 사용하던 generator coroutine과는 다른 관점에서 봐야 하는, 비동기 형태의 코루틴이다
-
-import asyncio
 
 @asyncio.coroutine
 # 비동기로 호출되는 코루틴 함수를 정의하기 위해 사용하는 데코레이터
