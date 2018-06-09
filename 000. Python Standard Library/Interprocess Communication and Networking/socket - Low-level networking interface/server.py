@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/socket.html
 from socket import socket, AF_INET, SOCK_STREAM
+# https://github.com/python/cpython/blob/3.6/Lib/socket.py
 # 네트워크 프로그래밍의 기초 중 하나인 소켓 프로그래밍
 # 소켓은 양방향 데이터 전송 가능
 

@@ -1,5 +1,6 @@
 ﻿# https://docs.python.org/3/library/re.html
 import re
+# https://github.com/python/cpython/blob/3.6/Lib/re.py
 # 정규표현식에 관한 일들을 돕는 모듈
 
 pattern = re.compile('[a-z]+')

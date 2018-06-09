@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/webbrowser.html
 import webbrowser
+# https://github.com/python/cpython/blob/3.6/Lib/webbrowser.py
 # 웹브라우저를 컨트롤하기 위한 모듈
 
 webbrowser.open_new('https://github.com/JoMingyu/Awesome-Python')

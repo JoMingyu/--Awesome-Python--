@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/random.html
 import random
+# https://github.com/python/cpython/blob/3.6/Lib/random.py
 # 수많은 종류의 랜덤 값들을 다루기 위한 모듈
 # 많은 함수들이 제공된다
 
