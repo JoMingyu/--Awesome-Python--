@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/urllib.parse.html
 from urllib.parse import urlparse
+# https://github.com/python/cpython/blob/3.6/Lib/urllib/parse.py
 # URL을 특정 컴포넌트별로 나누기 위한 모듈
 
 url = 'https://www.github.com:80/JoMingyu?tab=repositories'

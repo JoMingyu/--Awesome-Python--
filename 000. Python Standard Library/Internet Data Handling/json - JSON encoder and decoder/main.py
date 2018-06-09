@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/json.html
 import json
+# https://github.com/python/cpython/tree/3.6/Lib/json
 # JSON은 Javascript 객체의 literal syntax에 영향을 받아 RFC 7159와 ECMA-404에 의해 지정된 경량의 data interchange format이다
 # 파이썬의 json 모듈은 파이썬 기본 자료형인 list, dictionary와 JSON 문자열 간 변환을 돕는다
 

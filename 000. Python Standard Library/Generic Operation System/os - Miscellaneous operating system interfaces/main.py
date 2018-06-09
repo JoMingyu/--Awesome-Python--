@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/os.html
 import os
+# https://github.com/python/cpython/blob/3.6/Lib/os.py
 # 파이썬의 주요 모듈 중 하나인 os 모듈
 # 운영체제에 관한 여러가지 데이터들을 다룰 수 있다
 

@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/urllib.request.html#module-urllib.request
 from urllib.request import urlopen, Request
+# https://github.com/python/cpython/blob/3.6/Lib/urllib/request.py
 # URL open을 위한 확장 가능한 라이브러리
 import ssl
 

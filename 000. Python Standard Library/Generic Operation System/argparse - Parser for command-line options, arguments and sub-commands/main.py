@@ -1,5 +1,6 @@
 ﻿# https://docs.python.org/3/library/argparse.html
 import argparse
+# https://github.com/python/cpython/blob/3.6/Lib/argparse.py
 # argparse 모듈을 이용하면 커맨드 라인에서 실행 시의 인자를 파싱할 수 있다
 # sys.argv를 사용해도 되지만, argparse를 이용하면 훨씬 쉽게 관리할 수 있다
 
