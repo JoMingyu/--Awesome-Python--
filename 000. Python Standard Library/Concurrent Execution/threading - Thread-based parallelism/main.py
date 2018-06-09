@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/threading.html
 import threading
+# https://github.com/python/cpython/blob/3.6/Lib/threading.py
 # 멀티 스레딩은 병행(Parallelism)을 구현하기 위한 가장 간단한 방법
 import time
 

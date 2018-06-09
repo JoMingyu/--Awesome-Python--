@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/hashlib.html
 import hashlib
+# https://github.com/python/cpython/blob/3.6/Lib/hashlib.py
 # hashlib을 사용하면 쉽게 단방향 해시 값을 구할 수 있다
 # sha1, sha224, sha256, sha384, sha512, blake2b, blake2s, md5를 기본적으로 제공하며
 # 거의 모든 플랫폼에서 sha3_224, sha3_256, sha3_384, sha3_512, shake_128, shake_256를 추가로 제공한다
