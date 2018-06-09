@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/calendar.html
 import calendar
+# https://github.com/python/cpython/blob/3.6/Lib/calendar.py
 # 유닉스의 cal 프로그램과 비슷하게 생긴 달력을 출력할 수 있으며 달력과 관련된 유용한 함수들을 추가로 제공함
 
 # 기본적으로 파이썬의 calendar 객체들에서는 월요일이 주 중 첫 번째 날로 표시되며 일요일이 마지막 요일로 표시됨

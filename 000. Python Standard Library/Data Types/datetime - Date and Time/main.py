@@ -1,5 +1,6 @@
 ﻿# https://docs.python.org/3/library/datetime.html
 import datetime
+# https://github.com/python/cpython/blob/3.6/Lib/datetime.py
 # 시간을 다루는 datetime 모듈
 
 # 먼저 datetime은 두 개의 상수를 지원한다

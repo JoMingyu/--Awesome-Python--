@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/unittest.html
 import unittest
+# https://github.com/python/cpython/tree/3.6/Lib/unittest
 # 파이썬은 단위 테스트(unit test)를 위해 unittest라는 모듈을 제공한다
 # 파이썬의 unittest는 객체지향적인 방식으로 테스트를 수행하며, 아래의 4가지 개념이 중요하다
 # Test fixture : 하나 이상의 테스트를 수행하는 데 필요한 준비 작업 및 클린업 작업. 임시 프록시나 데이터베이스, 디렉토리 작성, 서버 프로세스 시작 등

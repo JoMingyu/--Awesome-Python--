@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/copy.html
 import copy
+# https://github.com/python/cpython/blob/3.6/Lib/copy.py
 # 파이썬의 assignment는 객체를 복사하지 않고 해당 객체들을 바인딩할 뿐이다
 # 따라서 mutable한 컬렉션, 또는 mutable한 값들을 가지고 있는 컬렉션이라면 copy 모듈이 필요하다
 

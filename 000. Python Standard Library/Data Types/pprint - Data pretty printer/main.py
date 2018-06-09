@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/pprint.html
 import pprint
+# https://github.com/python/cpython/blob/3.6/Lib/pprint.py
 # 파이썬 데이터를 예쁘게 출력하기 위한 모듈
 
 data = ('Some', 'thing', 'problems', ('lumberjack', 'knights', 'hi', 'ham', 'miss', 'wonderful'))
