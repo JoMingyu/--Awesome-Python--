@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/subprocess.html
 import subprocess
+# https://github.com/python/cpython/blob/3.6/Lib/subprocess.py
 # https://www.python.org/dev/peps/pep-0324/
 # subprocess 모듈은 새로운 프로세스를 생성하고, 그들의 input/output/error pipe에 연결하고, 반환 코드를 얻어올 수 있게 돕는다
 
