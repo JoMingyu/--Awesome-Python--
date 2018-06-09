@@ -7,6 +7,12 @@ img = Image.open('sample_image.jpg')
 print(img)
 # mode=RGB, size=1984x1220 등 정보들이 기록된 객체가 출력된다
 
+print(Image.MAX_IMAGE_PIXELS)
+# Pillow의 Image 객체에는, 픽셀 단위가 엄청 큰 이미지를 업로드해 처리량을 낮추는 decompression bomb라는 해킹 기법을 일차적으로 막기 위해 
+# 최대 픽셀 수가 limit이 걸려 있고(기본 89478485) 이미지의 픽셀 수가 해당 수를 넘기면 에러가 발생한다
+# 만약 더 큰 이미지를 load하려 한다면, 해당 필드를 바꿔주면 된다
+Image.MAX_IMAGE_PIXELS = 21600 * 18200
+
 
 def show_image():
     input('Press enter to show image')
