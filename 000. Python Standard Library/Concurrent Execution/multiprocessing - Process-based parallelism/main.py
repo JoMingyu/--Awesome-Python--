@@ -1,5 +1,6 @@
 # https://docs.python.org/3/library/multiprocessing.html
 import multiprocessing
+# https://github.com/python/cpython/tree/3.6/Lib/multiprocessing/
 # multithreading이 Thread-based parallelism이라면 multiprocessing은 Process-based parallelism
 # 파이썬은 GIL 구조 때문에 멑티 스레딩을 돌려도 각 스레드가 time sharing하며 돌아간다
 # 그래서 병렬적으로 코드를 돌려야 할 경우(특히 계산) 멀티 스레딩보단 멀티 프로세싱을 쓴다
@@ -29,6 +30,7 @@ if __name__ == '__main__':
     proc2.join()
 
     print(q.get())
+    # queue에 get을 하면 consume되어 사라짐(자료구조의 queue와 동일)
 
     proc3 = multiprocessing.Process(target=f, args=(q,), name='third')
     proc3.start()
