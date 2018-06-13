@@ -10,6 +10,8 @@ for i in l:
 # S = {x² : x in {0 ... 9}}
 # V = (1, 2, 4, 8, ..., 2¹²)
 # M = {x | x in S and x even}
+# Python의 대부분의 기능들은 다른 언어에서도 대충 엿볼 수 있는데, 이처럼 간단한 comprehension은 Python만 가지고 있는 강점이다
+# -> Scala도 가능하긴 하지만, FP 개념이 들어가기 때문에 이처럼 간단하진 않다
 
 # - List Comprehension
 # [<expr> for <element> in <iterable>]
