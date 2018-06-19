@@ -31,11 +31,12 @@ class User(Document):
 
 class Comment(EmbeddedDocument):
     # 먼저 댓글부터. 댓글은 일반적으로 하나의 게시물과 연관됨
-    # MongoDB의 Embedded Document 개념을 사용하여 댓글을 Post document에 직접 포함된 document으로 저장할 수 있음
-    # mongoengine을 사용하여 정규 document와 똑같은 방식으로 embedded document의 구조를 정의할 수 있음
+    # MongoDB의 Embedded Document 개념을 사용하여 스키마 형태로 value를 정의할 수 있음
+    # 여기서는 댓글을 Post document에 직접 포함된 document로 저장하도록 함
     content = StringField()
     name = StringField(max_length=30)
-    # Embedded Document는 별도로 명시해 주지 않으면 ID를 가지지 않는다는 것에 주의해야 함
+    # Embedded Document는 별도로 명시해 주지 않으면 ID를 가지지 않는다는 것에 주의해야 하며
+    # 이를 통해 RDB에서 여러 개의 컬럼을 섞어 PK를 만드는 것처럼, compound하게 PK를 만들 수 있다(ex: EmbeddedDocumentField(..., primary_key=True))
 
 
 class Post(Document):
