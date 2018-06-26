@@ -1,7 +1,7 @@
 """
-   Return True if bool(x) is True for any x in the iterable.
+Return True if bool(x) is True for any x in the iterable.
 
-   If the iterable is empty, return False.
+If the iterable is empty, return False.
 """
 
 # any 함수는 all 함수와 마찬가지로, 인자로 반복가능한(iterable) 객체를 받는다.

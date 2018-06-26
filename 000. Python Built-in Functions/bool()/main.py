@@ -1,4 +1,7 @@
-""" The bool() method converts a value to Boolean (True or False) using the standard truth testing procedure. """
+"""
+The bool() method converts a value to Boolean (True or False)
+using the standard truth testing procedure.
+"""
 
 # bool() 함수는 인자에 따라 불리언 값. 즉, True 나 False 를 반환한다.
 # bool() 함수는  'truth value testing' 를 사용하여 인자를 불리언으로 반환하는데
