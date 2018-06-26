@@ -9,6 +9,7 @@ start, which defaults to zero) and a value yielded by the iterable argument.
 enumerate is useful for obtaining an indexed list:
     (0, seq[0]), (1, seq[1]), (2, seq[2]), ...
 """
+
 # enumerate()는 iterable이나 iterator 객체의 인덱스(start의 기본값은 0)와 값으로 이루어진 pair를 튜플 형태로 yield하는 enumerate 객체를 반환한다
 # iterable 객체를 index 기반으로 iteration할 때 자주 사용된다
 data = list(range(5))
