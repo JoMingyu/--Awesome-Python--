@@ -49,7 +49,7 @@ pip 9.0.3 from /Users/planb/Library/Python/3.6/lib/python/site-packages (python 
 ```
 
 ### virtual enviroment
-virtual environemtn는 **특정 디렉토리 내에서만 적용될 격리된 Python 환경**을 구성해 줍니다. 처음엔 '도대체 이게 왜 필요해'라고 생각했는데, 3개의 프로젝트에서 사용하는 동일한 라이브러리가 서로 모두 버전이 다르고, 한 프로젝트에선 numpy, pytz, six처럼 '이 프로젝트 말고는 다른 데서 안쓸 패키지'가 많은 걸 보고 납득했습니다. 대표적으로 `virtualenv`라는 유틸리티를 사용하며, 이는 서드파티 유틸리티기 때문에 pip를 이용해 설치해야 합니다.
+virtual environment는 **디렉토리 단위의 격리된 Python 환경**을 구성해 줍니다. 처음엔 '도대체 이게 왜 필요해?'라고 생각했는데, 3개의 프로젝트에서 사용하는 동일한 라이브러리가 서로 모두 버전이 다르고(프로젝트 A에선 Flask 0.12, 프로젝트 B에선 Flask 1.0.1 사용), 한 프로젝트에선 numpy, pytz, six처럼 '이 프로젝트 말고는 다른 데서 안쓸 패키지'가 많은 걸 보고 납득했습니다. 대표적으로 `virtualenv`라는 유틸리티를 사용하며, 이는 서드파티 유틸리티기 때문에 pip를 이용해 설치해야 합니다.
 
 `$ pip install virtualenv`
 
@@ -57,7 +57,7 @@ virtualenv의 사용법은 아주 간단합니다.
 
 `$ virtualenv .venv`
 
-`virtualenv [venv_name]` 형태입니다. 위의 명령을 실행하면 `.venv`라는 이름의 디렉토리가 생기고, 그 밑에 가상 환경이 만들어집니다. Python의 특정 버전에 대하여 가상 환경을 구성하려면, `--python`이나 `-p` 옵션을 이용해 Python 버전을 명시하면 됩니다.
+`virtualenv [venv_name]` 형태입니다. 위의 명령을 실행하면 `.venv`라는 이름의 디렉토리가 생기고, 그 밑에 virtualenv가 설치된 Python 버전으로 환경이 구성됩니다. Python의 특정 버전에 대하여 가상 환경을 구성하려면, `--python`이나 `-p` 옵션을 이용해 Python 버전을 명시하면 됩니다.
 
 ```
 $ virtualenv -p python3 .venv
