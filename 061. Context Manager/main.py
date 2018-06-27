@@ -4,7 +4,7 @@ f = open('some.txt', 'w')
 f.write('Hello')
 f.close()
 
-# Context Manager는 원하는 타이밍에 정확하게 리소스를 할당하고 제거하는 역항를 하는데
+# Context Manager는 원하는 타이밍에 정확하게 리소스를 할당하고 제거하는 역할을 하는데
 # 가장 많이 사용되는 Context Manager는 with - as문이다
 with open('some.txt', 'w') as f:
     f.write('Hello')
@@ -15,7 +15,7 @@ with open('some.txt', 'w') as f:
 # 따라서 매직 메소드 __enter__()와 __exit__()이 정의되어 있는 객체는 모두 Context Manageable하며, 'Context Manager 프로토콜을 구현하고 있다'라고 말한다
 
 class File:
-    def __init__(self, file_name, method):
+    def __init__(self, file_name, method='r'):
         self.file_obj = open(file_name, method)
 
     def __enter__(self):
