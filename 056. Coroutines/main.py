@@ -1,7 +1,7 @@
 # Generator가 데이터의 생산자라면, Coroutines은 데이터의 소비자
-# 코루틴은 '진입점이 여러 개인 함수'를 의미하며, Python은 이 '진입점'을 yield로 표현함
-# Python 2.5에서 yield는 표현식이 됨(이전까지는 값을 내놓은 지점을 설정하는 용도였으나, 표현식이 됨으로써 값으로 평가됨)
-# 이를 통해 외부에서 generator로 값을 주입할 수 있게 됨
+# Python 2.5에서 yield는 표현식이 됨 -> 이전까지는 값을 내놓을 지점을 설정하는 용도였으나, 표현식이 됨으로써 값으로 평가할 수 있음
+# 코루틴은 '진입점이 여러 개인 함수'를 의미하며, Python은 이 '진입점'을 yield로 표현하여 외부에서 generator로 값을 주입할 수 있게 되어
+# generator로 동기 코루틴을 구성할 수 있게 됨
 
 def finder(str_for_find):
     while True:
