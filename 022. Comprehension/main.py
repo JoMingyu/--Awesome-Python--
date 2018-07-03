@@ -34,3 +34,5 @@ print({i ** 2 for i in l})
 # - Dictionary Comprehension
 # {<key_expr>:<value_expr> for <element> in <iterable>}
 print({i: i ** 2 for i in l})
+
+# 파이썬을 가장 파이썬답게 만들어 주는 개념은 comprehension이 아닐까 싶다
