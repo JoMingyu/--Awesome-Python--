@@ -1,7 +1,8 @@
 # http://flask.pocoo.org/docs/1.0/appcontext/
 # Application context는 요청을 처리하는 동안 어플리케이션 레벨의 데이터를 관리하기 위해 사용한다
-# 예를 들어, '해당 요청을 처리하고 있는 flask 객체의 config'가 application level 데이터에 해당한다
-# Application Context에 해당하는 대표적인 객체로, current_app과 g가 있다
+# context는 같은 전역 변수지만 실제 내용은 각 요청(문맥)마다 다른 것을 가르키게 만들어둔 것이다
+# 그렇게 만든 이유 : http://flask.pocoo.org/docs/1.0/design/#thread-locals
+# Application context에 해당하는 대표적인 객체로, current_app과 g가 있다
 
 # Flask 객체는 config와 같은 속성들을 가지고 있다. 그러나, 단순히 해당 객체를 import하는 것은 circular import(서로 다른 모듈에서 서로 import) 문제를 일으킬 수 있다
 # Flask는 이러한 문제를 application context라는 개념을 이용해 극복했고, Flask 객체를 직접 참조하지 않고 current_app을 사용하도록 지원한다
