@@ -14,8 +14,7 @@ class User(Document):
     # meta 필드를 사용해서 collection name을 직접 지정해둘 수 있다
 
     id = StringField(required=True, primary_key=True)
-    # primary key 설정. 이 경우 document에서 ObjectId가 사라지고 이게 식별자가 된다
-    # 따라서 primary key 속성 없이 'id'라는 이름을 가진 필드를 선언하지 말아야 한다. _id 또는 uid 등을 사용하는 편이 좋다
+    # primary key 설정. 이 경우 document에 자동으로 들어가는 ObjectId가 사라지고 이게 식별자가 된다
     # primary key가 어떻게 설정되어 있든 실제로 MongoDB 서버에 들어갈 땐 '_id'로 표기된다
     # MongoEngine에서 primary key에 접근하려면 MongoDB 표기 상의 _id는 신경쓰지 말고 primary key로 설정한 필드 이름 또는 'id'로 접근하면 된다
     # 이미 insert된 id가 다시 들어가더라도 오류는 생기지 않는데, 해당 값이 이미 있다면 update하기 때문이다

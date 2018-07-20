@@ -21,7 +21,6 @@ print(type(list(data)))
 # list 캐스팅 가능
 print(list(data))
 # User 객체들이 담겨 있음
-# User 객체들의 list가 필요하지 않고, 즉시 데이터를 반환할 필요가 있다면 as_pymongo()의 리턴인 QuerySet에 list 캐스팅을 하자
 print(list(data.as_pymongo()))
 # as_pymongo()의 경우, value가 None인 key는 제거해 버리며 primary key는 _id로 바뀌므로 주의해야 한다
 # 클래스에 명시해 둔 그대로 가져오고 싶다면, 각 object의 _data 필드에 접근하면 된다
