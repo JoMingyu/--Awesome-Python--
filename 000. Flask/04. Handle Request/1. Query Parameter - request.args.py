@@ -3,6 +3,7 @@ from flask import request
 
 app = Flask(__name__)
 # GET에서 자주 사용하는 Query Paramter( = querystring(ex - localhost:5000/?a=1&b=2에서 물음표 뒷부분인 a=1&b=2) )에 접근하도록 하자
+# 대부분의 웹 프레임워크에서는 요청 데이터 등과 같은 context 데이터들은 콜백의 인자로 전달하지만, Flask에서는 전역 객체를 사용한다
 # flask.globals.request에 접근하면 되며, 이는 Request context와 연관되어 있는 객체지만 이 부분은 나중에 알아보자
 # request 객체는 flask.wrappers.Request 클래스의 인스턴스이며, 이는 werkzeug.wrappers.RequestBase를 상속하고 있다
 
