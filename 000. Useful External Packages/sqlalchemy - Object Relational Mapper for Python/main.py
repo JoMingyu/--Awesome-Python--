@@ -71,9 +71,13 @@ query = query.filter(User.id.in_(['PlanB', 'PlanB2']))
 # filter(User.id.like('Plan%')), filter(User.id == 'PlanB') 등. 아래 링크에 잘 설명되어 있다
 # http://docs.sqlalchemy.org/en/latest/orm/tutorial.html#common-filter-operators
 
+res = session.query(User).get('PlanB')
+# get()은 Primary key를 통한 조회
+# 해당 값에 대한 row가 있으면 객체를 반환하고, 없으면 None을 반환
+
 res = query.all()
 # query 객체의 all() 메소드는 해당 쿼리를 수행한 결과의 모든 row를 가져온다
-# 가장 첫 row에 해당하는 객체 가져오는 first()
+# 가장 첫 row에 해당하는 객체를 가져오거나, 없으면 None을 반환하는 first()
 # 결과가 단 하나만 있는 경우 해당 객체를 반환하고, 결과가 없거나 여러 개가 있으면 에러를 raise하는 one()
 # one()을 실행하고, 성공하면 첫 컬럼의 데이터를 반환하는 scalar()
 # 쿼리 결과의 수(COUNT(*))를 반환하는 count() 등이 있다
