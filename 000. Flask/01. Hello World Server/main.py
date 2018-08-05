@@ -10,12 +10,12 @@ app = Flask(__name__)
 # 1. 현재 모듈에 대해 Flask 객체를 생성
 
 @app.route('/')
-# 2. 데코레이터를 통해 '/'에 라우팅
+# 2. 데코레이터를 통해 '/'에 라우팅. Flask 라우팅의 가장 기본형
 # [app.Flask]
 #     def route(self, rule, **options) - 'A decorator that is used to register a view function for a given URL rule'
 
-# View Function - 한 URL Rule에 대해 할당된 함수
-# URL rule - Endpoint에서 HTTP 메소드를 제외한 부분('GET /'에서 'GET'을 뺀 '/' : URL)
+# 위처럼 한 URL Rule에 대해 할당되어 로직을 처리하는 함수를 view function이라고 부른다
+# URL rule - Endpoint에서 HTTP 메소드를 제외한 부분('GET /'에서 'GET'을 뺀 '/')
 # 별도의 HTTP 메소드 명시가 없으면 GET에 라우팅하며, 따라서 아래의 view function은 'GET /'의 요청 처리를 담당
 def index():
     return 'Hello World'
