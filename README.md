@@ -5,8 +5,8 @@ Interpreter, Object-Oriented, Dynamically Typed, Iteractive language
 
 ## Python
 - 인터프리터, 바이트코드 컴파일
-- 타입 시스템 : 약타입, 동적 타이핑 / 강타입처럼 사용 가능
-- 타입 추론 : 암시적
+- 타입 시스템 : 강타입, 동적 타이핑
+- 타입 추론 : 암시적, 타입을 명시하는 문법 존재(type decoration)
 - Scope : 정적, 함수 스코프
 - 함수 : 일급 객체
     - 함수의 런타임 익명 생성을 위해 lambda 키워드 지원
