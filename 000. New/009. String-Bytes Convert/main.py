@@ -4,6 +4,6 @@
 b'hello'.decode()
 # 'hello'
 
-# 기본 인코딩은 utf-8로, ascii, utf-16 등 다른 종류의 인코딩을 사용할 수 있다
+# 기본 인코딩은 utf-8이며, ascii, utf-16 등 다른 종류의 인코딩을 사용할 수 있다
 'hello'.encode('utf-16')
 # b'\xff\xfeh\x00e\x00l\x00l\x00o\x00'
