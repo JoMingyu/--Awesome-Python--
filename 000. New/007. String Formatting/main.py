@@ -1,7 +1,6 @@
 # 컴퓨터 프로그래밍에서 string interpolation은
 # placeholder가 포함된 문자열 리터럴을 평가하여, placeholder를 특정한 값으로 치환한 결과를 반환하는 프로세스
 # Python에서는 string formatting이라고도 이야기한다
-# https://www.python.org/dev/peps/pep-3101
 
 nickname = 'planb'
 age = 19
