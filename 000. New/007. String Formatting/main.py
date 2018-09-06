@@ -7,7 +7,7 @@ age = 19
 
 # 1. 포맷 코드 사용
 print('My nickname is %s, age is %d' % (nickname, age))
-# <string literal> % (values)
+# [string literal] % (values)
 # C 계열 언어의 printf 역할
 
 # 2. placeholder 표현식과 문자열 객체의 .format() 메소드 사용
@@ -15,7 +15,7 @@ print('My nickname is {0}, age is {1}'.format(nickname, age))
 # 인자로 전달된 nickname과 age가 각각 {0}, {1}에 치환됨
 print('{0} {0} {1}'.format(nickname, age))
 # 'planb planb 19'
-# 동일한 치환 표현식을 가진 두 개 이상의 placeholder를 함께 사용해, 동일한 값을 여러 번 치환할 수 있다
+# 동일한 숫자를 가진 두 개 이상의 치환 표현식을 함께 사용해, 동일한 값을 여러 번 치환할 수 있다
 print('{1} {0}'.format(nickname, age))
 # '19 planb'
 # 숫자는 format 메소드의 인자로 전달되는 값들 중 어떤 걸 치환할지를 표현하는 것 뿐이라, 순서를 지키지 않아도 됨
