@@ -1,4 +1,5 @@
 # 문자열과 bytes 간의 변환은, 문자열 객체의 encode()와 bytes 객체의 decode()를 사용한다
+
 'hello'.encode()
 # b'hello'
 b'hello'.decode()
