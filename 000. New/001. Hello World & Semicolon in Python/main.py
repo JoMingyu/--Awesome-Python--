@@ -1,5 +1,5 @@
 print('Hello World')
-# 파이썬의 확장자는 .py, 인터프리터 특성 상 한줄 한줄씩 읽어간다
+# 파이썬의 확장자는 .py, 인터프리터 언어기 때문에 위에서 아래로 한줄씩 실행한다
 # 파이썬에는 이처럼 global namespace에 함수들이 여럿 지원된다
 
 print('Hello'); print('Hi')
