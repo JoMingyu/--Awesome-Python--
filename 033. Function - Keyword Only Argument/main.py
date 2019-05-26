@@ -15,3 +15,5 @@ print(sum(1, 3))
 # TypeError: sum() takes 0 positional arguments but 2 were given
 # 위치 인자로 전달하면 에러 발생
 print(sum(a=3)) # 3
+
+# https://velog.io/@city7310/Positional-Only-Keyword-Only-Arguments-k9jv9u0tmz
