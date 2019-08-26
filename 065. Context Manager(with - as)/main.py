@@ -10,10 +10,10 @@ f.close()
 with open('some.txt', 'w') as f:
     f.write('Hello')
 
-# with 문에 의해 감싸진 객체는, entry point에서 __enter__()가 호출되며 as [obj]의 obj에 반환값을 할당하며
-# exit point에서 객체의 __exit__()이 호출된다
-# 파일 객체는 __enter__()에서 파일 객체를 열어 반환하고, __exit__()에서 파일 객체를 닫는 역할을 하므로 Context Manageable하다
-# 따라서 매직 메소드 __enter__()와 __exit__()이 정의되어 있는 객체는 모두 Context Manageable하며, 'Context Manager 프로토콜을 구현하고 있다'라고 말한다
+# with 문은 entry point에서 전달된 객체의 __enter__()를 호출하며 해당 함수의 리턴을 `as [obj]`의 obj에 바인딩하고,
+# exit point에서, exit의 사유가 어떻든 객체의 __exit__()을 호출한다
+# 이러한 magic method들이 정의되어 있어, with문이 정상적으로 흐름을 관리할 수 있는 객체를 파이썬에선 context manager라고 부른다
+# == 합당한 스펙의 __enter__()와 __exit__()이 정의되어 있는 객체는 context manageable하다
 
 class File:
     def __init__(self, file_name, method='r'):
