@@ -34,3 +34,10 @@ print(f'My nickname is {nickname}, age is {age}')
 # Python 3.6부터 지원하며, JavaScript의 template literal과 비슷한 형태
 # 미리 선언해 두고 나중에 포매팅하는 경우가 아니라,
 # 문자열 리터럴에 외부의 값을 주입해야 하는 경우 유용하고 다른 포매팅 방식보다 빠르기도 함
+
+# 6. debug support for fstring
+print(f'{age=}') # 'age=3'
+# Python 3.8부터 지원하며, {expression=} 처럼, expression 뒤에 '='를 붙여 위와 같은 식의 문자열 포매팅이 가능하다
+# 아래와 같이 포매팅하는 것보다 간결하다
+print(f'age={age}')
+# 디버깅 용도로 사용하는 데에 좋다
