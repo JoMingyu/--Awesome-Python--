@@ -16,4 +16,12 @@ print(sum(1, 3))
 # 위치 인자로 전달하면 에러 발생
 print(sum(a=3)) # 3
 
+# asterisk 뒤에 명시된 Keyword Only Argument들은 일반 argument와 다르게,
+# non-required 인자가 required 인자 앞에 와도 문제가 없다
+def f1(*, a=0, b): # keyword only argument들은 required 여부에 상관 없이 나열 가능
+    pass
+
+def f2(a=0, b): # 일반 argument들은 required argument가 non-required argument 앞에 와야만 함
+    pass
+
 # https://velog.io/@city7310/Positional-Only-Keyword-Only-Arguments-k9jv9u0tmz
