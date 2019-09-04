@@ -24,4 +24,19 @@ def f1(*, a=0, b): # keyword only argument들은 required 여부에 상관 없�
 def f2(a=0, b): # 일반 argument들은 required argument가 non-required argument 앞에 와야만 함
     pass
 
+# Python 3.8부터는 Positional Only Argument를 사용할 수 있다
+
+def sum(/, a, b):
+    return a + b
+
+print(sum(1, 3))
+
+
+# def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
+#       -----------    ----------     ----------
+#        |              |                 |
+#        |        Positional or keyword   |
+#        |                              Keyword only
+#     Positional only
+
 # https://velog.io/@city7310/Positional-Only-Keyword-Only-Arguments-k9jv9u0tmz
