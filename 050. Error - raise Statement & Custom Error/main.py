@@ -12,3 +12,8 @@ try:
     raise_error()
 except CustomError as e:
     print(e.args)
+
+
+# 인자를 안 넘기는 경우, 아래 두 raise 중 전자처럼 클래스 자체를 raise하곤 한다
+raise Exception
+raise Exception()
