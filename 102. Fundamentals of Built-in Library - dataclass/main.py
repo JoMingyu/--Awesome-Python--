@@ -58,3 +58,8 @@ class Inventory:
 
 inventory = Inventory(items=[bundled_item_1])
 inventory.items.append(bundled_item_2)
+
+# 단, dataclass property에 명시한 타입들은 단순히 hinting임에 주의해야 함
+Item(name=123, weight='PlanB')
+# dataclass를 위한 대표적인 헬퍼인 dacite, pydantic.dataclass, dataclass-json 라이브러리를 써보고
+# 뜯어보며 원리를 알아보면 dataclass를 이해하기 더 좋을 것 같다
