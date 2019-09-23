@@ -19,6 +19,11 @@ class PropertyTest:
     def name(self, name):
         self._name = name
 
+    @name.deleter
+    # del 함수의 인자에 프로퍼티가 넘겨진 경우 호출됨
+    def name(self):
+        self._name = None
+
     @property
     def color(self):
         return {'color': self._color}
@@ -34,4 +39,11 @@ prop_test.name = 'MingyuJo'
 # 객체의 필드에 직접 접근하는 것처럼 보이지만, 실제로는 setter 메소드에 접근
 
 print(prop_test.name, prop_test.color)
-# property 메소드의 반환값
+# {'name': 'MingyuJo'} {'color': 'Black'}
+# 각 property의 반환값
+
+del prop_test.name
+# deleter 호출
+
+print(prop_test.name)
+# {'name': None}
