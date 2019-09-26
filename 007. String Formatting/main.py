@@ -36,8 +36,16 @@ print(f'My nickname is {nickname}, age is {age}')
 # 문자열 리터럴에 외부의 값을 주입해야 하는 경우 유용하고 다른 포매팅 방식보다 빠르기도 함
 
 # 6. debug support for fstring
-print(f'{age=}') # 'age=3'
+print(f'{age=}') # 'age=19'
 # Python 3.8부터 지원하며, {expression=} 처럼, expression 뒤에 '='를 붙여 위와 같은 식의 문자열 포매팅이 가능하다
 # 아래와 같이 포매팅하는 것보다 간결하다
 print(f'age={age}')
 # 디버깅 용도로 사용하는 데에 좋다
+
+# 7. format specifier
+# 문자열 포매팅도 일종의 mini language라고 볼 수 있다
+# 총 30글자로 문자열을 형성하되 가운데로 정렬한다던가, 좌측을 0으로 채운다던가, 타입을 바꾼다던가 하는 것이 가능하다
+print(f'{age:^10}') # '    19    '
+print(f'{age:0>10}') # '0000000019'
+print(f'{age:04}') # '0019'
+print('{:#x}'.format(age)) # '0x13'
