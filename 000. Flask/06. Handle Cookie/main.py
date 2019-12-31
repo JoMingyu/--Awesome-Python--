@@ -12,7 +12,7 @@ def send_cookie():
     if request.method == 'GET':
         # 쿠키를 주려면 Response 객체가 필요하다
         response = Response('hello hello')
-        response.set_cookie('cookie', 'value!!!!!!!!!')
+        response.set_cookie('cookie', 'value!!!!!!!!!', secure=True, httponly=True, samesite='Lax')
         # [werkzeug.wrappers.BaseResponse]
         #     def set_cookie(
         #         self, key, value='', max_age=None, expires=None, path='/',
@@ -26,7 +26,7 @@ def send_cookie():
 
         # 쿠키 제거는 expires를 0으로 주면 된다
         response = Response('hello hello!')
-        response.set_cookie('cookie', '', expires=0)
+        response.set_cookie('cookie', '', expires=0,secure=True, httponly=True, samesite='Lax')
 
         return response
     else:
